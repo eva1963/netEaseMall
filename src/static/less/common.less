@@ -1,0 +1,120 @@
+@import '~antd/dist/antd.css';
+@import './_variable';
+
+html,body {
+  font-size: 100px;
+  font-family: PingFangSC-Light,helvetica,'Heiti SC';
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root {
+  margin: 0 auto;
+  max-width: 750px;
+  font-size: .3rem;
+}
+
+.navTop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  height: 1.8rem;
+  border-bottom: .01rem solid @borderColor;
+  background: #fff;
+  .line {
+    display: flex;
+
+    align-items: center;
+    padding: .21333rem .4rem;
+    .logo {
+      width: 1.84rem;
+      height: .53333rem;
+      font-size: 0;
+      background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/indexLogo-11d65342f9.png);
+      display: inline-block;
+      margin-right: .26667rem;
+      background-size: cover;
+      background-position: center;
+    }
+    .search {
+      flex: 1;
+      input {
+        background: #eee;
+        &:hover {
+          border-color: transparent;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  .navList {
+    position: relative;
+    width: 100%;
+    /* 隐藏滚动条*/
+    ::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    ul {
+      display: flex;
+      padding: 0 .4rem;
+      margin-bottom:0;
+      overflow-x: scroll;
+      li {
+        flex-shrink: 0;
+        flex-flow: row nowrap;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 .2rem;
+        height: .8rem;
+        line-height: .8rem;
+        margin-left: .40rem;
+        border-bottom: .05rem solid transparent;
+        &:first-child {
+          margin-left: 0;
+        }
+        &.active {
+          color: @red;
+          border-bottom-color: @red;
+        }
+      }
+    }
+  }
+
+}
+.navBottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  display: flex;
+  width: 100%;
+  height: 1.1rem;
+  padding-top: .14rem;
+  border-top: 1px solid @borderColor;
+  background: #fff;
+
+  a {
+    flex: 1;
+    text-align: center;
+    color: @color6;
+    &.active {
+      color: @red;
+    }
+    i {
+      font-size: .45rem;
+    }
+    span {
+      display: block;
+      font-size: .28rem;
+    }
+  }
+}
+
+.container {
+  padding: 1.8rem .14rem 1.2rem;
+}
