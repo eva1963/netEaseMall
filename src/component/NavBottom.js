@@ -15,11 +15,11 @@ class NavBottom extends React.Component {
                     <span>首页</span>
                 </NavLink>
                 <NavLink to="/classify">
-                    <Icon type="home"/>
+                    <Icon type="database"/>
                     <span>分类</span>
                 </NavLink>
                 <NavLink to="/shopcart">
-                    <Icon type="shopping-cart" />
+                    <Icon type="shopping-cart"/>
                     <span>购物车</span>
                 </NavLink>
                 <NavLink to="/person">
@@ -30,6 +30,5 @@ class NavBottom extends React.Component {
         )
     }
 }
-
 
 export default withRouter(connect()(NavBottom));
