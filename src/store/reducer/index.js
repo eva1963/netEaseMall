@@ -4,14 +4,12 @@
  */
 import {combineReducers} from 'redux';
 import home from './home';
-import knowledge from './knowledge';
 import classify from './classify';
 import person from './person';
 import shopcart from './shopCart';
 
 let reducers = combineReducers({
     home,
-    knowledge,
     classify,
     person,
     shopcart

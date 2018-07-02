@@ -18,7 +18,6 @@ import Navtop from './component/NavTop';
 import Navbottom from './component/NavBottom';
 import Home from './routes/Home';
 import Classify from './routes/Classify';
-import Knowledge from './routes/Knowledge';
 import Person from './routes/Person';
 import Shopcart from './routes/Shopcart';
 
@@ -34,7 +33,6 @@ render(
                         {/* 一级路由 */}
                         <Switch>
                             <Route path="/home" component={Home}/>
-                            <Route path="/Knowledge" component={Knowledge}/>
                             <Route path="/classify" component={Classify}/>
                             <Route path="/shopcart" component={Shopcart}/>
                             <Route path="/person" component={Person}/>

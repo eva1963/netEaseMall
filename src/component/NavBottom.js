@@ -14,10 +14,6 @@ class NavBottom extends React.Component {
                     <Icon type="home"/>
                     <span>首页</span>
                 </NavLink>
-                <NavLink to="/knowledge">
-                    <Icon type="appstore-o" />
-                    <span>识物</span>
-                </NavLink>
                 <NavLink to="/classify">
                     <Icon type="home"/>
                     <span>分类</span>
