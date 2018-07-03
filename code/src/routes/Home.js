@@ -1,5 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import NavTop from "../component/NavTop";
+import NavClassify from "../component/NavClassify";
+import NavBottom from "../component/NavBottom";
 
 class Home extends React.Component {
     constructor(props,context){
@@ -8,7 +11,8 @@ class Home extends React.Component {
     render(){
         return (
             <div>
-                <p>home</p>
+                <NavTop />
+                <NavBottom/>
             </div>
         )
     }
