@@ -23,7 +23,6 @@ class Order extends React.Component{
         this.setState({
             classifyIndex:index
         });
-        console.log(type);
     }
 }
 
