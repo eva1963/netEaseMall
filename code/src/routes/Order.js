@@ -2,7 +2,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-import Header from '../component/NavTop'
+import NavTopCart from '../component/NavTopCart'
 import NavClassify from '../component/NavClassify'
 
 class Order extends React.Component{
@@ -14,8 +14,7 @@ class Order extends React.Component{
     }
     render(){
         return <div className={'order-container'}>
-            {/*<Header/>*/}
-            <NavClassify classifyIndex={this.state.classifyIndex} handle={this.classifyHandle}/>
+            <NavTopCart/>
         </div>
     }
     classifyHandle = ({type,index}={})=>{
