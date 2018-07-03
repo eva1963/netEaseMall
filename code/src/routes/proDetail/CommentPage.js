@@ -63,9 +63,8 @@ class CommentPage extends React.Component {
                 <div className="commentList">
 
                         {commentList && commentList.length !== 0 ?commentList.map((item,index)=>{
-                            return <div className="item"><Comment key={index} item={item}/></div>
+                            return <div className="item" key={index}><Comment  item={item}/></div>
                         }): ''}
-
                 </div>
 
             </div>

@@ -9,7 +9,6 @@ class Comment extends React.Component {
 
     render() {
         let {item} = this.props;
-        console.log(item);
         return (
             <div className="comment">
             <header>
@@ -30,7 +29,7 @@ class Comment extends React.Component {
                         {
                             item.picList && item.picList.length !== 0 ? (
                                 item.picList.map((item,index)=>{
-                                    return <li><img src={item} alt=""/></li>
+                                    return <li key={index}><img src={item} alt=""/></li>
                                 })
                             ) : ''
                         }
