@@ -13,43 +13,44 @@ class ProductDetail extends React.Component {
     }
 
     render() {
+        let descList = [{
+            pic: 'https://yanxuan.nosdn.127.net/2cd96e4388819c508b6292f25729cc3e.jpg',
+            name: '快速升温',
+            desc: '阳光暖宫'
+        },{
+            pic: 'https://yanxuan.nosdn.127.net/45ff6bdb618636123d2ba2d6ce38e13e.jpg',
+            name: '快速升温',
+            desc: '阳光暖宫'
+        },{
+            pic: 'https://yanxuan.nosdn.127.net/1bdddd10d54e5815506dbf16c8f3fcf4.jpg',
+            name: '快速升温',
+            desc: '阳光暖宫'
+        }];
+        if(descList.length <= 0)  {
+            return '';
+        }
         return (
             <div className="productDetail">
                 <div className="banner">
                     <Banner/>
                     <span>{this.props.stepIndex}/{5}</span>
                 </div>
+
                 <ul className="characteristic">
-                    <li className="characteristic-item">
-                        <dl>
-                            <dt><img src="https://yanxuan.nosdn.127.net/2cd96e4388819c508b6292f25729cc3e.jpg" alt=""/>
-                            </dt>
-                            <dd>
-                                <p>快速升温</p>
-                                <p>阳光暖宫</p>
-                            </dd>
-                        </dl>
-                    </li>
-                    <li className="characteristic-item">
-                        <dl>
-                            <dt><img src="https://yanxuan.nosdn.127.net/45ff6bdb618636123d2ba2d6ce38e13e.jpg" alt=""/>
-                            </dt>
-                            <dd>
-                                <p>快速升温</p>
-                                <p>阳光暖宫</p>
-                            </dd>
-                        </dl>
-                    </li>
-                    <li className="characteristic-item">
-                        <dl>
-                            <dt><img src="https://yanxuan.nosdn.127.net/1bdddd10d54e5815506dbf16c8f3fcf4.jpg" alt=""/>
-                            </dt>
-                            <dd>
-                                <p>快速升温</p>
-                                <p>阳光暖宫</p>
-                            </dd>
-                        </dl>
-                    </li>
+                    {
+                        descList.map(item =>{
+                            return ( <li className="characteristic-item">
+                                <dl>
+                                    <dt><img src={item.pic} alt=""/>
+                                    </dt>
+                                    <dd>
+                                        <p>{item.name}</p>
+                                        <p>{item.desc}</p>
+                                    </dd>
+                                </dl>
+                            </li>)
+                        })
+                    }
                 </ul>
                 <div className="detailBaseInfo">
                     <div className="content">
