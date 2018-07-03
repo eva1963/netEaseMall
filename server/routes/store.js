@@ -7,13 +7,14 @@ const express = require('express'),
 //=>增加购物车信息
 route.post('/add', (req, res) => {
     let personID = req.session.personID,//=>登录用户的ID
-        {goodsID,count} = req.body;//=>传递的商品ID，我就是要把这个商品加入购物车
+        {goodsID, count = 1} = req.body;//=>传递的商品ID，数量设置默认值是1，我就是要把这个商品加入购物车
     goodsID = +goodsID;
     count = +count;
+    let item = req.goodsDATA.find(item => +item.id === goodsID);
 
     //=>已经登录状态下，把信息直接存储到JSON中即可（用户在其它平台上登录，也可以从JSON中获取到数据，实现信息跨平台）
     if (personID) {
-        utils.ADD_STORE(req, res, goodsID).then(() => {
+        utils.ADD_STORE(req, res, item, count).then(() => {
             res.send({code: 0, msg: 'OK!'});
         }).catch(() => {
             res.send({code: 1, msg: 'NO!'});
@@ -30,7 +31,7 @@ route.post('/add', (req, res) => {
 route.post('/remove', (req, res) => {
     let personID = req.session.personID,
         {goodsID = 0} = req.body;
-    goodsID = parseFloat(goodsID);
+    goodsID = +goodsID;
 
     if (personID) {
         req.storeDATA = req.storeDATA.filter(item => {
@@ -60,8 +61,9 @@ route.get('/info', (req, res) => {
         req.storeDATA.forEach(item => {
             if (parseFloat(item.personID) === personID && parseFloat(item.state) === state) {
                 storeList.push({
-                    goodsID: parseFloat(item.goodsID),
-                    storeID: parseFloat(item.id)
+                    goodsID: +item.goodsID,
+                    storeID: +item.id,
+                    count: +item.count
                 });
             }
         });

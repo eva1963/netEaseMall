@@ -19,10 +19,9 @@ class NavClassify extends React.Component{
         let el = this.classifyWrap,
           t_menu = el.childNodes[this.props.classifyIndex];
 
-        let space = window.innerWidth / 2 - t_menu.offsetWidth / 2;
-        el.style.transition="-webkit-transform 500ms ease-in";
+        let space = document.documentElement.clientWidth / 2 - t_menu.offsetWidth / 2 - t_menu.offsetWidth;
+        el.style.transition="-webkit-transform 500ms";
         el.scrollLeft = t_menu.offsetLeft - space;
-        console.log(t_menu.offsetLeft,space);
     }
     render(){
         let {classifyIndex,handle} = this.props;
