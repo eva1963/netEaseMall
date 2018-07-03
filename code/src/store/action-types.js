@@ -1,8 +1,7 @@
+
 /*订单order*/
 export const CLASSIFY_QUERY_GOODS = "CLASSIFY_QUERY_GOODS";
 /*轮播图的index*/
 export const PRODUCT_DETAIL_STEPINDEX = 'PRODUCT_DETAIL_STEPINDEX';
 /*获取评价列表信息*/
 export const PRODUCT_DETAIL_COMMENTLIST = 'PRODUCT_DETAIL_COMMENTLIST';
-
-
