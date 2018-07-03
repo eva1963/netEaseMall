@@ -1,5 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import '../static/less/shopCart.less'
+
 
 class Shopcart extends React.Component {
     constructor(props,context){
@@ -7,7 +9,9 @@ class Shopcart extends React.Component {
     }
     render(){
         return (
-            <div>Shopcart</div>
+            <div className='shopCartBox'>
+                <div></div>
+            </div>
         )
     }
 }
