@@ -1,21 +1,21 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Carousel} from 'antd';
+import action from '../../store/action';
 
 
 class Banner extends React.Component {
-    constructor(props,context){
-        super(props,context);
+    constructor(props, context) {
+        super(props, context);
     }
-    onChange = index => {
-        this.setState({
-            slideIndex: index + 1
-        })
+
+    onchange = index => {
+        this.props.updateIndex(index+1);
     };
 
-    render(){
+    render() {
         return (
-            <Carousel afterChanger={this.onChange} dots='false'>
+            <Carousel afterChange={this.onchange} dots='false'>
                 <div><h3>1</h3></div>
                 <div><h3>2</h3></div>
                 <div><h3>3</h3></div>
@@ -26,4 +26,4 @@ class Banner extends React.Component {
 }
 
 
-export default connect()(Banner);
+export default connect(state => state.prodetail, action.prodetail)(Banner);

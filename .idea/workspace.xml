@@ -2,33 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e32f891b-4226-4b17-8541-92d1da463f00" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/src/component/NavClassify.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/src/routes/Order.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/src/routes/proDetail/Banner.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/src/static/less/header.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/src/static/less/orderTitle.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/json/goods.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/netEaseMall.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/json/course.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/珠峰课堂APP–API接口文档.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server/json/create_course.js" afterPath="$PROJECT_DIR$/server/json/create_goods.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server/routes/course.js" afterPath="$PROJECT_DIR$/server/routes/goods.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/src/store/action/prodetail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/src/store/reducer/prodetail.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/src/component/NavTop.js" afterPath="$PROJECT_DIR$/code/src/component/NavTop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/src/index.js" afterPath="$PROJECT_DIR$/code/src/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/src/routes/ProductDetail.js" afterPath="$PROJECT_DIR$/code/src/routes/ProductDetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/src/static/less/common.less" afterPath="$PROJECT_DIR$/code/src/static/less/common.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/config.js" afterPath="$PROJECT_DIR$/server/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/index.js" afterPath="$PROJECT_DIR$/server/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/json/store.json" afterPath="$PROJECT_DIR$/server/json/store.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes/store.js" afterPath="$PROJECT_DIR$/server/routes/store.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/utils/utils.js" afterPath="$PROJECT_DIR$/server/utils/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/src/routes/proDetail/Banner.js" afterPath="$PROJECT_DIR$/code/src/routes/proDetail/Banner.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/src/static/less/_variable.less" afterPath="$PROJECT_DIR$/code/src/static/less/_variable.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/src/static/less/proDetail.less" afterPath="$PROJECT_DIR$/code/src/static/less/proDetail.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/src/store/action-types.js" afterPath="$PROJECT_DIR$/code/src/store/action-types.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/src/store/action/index.js" afterPath="$PROJECT_DIR$/code/src/store/action/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/src/store/reducer/index.js" afterPath="$PROJECT_DIR$/code/src/store/reducer/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,58 +26,42 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Classify.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/src/routes/Classify.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Home.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/src/routes/Home.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductDetail.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/src/routes/ProductDetail.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Banner.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/code/src/routes/proDetail/Banner.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="proDetail.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/src/static/less/proDetail.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="119" column="33" lean-forward="false" selection-start-line="119" selection-start-column="33" selection-end-line="119" selection-end-column="33" />
+            <state relative-caret-position="603">
+              <caret line="363" column="0" lean-forward="false" selection-start-line="363" selection-start-column="0" selection-end-line="363" selection-end-column="0" />
               <folding>
-                <element signature="e#49#667#0" expanded="false" />
-                <element signature="e#686#1547#0" expanded="false" />
+                <element signature="e#49#670#0" expanded="false" />
+                <element signature="e#689#1550#0" expanded="false" />
+                <element signature="e#1586#5409#0" expanded="false" />
+                <element signature="e#1881#1942#0" expanded="false" />
+                <element signature="e#1958#2049#0" expanded="false" />
+                <element signature="e#2064#2192#0" expanded="false" />
+                <element signature="e#2218#3160#0" expanded="false" />
+                <element signature="e#3191#3838#0" expanded="false" />
+                <element signature="e#3855#4460#0" expanded="false" />
+                <element signature="e#4473#4943#0" expanded="false" />
+                <element signature="e#5423#6601#0" expanded="false" />
+                <element signature="e#6618#7375#0" expanded="false" />
+                <element signature="e#7397#7458#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductDetail.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code/src/routes/ProductDetail.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="148" column="26" lean-forward="true" selection-start-line="148" selection-start-column="26" selection-end-line="148" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#590#1993#0" expanded="false" />
+                <element signature="e#2063#2645#0" expanded="false" />
+                <element signature="e#2699#3945#0" expanded="false" />
+                <element signature="e#3999#5767#0" expanded="false" />
+                <element signature="e#5819#6511#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -114,7 +81,12 @@
     <findStrings>
       <find>css</find>
       <find>B4282D</find>
+      <find>b4282d</find>
+      <find>/^class/</find>
     </findStrings>
+    <replaceStrings>
+      <replace>className</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -157,11 +129,16 @@
         <option value="$PROJECT_DIR$/src/component/NavBottom.js" />
         <option value="$PROJECT_DIR$/src/routes/Shopcart.js" />
         <option value="$PROJECT_DIR$/src/routes/shopCart/Oderpay.js" />
+        <option value="$PROJECT_DIR$/code/src/index.js" />
+        <option value="$PROJECT_DIR$/code/src/store/action-types.js" />
+        <option value="$PROJECT_DIR$/code/src/store/action/index.js" />
+        <option value="$PROJECT_DIR$/code/src/store/reducer/index.js" />
+        <option value="$PROJECT_DIR$/code/src/store/action/prodetail.js" />
+        <option value="$PROJECT_DIR$/code/src/store/reducer/prodetail.js" />
+        <option value="$PROJECT_DIR$/code/src/routes/proDetail/Banner.js" />
         <option value="$PROJECT_DIR$/code/src/static/less/_variable.less" />
         <option value="$PROJECT_DIR$/code/src/static/less/proDetail.less" />
-        <option value="$PROJECT_DIR$/code/src/index.js" />
         <option value="$PROJECT_DIR$/code/src/routes/ProductDetail.js" />
-        <option value="$PROJECT_DIR$/code/src/routes/proDetail/Banner.js" />
       </list>
     </option>
   </component>
@@ -182,10 +159,8 @@
     <handled-path value="$PROJECT_DIR$/server/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="67" />
-    <option name="y" value="23" />
-    <option name="width" value="1213" />
-    <option name="height" value="777" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -278,24 +253,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="json" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="netEaseMall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="netEaseMall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="code" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -315,6 +272,80 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="netEaseMall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="netEaseMall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="netEaseMall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="netEaseMall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reducer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="netEaseMall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="netEaseMall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="action" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -447,6 +478,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -544,18 +576,18 @@
       <option name="presentableId" value="Default" />
       <updated>1530537843224</updated>
       <workItem from="1530537847050" duration="2785000" />
-      <workItem from="1530610465039" duration="653000" />
+      <workItem from="1530610465039" duration="9060000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16027000" />
+    <option name="totallyTimeSpent" value="24434000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="23" width="1213" height="777" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15939598" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15091342" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -584,12 +616,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/webpack.config.dev.js" />
-    <entry file="file://$PROJECT_DIR$/config/webpack.config.prod.js" />
-    <entry file="file://$PROJECT_DIR$/src/App.css" />
-    <entry file="file://$PROJECT_DIR$/src/registerServiceWorker.js" />
-    <entry file="file://$PROJECT_DIR$/src/index.css" />
-    <entry file="file://$PROJECT_DIR$/src/api/index.js" />
     <entry file="file://$PROJECT_DIR$/src/App.test.js" />
     <entry file="file://$PROJECT_DIR$/src/App.js" />
     <entry file="file://$PROJECT_DIR$/src/logo.svg" />
@@ -631,25 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/src/static/less/_variable.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/src/static/less/proDetail.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="119" column="33" lean-forward="false" selection-start-line="119" selection-start-column="33" selection-end-line="119" selection-end-column="33" />
-          <folding>
-            <element signature="e#49#667#0" expanded="false" />
-            <element signature="e#686#1547#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/json/create_course.js" />
     <entry file="file://$PROJECT_DIR$/code/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -687,10 +694,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/src/routes/Classify.js">
+    <entry file="file://$PROJECT_DIR$/code/src/store/reducer/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="352">
+          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#55#93#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/src/store/action/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/src/store/reducer/person.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/src/store/action-types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="51" lean-forward="true" selection-start-line="0" selection-start-column="51" selection-end-line="0" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/src/routes/proDetail/Banner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/src/static/less/_variable.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
           <folding />
         </state>
       </provider>
@@ -703,22 +757,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/src/routes/ProductDetail.js">
+    <entry file="file://$PROJECT_DIR$/code/src/routes/Classify.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="176">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/src/store/action/prodetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/src/store/reducer/prodetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/src/static/less/proDetail.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="363" column="0" lean-forward="false" selection-start-line="363" selection-start-column="0" selection-end-line="363" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#49#670#0" expanded="false" />
+            <element signature="e#689#1550#0" expanded="false" />
+            <element signature="e#1586#5409#0" expanded="false" />
+            <element signature="e#1881#1942#0" expanded="false" />
+            <element signature="e#1958#2049#0" expanded="false" />
+            <element signature="e#2064#2192#0" expanded="false" />
+            <element signature="e#2218#3160#0" expanded="false" />
+            <element signature="e#3191#3838#0" expanded="false" />
+            <element signature="e#3855#4460#0" expanded="false" />
+            <element signature="e#4473#4943#0" expanded="false" />
+            <element signature="e#5423#6601#0" expanded="false" />
+            <element signature="e#6618#7375#0" expanded="false" />
+            <element signature="e#7397#7458#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/src/routes/proDetail/Banner.js">
+    <entry file="file://$PROJECT_DIR$/code/src/routes/ProductDetail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+        <state relative-caret-position="304">
+          <caret line="148" column="26" lean-forward="true" selection-start-line="148" selection-start-column="26" selection-end-line="148" selection-end-column="26" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#590#1993#0" expanded="false" />
+            <element signature="e#2063#2645#0" expanded="false" />
+            <element signature="e#2699#3945#0" expanded="false" />
+            <element signature="e#3999#5767#0" expanded="false" />
+            <element signature="e#5819#6511#0" expanded="false" />
           </folding>
         </state>
       </provider>
