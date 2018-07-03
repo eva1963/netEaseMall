@@ -1,0 +1,130 @@
+@import '_variable';
+
+.productDetail {
+  .banner {
+    position: relative;
+    overflow: hidden;
+
+    span {
+      position: absolute;
+      bottom: .3rem;
+      right: .4rem;
+      z-index: 2;
+      width: .72rem;
+      height: .4rem;
+      line-height: .35rem;
+      text-align: center;
+      font-size: .1rem;
+      border: 1px solid rgba(0,0,0,.15);
+      background: #fff;
+    }
+    /* For demo */
+    .ant-carousel .slick-slide {
+      text-align: center;
+      height: 9rem;
+      background: #364d79;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .ant-carousel .slick-slide h3 {
+      color: #fff;
+    }
+  }
+  .characteristic {
+    display: flex;
+    padding: .32rem;
+    background-color: #F9F9F9;
+    &-item {
+      flex: 1;
+      justify-content: space-between;
+      align-items: center;
+      justify-items: center;
+      dl {
+        display: flex;
+        margin: 0;
+        dt {
+          width: .96rem;
+          height: .96rem;
+          margin-right: .16rem;
+          img {
+            border-radius: 100%;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        dd {
+          flex: 1;
+          p {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 1.52rem;
+            font-size: .37333rem;
+            line-height: .42667rem;
+            margin-bottom: .21333rem;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+      }
+    }
+  }
+  .detailBaseInfo {
+    .content {
+      display: flex;
+      padding: .53333rem 0 .53333rem .4rem;
+      .info {
+        flex: 1;
+        .name {
+          font-size: .48rem;
+          margin-bottom: .06667rem;
+        }
+        .desc {
+          font-size: .37333rem;
+          line-height: 1;
+          color: @desc;
+        }
+        .price {
+          height: .74667rem;
+          margin-bottom: .10667rem;
+          font-size: .64rem;
+          color: @red;
+          font-weight: 700;
+        }
+
+      }
+      .comment {
+        width: 2.08rem;
+        padding: 0 .26rem;
+        text-align: center;
+        background-image: linear-gradient(to bottom,#919191 33%,rgba(255,255,255,0) 0);
+        background-size: 1px 12px;
+        background-repeat: repeat-y;
+        .num {
+          display: block;
+          font-size: .48rem;
+          line-height: 1;
+          margin-bottom: .13333rem;
+          color: #B4282D;
+          text-align: center;
+        }
+        .com {
+          color: #B4282D;
+          line-height: 1;
+          margin-bottom: .26667rem;
+        }
+        .more {
+          border: 1px solid #7F7F7F;
+          border-radius: 2px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

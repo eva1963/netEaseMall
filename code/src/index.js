@@ -20,6 +20,7 @@ import Home from './routes/Home';
 import Classify from './routes/Classify';
 import Person from './routes/Person';
 import Shopcart from './routes/Shopcart';
+import ProductDetail from './routes/ProductDetail';
 
 
 render(
@@ -32,7 +33,7 @@ render(
                     <main className="container">
                         {/* 一级路由 */}
                         <Switch>
-                            <Route path="/home" component={Home}/>
+                            <Route path="/home" component={ProductDetail}/>
                             <Route path="/classify" component={Classify}/>
                             <Route path="/shopcart" component={Shopcart}/>
                             <Route path="/person" component={Person}/>
