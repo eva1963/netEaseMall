@@ -71,5 +71,4 @@ route.get('/list', (req, res) => {
         data: result
     });
 });
-
 module.exports = route;
