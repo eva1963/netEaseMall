@@ -30,7 +30,10 @@ class NavClassify extends React.Component{
         return <div className="orderTitle">
             <ul ref={x=>this.classifyWrap=x}>{
                 type.map((item,index)=>{
-                    return <li key={index} className={classifyIndex===index?'active':''} onClick={handle.bind(this,{type:item,index:index})}>{classifyData[index]}</li>
+                    return <li key={index} className={classifyIndex===index?'active':''} onClick={ev=>{
+                       alert('跳转到分类列表')
+                    }
+                    }>{classifyData[index]}</li>
                 })
             }</ul>
         </div>

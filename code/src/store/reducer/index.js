@@ -7,11 +7,13 @@ import home from './home';
 import classify from './classify';
 import person from './person';
 import shopcart from './shopCart';
+import prodetail from './prodetail';
 
 let reducers = combineReducers({
     home,
     classify,
     person,
-    shopcart
+    shopcart,
+    prodetail
 });
 export default reducers;

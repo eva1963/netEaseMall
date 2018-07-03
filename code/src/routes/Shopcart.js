@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import '../static/less/shopCart.less'
 
 
 class Shopcart extends React.Component {
@@ -9,7 +10,7 @@ class Shopcart extends React.Component {
     render(){
         return (
             <div className='shopCartBox'>
-
+                <div></div>
             </div>
         )
     }

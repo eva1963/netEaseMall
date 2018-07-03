@@ -19,7 +19,7 @@ import Home from './routes/Home';
 import Classify from './routes/Classify';
 import Person from './routes/Person';
 import Shopcart from './routes/Shopcart';
-// 测试
+import ProductDetail from './routes/ProductDetail';
 import Order from './routes/Order';
 
 
@@ -29,17 +29,15 @@ render(
             <HashRouter>
                 <div className="wrapper">
                     {/* 公共头部组件 */}
-                    <main className="container">
-                        {/* 一级路由 */}
-                        <Switch>
-                            <Route path="/home" component={Home}/>
-                            <Route path="/classify" component={Classify}/>
-                            <Route path="/shopcart" component={Shopcart}/>
-                            <Route path="/person" component={Person}/>
-                            <Route path="/order" component={Order}/>  {/*订单页面*/}
-                            <Redirect to="/home"/>
-                        </Switch>
-                    </main>
+                    {/* 一级路由 */}
+                    <Switch>
+                        <Route path="/home" component={ProductDetail}/>
+                        <Route path="/classify" component={Classify}/>
+                        <Route path="/shopcart" component={Shopcart}/>
+                        <Route path="/person" component={Person}/>
+                        <Route path="/order" exact component={Order}/> {/*订单页面*/}
+                        <Redirect to="/home"/>
+                    </Switch>
                 </div>
             </HashRouter>
         </LocaleProvider>
