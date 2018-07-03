@@ -3,26 +3,24 @@ import {connect} from 'react-redux';
 import {withRouter,NavLink,Link} from 'react-router-dom';
 import {Icon} from 'antd';
 
-
 class IndexFloor extends React.Component{
     constructor(props){
         super(props);
     };
     render(){
-        return  <div className={''}>
-            <Link component={}>品牌制造商直供 <Icon type={'right-circle-o'}></Icon></Link>
-            {
-                <div className={''}>
+        return  <div className={'indexFloor'}>
+            <ul>
+                <li>
                     <div>
-                        <p>ck制造商</p>
-                        <p></p>
-                        <p></p>
+                        <p>Ck制造商</p>
+                        <p>25元起</p>
+                        <a href="javascript:;" className={'new'}>上新</a>
                     </div>
                     <div>
-                        <img src={} alt=/>
+                        <img src="" alt="这是图片，马上会有"/>
                     </div>
-                </div>
-            }
+                </li>
+            </ul>
         </div>
     }
 };
