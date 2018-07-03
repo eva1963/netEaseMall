@@ -31,7 +31,8 @@ render(
                     {/* 公共头部组件 */}
                     {/* 一级路由 */}
                     <Switch>
-                        <Route path="/home" component={ProductDetail}/>
+                        <Route path="/home" component={Home}/>
+                        <Route path="/productDetail" component={ProductDetail}/>
                         <Route path="/classify" component={Classify}/>
                         <Route path="/shopcart" component={Shopcart}/>
                         <Route path="/person" component={Person}/>
