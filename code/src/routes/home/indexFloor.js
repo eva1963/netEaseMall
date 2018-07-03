@@ -9,7 +9,8 @@ class IndexFloor extends React.Component{
     };
     render(){
         return  <div className={'indexFloor'}>
-            <ul>
+            <a href="javascript:;">品牌制造商直销</a>
+            <ul className={'floorBox'}>
                 <li>
                     <div>
                         <p>Ck制造商</p>
