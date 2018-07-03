@@ -1,9 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Carousel} from 'antd';
 
 import '../static/less/proDetail.less';
 
+import Banner from './proDetail/Banner';
 class ProductDetail extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -12,23 +12,14 @@ class ProductDetail extends React.Component {
         }
     }
 
-    onChange = index => {
-        this.setState({
-            slideIndex: index + 1
-        })
-    };
+
 
     render() {
         let {slideIndex} = this.state;
         return (
             <div className="productDetail">
                 <div className="banner">
-                    <Carousel afterChange={this.onChange} dots='false'>
-                        <div><h3>1</h3></div>
-                        <div><h3>2</h3></div>
-                        <div><h3>3</h3></div>
-                        <div><h3>4</h3></div>
-                    </Carousel>
+                    <Banner/>
                     <span>{slideIndex}/{5}</span>
                 </div>
                 <ul className="characteristic">

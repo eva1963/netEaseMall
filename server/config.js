@@ -12,7 +12,7 @@ module.exports = {
 
     //=>SESSION存储相关信息
     session: {
-        secret: 'ZFPX',
+        secret: 'best',
         saveUninitialized: false,
         resave: false,
         cookie: {maxAge: 1000 * 60 * 60 * 24 * 30}
