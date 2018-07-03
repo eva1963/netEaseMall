@@ -8,12 +8,15 @@ import '../static/less/header.less'
 */
 class NavTopCart extends React.Component{
     constructor(props,context){
-        super(props,context)
+        super(props,context);
+        this.state={
+            imgSrc:require('../static/img/neteasy.png')
+        }
     }
     render(){
         return <div className={'navTopCart'}>
             <div className={'home'}><Link to={"/home"}><Icon type="home"/></Link></div>
-                <img src="http://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/indexLogo-11d65342f9.png"/>
+                <img src={this.state.imgSrc}/>
             <div className={'cart'}><Link to={"/order"}><Icon type="search" /></Link><Link to={"/order"}><Icon type="shopping-cart" /></Link></div>
         </div>
     }
