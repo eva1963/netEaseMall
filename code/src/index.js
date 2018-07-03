@@ -36,7 +36,7 @@ render(
                         <Route path="/classify" component={Classify}/>
                         <Route path="/shopcart" component={Shopcart}/>
                         <Route path="/person" component={Person}/>
-                        <Route path="/order" component={Order}/> {/*订单页面*/}
+                        <Route path="/order" exact component={Order}/> {/*订单页面*/}
                         <Redirect to="/home"/>
                     </Switch>
                 </div>
