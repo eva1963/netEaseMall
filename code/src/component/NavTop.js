@@ -21,24 +21,6 @@ class NavTop extends React.Component {
                     <Link to="/home" className="logo">网易严选</Link>
                     <div className="search"><Search placeholder="搜索商品, 共10483款好物" /></div>
                 </div>
-                <div className="navList">
-                    <ul className="">
-                        <li className="active">推荐</li>
-                        <li>居家</li>
-                        <li>鞋包配置</li>
-                        <li>服装</li>
-                        <li>电器</li>
-                        <li>洗护</li>
-                        <li>洗护</li>
-                        <li>洗护</li>
-                        <li>洗护</li>
-                        <li>洗护</li>
-                        <li>洗护</li>
-                        <li>洗护</li>
-                        <li>洗护</li>
-                        <li>洗护</li>
-                    </ul>
-                </div>
             </div>
         )
     }

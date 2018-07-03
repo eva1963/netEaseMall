@@ -1,0 +1,39 @@
+@import './_variable';
+.orderTitle{
+  position: relative;
+  width: 100%;
+  /* 隐藏滚动条*/
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  ul {
+    box-sizing:border-box;
+    width:100vw;
+    display: flex;
+    padding: 0 .4rem;
+    margin-bottom:0;
+    overflow-x: scroll;
+    li {
+      flex-shrink: 0;
+      flex-flow: row nowrap;
+      align-items: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 .2rem;
+      height: .9rem;
+      line-height: .9rem;
+      margin-left: .40rem;
+      border-bottom: .05rem solid transparent;
+      &:first-child {
+        margin-left: 0;
+      }
+      &.active {
+        color: @red;
+        border-bottom-color: @red;
+      }
+    }
+  }
+}

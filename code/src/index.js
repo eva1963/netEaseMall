@@ -14,12 +14,13 @@ import './static/less/common.less';
 
 /* 自定义组件 */
 import store from './store';
-import Navtop from './component/NavTop';
 import Navbottom from './component/NavBottom';
 import Home from './routes/Home';
 import Classify from './routes/Classify';
 import Person from './routes/Person';
 import Shopcart from './routes/Shopcart';
+// 测试
+import Order from './routes/Order';
 
 
 render(
@@ -28,7 +29,6 @@ render(
             <HashRouter>
                 <div className="wrapper">
                     {/* 公共头部组件 */}
-                    <Navtop/>
                     <main className="container">
                         {/* 一级路由 */}
                         <Switch>
@@ -36,11 +36,10 @@ render(
                             <Route path="/classify" component={Classify}/>
                             <Route path="/shopcart" component={Shopcart}/>
                             <Route path="/person" component={Person}/>
+                            <Route path="/order" component={Order}/>  {/*订单页面*/}
                             <Redirect to="/home"/>
                         </Switch>
                     </main>
-                    {/* 公共尾部组件 */}
-                    <Navbottom/>
                 </div>
             </HashRouter>
         </LocaleProvider>

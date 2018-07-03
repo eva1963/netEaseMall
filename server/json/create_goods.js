@@ -53,5 +53,5 @@ for (let i = 1; i < 1000; i++) {
     result.push(item);
 }
 console.log(result);
-require('../utils/promiseFS').writeFile('./course.json', result);
+require('../utils/promiseFS').writeFile('./goods.json', result);
 
