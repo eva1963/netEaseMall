@@ -3,7 +3,6 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Tabs,Icon} from "antd"
 import NavTopCart from '../component/NavTopCart'
-import NavClassify from '../component/NavClassify'
 import '../static/less/order.less'
 const TabPane = Tabs.TabPane;
 
@@ -13,6 +12,9 @@ class Order extends React.Component{
         this.state={
             classifyIndex:0
         }
+    }
+    async componentDidMount(){
+      let result
     }
     render(){
         let data = [{
@@ -47,7 +49,7 @@ class Order extends React.Component{
                             data.map((item,index)=>{
                                 let {orderID,pic,name,desc,id,state} = item;
                                 return <li key={index} className={'item'}>
-                                    <h3>订单编号：<span>{orderID}</span></h3>
+                                    <h3>订单编号：<span>{orderID}</span><Icon type="delete" onClick={ev=>{alert('删除')}}/></h3>
                                     <div className={'content'}>
                                         <div className="acator"><img src={pic} alt={name}/></div>
                                         <div className={'info'}>
