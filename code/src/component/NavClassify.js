@@ -1,3 +1,12 @@
+/*@target: 商品分类banner
+* @params: <NavClassify classifyIndex={this.state.classifyIndex} handle={this.classifyHandle}/>
+*          classifyIndex:当前索引
+*          handle:传递的函数，触发的时候传递一个对象
+*          {
+*            type:'tuijianzhuanqu',
+*            index:0
+*          }
+*/
 import React from 'react'
 import {connect} from 'react-redux'
 import '../static/less/orderTitle.less'
@@ -6,12 +15,23 @@ class NavClassify extends React.Component{
     constructor(props,context){
         super(props,context);
     }
+    componentWillReceiveProps(){
+        let el = this.classifyWrap,
+          t_menu = el.childNodes[this.props.classifyIndex];
+
+        let space = window.innerWidth / 2 - t_menu.offsetWidth / 2;
+        el.style.transition="-webkit-transform 500ms ease-in";
+        el.scrollLeft = t_menu.offsetLeft - space;
+        console.log(t_menu.offsetLeft,space);
+    }
     render(){
-        let classifyData = ['推荐','居家','鞋包配饰','服装','电器','洗护','饮食','餐厨','婴童','文体','特色区'];
+        let {classifyIndex,handle} = this.props;
+        let classifyData = ['推荐专区','爆品区','夏季专区','居家','鞋包配饰','服装','电器','洗护','银饰','餐厨','婴童','文体'],
+             type = ['tuijianzhuanqu','baopinqu','xiajizhuanqu','jujia','xiebaopeishi','fuzhuang','dianqi','xihu','yinshi','canchu','yingtong','wenti'];
         return <div className="orderTitle">
-            <ul className="">{
-                classifyData.map((item,index)=>{
-                    return <li key={index}>{item}</li>
+            <ul ref={x=>this.classifyWrap=x}>{
+                type.map((item,index)=>{
+                    return <li key={index} className={classifyIndex===index?'active':''} onClick={handle.bind(this,{type:item,index:index})}>{classifyData[index]}</li>
                 })
             }</ul>
         </div>

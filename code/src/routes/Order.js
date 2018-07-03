@@ -7,13 +7,23 @@ import NavClassify from '../component/NavClassify'
 
 class Order extends React.Component{
     constructor(props,context){
-        super(props,context)
+        super(props,context);
+        this.state={
+            classifyIndex:0
+        }
     }
     render(){
         return <div className={'order-container'}>
-            <Header/>
-            <NavClassify/>
+            {/*<Header/>*/}
+            <NavClassify classifyIndex={this.state.classifyIndex} handle={this.classifyHandle}/>
         </div>
+    }
+    classifyHandle = ({type,index}={})=>{
+        /*type是商品的type*/
+        this.setState({
+            classifyIndex:index
+        });
+        console.log(type);
     }
 }
 
