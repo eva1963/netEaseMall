@@ -1,7 +1,7 @@
 const {writeFile} = require('../utils/promiseFS'),
     STORE_PATH = './json/store.json';
 
-function ADD_STORE(req, res, goodsID) {
+function ADD_STORE(req, res, goodsID, count) {
     //=>把某一个商品存储到JSON中，实现加入购物车的功能
     let personID = req.session.personID,
         storeInfo = {
@@ -9,6 +9,7 @@ function ADD_STORE(req, res, goodsID) {
             goodsID,
             personID,
             state: 0,//=>默认是不支付
+            count,//商品数量
             time: new Date().getTime()
         };
     //=>把数据先存放到原始数组中，最后把原始数组写入到JSON中永久保存

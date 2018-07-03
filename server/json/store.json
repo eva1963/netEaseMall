@@ -4,6 +4,7 @@
     "goodsID": 2,
     "personID": 1,
     "state": 0,
+    "count":1,
     "time": 1530528230517
   },
   {
@@ -11,6 +12,7 @@
     "goodsID": 5,
     "personID": 1,
     "state": 1,
+    "count":1,
     "time": 1530528308118
   },
   {
@@ -18,6 +20,7 @@
     "goodsID": 3,
     "personID": 1,
     "state": 0,
+    "count":1,
     "time": 1530528538781
   },
   {
@@ -25,6 +28,7 @@
     "goodsID": 1,
     "personID": 1,
     "state": 0,
+    "count":1,
     "time": 1530528804382
   },
   {
@@ -32,6 +36,7 @@
     "goodsID": 4,
     "personID": 1,
     "state": 1,
+    "count":1,
     "time": 1530528810492
   }
 ]
