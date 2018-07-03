@@ -7,8 +7,9 @@ const express = require('express'),
 //=>增加购物车信息
 route.post('/add', (req, res) => {
     let personID = req.session.personID,//=>登录用户的ID
-        {goodsID} = req.body;//=>传递的课程ID，我就是要把这个课程加入购物车
-    goodsID = parseFloat(goodsID);
+        {goodsID,count} = req.body;//=>传递的商品ID，我就是要把这个商品加入购物车
+    goodsID = +goodsID;
+    count = +count;
 
     //=>已经登录状态下，把信息直接存储到JSON中即可（用户在其它平台上登录，也可以从JSON中获取到数据，实现信息跨平台）
     if (personID) {
@@ -73,7 +74,7 @@ route.get('/info', (req, res) => {
         }
     }
 
-    //=>根据上面查找到的课程ID（storeList），把每一个课程的详细信息获取到，返回给客户端
+    //=>根据上面查找到的商品ID（storeList），把每一个商品的详细信息获取到，返回给客户端
     let data = [];
     storeList.forEach(({goodsID, storeID} = {}) => {
         let item = req.goodsDATA.find(item => parseFloat(item.id) === goodsID);
@@ -88,7 +89,7 @@ route.get('/info', (req, res) => {
 });
 
 route.post('/pay', (req, res) => {
-    //=>把某一个课程的STATE修改为1（改完后也是需要把原始JSON文件替换的）
+    //=>把某一个商品的STATE修改为1（改完后也是需要把原始JSON文件替换的）
     let {storeID} = req.body,
         personID = req.session.personID,
         isUpdate = false;

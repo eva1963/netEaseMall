@@ -2,7 +2,7 @@ const express = require('express'),
     route = express.Router();
 
 route.get('/banner', (req, res) => {
-    //=>我就是把所有课程中的最后三条数据做为轮播图展示
+    //=>我就是把所有商品中的最后三条数据做为轮播图展示
     let data = req.goodsDATA.reverse().slice(0, 3);
     res.send({
         code: 0,
@@ -12,7 +12,7 @@ route.get('/banner', (req, res) => {
 });
 
 route.get('/info', (req, res) => {
-    //=>客户端会传一个课程ID进来，我们在所有课程中找到和ID相同的信息，返回
+    //=>客户端会传一个商品ID进来，我们在所有商品中找到和ID相同的信息，返回
     let {goodsID} = req.query;//=>GET请求问号传递信息都在REQ.QUERY上呢
     goodsID = parseFloat(goodsID);
     let item = req.goodsDATA.find(item => {
