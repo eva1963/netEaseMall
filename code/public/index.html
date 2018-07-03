@@ -10,7 +10,7 @@
     ;(function anonymous(window) {
         function computed() {
             let winW = document.documentElement.clientWidth,
-                desW = 750;
+                desW = 1000;
             winW >= desW ? document.documentElement.style.fontSize = '100px' : document.documentElement.style.fontSize = (winW / desW) * 100 + 'px';
         };
         computed();
