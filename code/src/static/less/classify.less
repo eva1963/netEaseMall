@@ -1,0 +1,113 @@
+html,body{
+  height: 100%;
+}
+.classify_box {
+  position: relative;
+  top: .47rem;
+  border-top: 1px solid #ccc;
+  .classify_boxL {
+
+    width: 2.16rem;
+    float: left;
+    border-right: 1px solid #ccc;
+    li {
+      margin-top: .53333rem;
+      width: 100%;
+      height: .66667rem;
+      text-align: center;
+      border: none;
+
+      span {
+        display: block;
+        color: #333;
+        font-size: .37333rem;
+        line-height: .66667rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      &.active span {
+        font-size: .48rem;
+        color: #ab2b2b;
+
+      }
+    }
+  }
+  .classify_boxR {
+    float: left;
+    padding: .4rem .4rem .28rem;
+    width: 7.74rem;
+    .classify_boxR_banner {
+      position: relative;
+      width: 100%;
+      height: 2.56rem;
+      display: table;
+      background: center no-repeat #f4f4f4;
+      background-size: cover;
+      border-radius: 4px;
+      background: url("http://yanxuan.nosdn.127.net/8932ed42f62703c638c3af7bd8bf7a59.jpg?imageView&thumbnail=0x196&quality=75") no-repeat;
+      background-size: 100% 100%;
+    }
+    .classify_r_title {
+      height: 1.44rem;
+      line-height: 1.44rem;
+      text-align: center;
+      font-size: .32rem;
+      color: #333;
+      p{
+
+        position: relative;
+        display: inline-block;
+        span:after,span:before{
+          position: absolute;
+          content: '';
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          height: 1px;
+          width: .53333rem;
+          background-color: #d9d9d9;
+          -webkit-transform-origin: 50% 100% 0;
+          transform-origin: 50% 100% 0;
+        }
+        span.classify_r_title1:before{
+          left: -.74667rem;
+        }
+        span.classify_r_title2:after{
+          right: -.74667rem;
+        }
+
+      }
+
+
+
+    }
+    .classify_r_bottom{
+
+      li{
+        float: left;
+        display: inline-block;
+        margin-right: .45333rem;
+        font-size: 0;
+        width: 1.92rem;
+        vertical-align: top;
+        text-align: center;
+        &:nth-child(3n){
+          margin-right: 0;
+        }
+        img{
+          display: block;
+          width: 100%;
+          border-radius: 50%;
+        }
+        span{
+          height: .96rem;
+          font-size: .32rem;
+          color: #333;
+          text-align: center;
+          line-height: .45333rem;
+        }
+      }
+    }
+  }
+}

@@ -13,11 +13,20 @@ route.get('/banner', (req, res) => {
 
 route.get('/info', (req, res) => {
     //=>客户端会传一个商品ID进来，我们在所有商品中找到和ID相同的信息，返回
-    let {goodsID} = req.query;//=>GET请求问号传递信息都在REQ.QUERY上呢
-    goodsID = parseFloat(goodsID);
-    let item = req.goodsDATA.find(item => {
-        return parseFloat(item.id) === goodsID;
-    });
+    let {type,goodsID} = req.query;//=>GET请求问号传递信息都在REQ.QUERY上呢
+    let item;
+    if(type==='all'){
+        item=req.goodsDATA = req.goodsDATA.filter(item => {
+            return true;
+        });
+    }
+    else{
+        goodsID = parseFloat(goodsID);
+        item = req.goodsDATA.find(item => {
+            return parseFloat(item.id) === goodsID;
+        });
+    }
+
     if (item) {
         res.send({
             code: 0,
