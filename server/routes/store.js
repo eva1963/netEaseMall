@@ -30,7 +30,7 @@ route.post('/add', (req, res) => {
 route.post('/remove', (req, res) => {
     let personID = req.session.personID,
         {goodsID = 0} = req.body;
-    goodsID = parseFloat(goodsID);
+    goodsID = +goodsID;
 
     if (personID) {
         req.storeDATA = req.storeDATA.filter(item => {
