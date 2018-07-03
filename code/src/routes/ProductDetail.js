@@ -6,6 +6,7 @@ import action from '../store/action';
 import '../static/less/proDetail.less';
 
 import Banner from './proDetail/Banner';
+import Totop from "../component/Totop";
 class ProductDetail extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -181,6 +182,8 @@ class ProductDetail extends React.Component {
 
 
                 </div>
+
+                <Totop/>
             </div>
         )
     }
