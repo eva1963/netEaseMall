@@ -14,6 +14,28 @@
       "https://yanxuan.nosdn.127.net/3d7c248460c3b0b9ac53dea8b7cd4606.png?imageView&thumbnail=750x0&quality=75",
       "https://yanxuan.nosdn.127.net/9a8501587b7a794e39bced7be8916a6d.jpg?imageView&thumbnail=750x0&quality=75"
     ],
+    "parameterList": [
+      {
+        "name": "适用季节",
+        "value": "四季通用"
+      },
+      {
+        "name": "工艺",
+        "value": "绣花"
+      },
+      {
+        "name": "面料",
+        "value": "腰带：正面面料：100%聚酯纤；背面/里料：100%棉，草本香包：100%棉"
+      },
+      {
+        "name": "草本主要成分",
+        "value": "当归、芍药、川穹、茯苓、白术、泽泻"
+      },
+      {
+        "name": "温馨提示",
+        "value": "非生理期建议草本香包靠近人体使用，生理期为达到更好的温热体验，议将石墨烯靠近人体使用"
+      }
+    ],
     "flag": [
       "上新"
     ],
