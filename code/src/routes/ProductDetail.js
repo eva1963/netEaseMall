@@ -27,10 +27,9 @@ class ProductDetail extends React.Component {
     }
 
     render() {
-        let proId = parseFloat(Qs.parse(this.props.location.search.substr(1)).id);
+        this.proId = parseFloat(Qs.parse(this.props.location.search.substr(1)).id);
         let {goodsList} = this.props,
-            item = goodsList.find(item => parseFloat(item.id) === parseFloat(proId));
-        console.log(goodsList,item);
+            item = goodsList.find(item => parseFloat(item.id) === parseFloat(this.proId));
         if (!item) return '';
         /* 商品属性列表 */
         let descList = [{
@@ -67,7 +66,8 @@ class ProductDetail extends React.Component {
                                         <dt><img src={item.pic} alt=""/>
                                         </dt>
                                         <dd>
-                                            <p>{item.name+'12122'}</p>
+                                            <p>{item.name}</p>
+
                                             <p>{item.desc}</p>
                                         </dd>
                                     </dl>
@@ -91,7 +91,10 @@ class ProductDetail extends React.Component {
                         {/* 产品规格 */}
                         <ul className="commonBox">
                             <li className="bordered">
-                                <Link to="/prodetail/params">
+                                <Link to={{
+                                    pathname: '/prodetail/params',
+                                    search: `?id=${item.id}`
+                                }}>
                                     <div className="inner">请选择产品规格
                                         <Icon type="right" style={{
                                             float: 'right',
@@ -154,7 +157,7 @@ class ProductDetail extends React.Component {
                     <Issues/>
 
                     {/* 加入购物车 */}
-                    <ToBuy toBack={true} id={item.id}/>
+                    <ToBuy toBack={true}/>
                     <Totop/>
                 </div>
             </div>

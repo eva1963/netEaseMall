@@ -19,7 +19,6 @@ route.get('/info', (req, res) => {
         item=req.goodsDATA = req.goodsDATA.filter(item => {
             return true;
         });
-        console.log(req.goodsDATA);
     }
     else{
         goodsID = parseFloat(goodsID);

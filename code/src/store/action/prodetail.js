@@ -40,12 +40,14 @@ export default {
         let {goodsID,count} = payload;
         return async dispatch => {
             let result = await addGoods({
-
+                goodsID,
+                count
             });
             dispatch({
                 type: TYPES.ADD_SHOP_CART,
                 result
             })
         }
+
     }
 }
