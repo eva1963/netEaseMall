@@ -125,7 +125,7 @@ class Detail extends React.Component {
         if(this.props.goodsData&&this.props.goodsData.length===0) return '';
         let goodsData=this.props.goodsData;
         let search = this.search;
-        console.log(search.category);
+        // console.log(search.category);
         let result = [];
         goodsData.forEach(item => {
             let {type, category} = item;
