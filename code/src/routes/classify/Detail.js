@@ -6,7 +6,8 @@ import Qs from 'qs';
 class Detail extends React.Component {
     constructor(props, context) {
         super(props, context);
-        let categorysHan = [
+        //二级汉字数据：
+        this.categorysHan = [
             {
                 "type": "tuijianzhuanqu",
                 "categorys": ["小食买4免1", "夏日餐厨满199减20", "亲子好物满199减30", "严选黑标", "自然系", "丁磊的好货推荐", "999+好评", "黑凤梨系列"]
@@ -89,31 +90,35 @@ class Detail extends React.Component {
             }
 
         ];
-        let {search} = this.props.location;
-        this.search = Qs.parse(search.substr(1));
-        //二级汉字数据：
-        let categorysData=[];
-        categorysHan.forEach(item=>{
-            let {type,categorys}=item;
-            if(type===this.search['type']){
-                categorysData=[...categorys];
-            }
-        });
-        this.categorysData=categorysData;
+        //路径地址
+        let {search} = this.props.location,
+            newSearch = Qs.parse(search.substr(1));
+        let resultSearch=JSON.stringify(newSearch);
         this.state = {
-            goodsData: [],
-
+            goodsData:[],
+            search:JSON.parse(resultSearch)
         };
 
 
     }
 
+
     async componentWillMount() {
+        //根据category获取下面数据
+        let categorysData=[];
+        this.categorysHan.forEach(item=>{
+            let {type,categorys}=item;
+            if(type===this.state['search']['type']){
+                categorysData=[...categorys];
+            }
+        });
+        this.categorysData=categorysData;
+        //判断当前页面是否存在props.goodsData
         let goodsData = this.props.goodsData.length === 0 ? [] : this.props.goodsData;
         if (this.props.goodsData.length === 0) {
             await this.props.queryInfo({type: 'all'});
             goodsData = this.props.goodsData;
-            this.props.queryCategory(goodsData,this.search["type"]);
+            this.props.queryCategory(goodsData,this.state.search['type']);
 
         }
         this.setState({
@@ -121,15 +126,15 @@ class Detail extends React.Component {
         })
 
     }
+
     render() {
         if(this.props.goodsData&&this.props.goodsData.length===0) return '';
         let goodsData=this.props.goodsData;
-        let search = this.search;
-        // console.log(search.category);
+        let search = this.state.search;
         let result = [];
         goodsData.forEach(item => {
             let {type, category} = item;
-            if (type === search.type && category === search.category) {
+            if (type === this.state.search.type && category === search.category) {
                 result.push(item);
             }
         });
@@ -140,8 +145,7 @@ class Detail extends React.Component {
                 <ul className={'clearfix'}>
                     {
                         this.props.categorys.map((item,index)=>{
-                            console.log(item);
-                            return  <li key={index} className={item===search.category?'active':''}>
+                            return  <li key={index} className={item.category===search.category?'active':''} onClick={()=>{this.updateType(item.type,item.category)}}>
                                 {this.categorysData[index]}
                           </li>
                         })
@@ -150,7 +154,6 @@ class Detail extends React.Component {
             </div>
             <div className={'classifyDetail_info'}>
                 <ul className={'clearfix'}>
-
                         {
                             result.map((item,index) => {
                                 let {pic,desc,name,flag,price}=item;
@@ -174,14 +177,15 @@ class Detail extends React.Component {
                                 </li>
                             })
                         }
-
-
-
-
                 </ul>
             </div>
 
         </div>;
+    }
+    updateType=(type,category)=>{
+        this.setState({
+            search:{type,category}
+        })
     }
 }
 
