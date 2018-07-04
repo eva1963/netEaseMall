@@ -14,7 +14,7 @@
 ```javascript
 地址：/store/remove
 方式：POST
-参数：courseID=xxx
+参数：goodsID=xxx
 返回：{
    code:0,//0成功 1失败
    msg:'xxx'
