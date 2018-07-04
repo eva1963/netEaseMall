@@ -20,6 +20,7 @@ import Person from './routes/Person';
 import Shopcart from './routes/Shopcart';
 import ProductDetail from './routes/ProductDetail';
 import CommentPage from './routes/proDetail/CommentPage';
+import Params from './routes/proDetail/Params';
 import Order from './routes/Order';
 
 
@@ -34,6 +35,7 @@ render(
                         <Route path="/home" component={Home} style={{marginTop:'50px'}}/>
                         <Route path="/productDetail" exact component={ProductDetail}/>
                         <Route path="/productDetail/commentList" component={CommentPage}/>
+                        <Route path="/productDetail/params" component={Params}/>
                         <Route path="/classify" component={Classify}/>
                         <Route path="/shopcart" component={Shopcart}/>
                         <Route path="/person" component={Person}/>
