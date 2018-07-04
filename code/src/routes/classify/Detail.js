@@ -95,7 +95,7 @@ class Detail extends React.Component {
         let categorysData=[];
         categorysHan.forEach(item=>{
             let {type,categorys}=item;
-            if(type===search['type']){
+            if(type===this.search['type']){
                 categorysData=[...categorys];
             }
         });
@@ -122,10 +122,10 @@ class Detail extends React.Component {
 
     }
     render() {
-        console.log(this.categorysData);
         if(this.props.goodsData&&this.props.goodsData.length===0) return '';
         let goodsData=this.props.goodsData;
         let search = this.search;
+        // console.log(search.category);
         let result = [];
         goodsData.forEach(item => {
             let {type, category} = item;
@@ -140,7 +140,8 @@ class Detail extends React.Component {
                 <ul className={'clearfix'}>
                     {
                         this.props.categorys.map((item,index)=>{
-                        return  <li>
+                            console.log(item);
+                            return  <li key={index} className={item===search.category?'active':''}>
                                 {this.categorysData[index]}
                           </li>
                         })
