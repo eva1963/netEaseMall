@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link,withRouter } from 'react-router-dom';
 
 import { Form, Button, Input, Icon, } from 'antd';
 import md5 from 'blueimp-md5';
@@ -15,8 +15,7 @@ class Login extends React.Component {
         super(props, context);
     }
 
-    handleSubmit = ev => {
-        console.log(1);
+    handleSubmit = ev => {      
         ev.preventDefault();
         this.props.form.validateFields(async (err, values) => {
             if (!err) {
@@ -34,12 +33,14 @@ class Login extends React.Component {
         });
     }
 
+
     render() {
+        let logo = require('../../static/img/loginLOGO.jpg');
         const { getFieldDecorator } = this.props.form;
         return <div className='personLogin'>
 
             <div className='loginWrap'>
-                <img src="//yanxuan.nosdn.127.net/bd139d2c42205f749cd4ab78fa3d6c60.png" alt="" />
+                <img src={logo} alt="" />
             </div>
 
             <div className='form'>
@@ -75,4 +76,4 @@ class Login extends React.Component {
     }
 }
 // export default connect()(Login);
-export default Form.create()(connect(null, {})(Login));
+export default withRouter(connect(null, {...action.person})(Form.create()(Login)));

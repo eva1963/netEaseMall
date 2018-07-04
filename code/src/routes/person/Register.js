@@ -6,7 +6,7 @@ import md5 from 'blueimp-md5';
 
 import action from '../../store/action/index';
 
-import {register} from '../../api/person';
+import { register } from '../../api/person';
 
 const FormItem = Form.Item;
 
@@ -15,7 +15,7 @@ class Register extends React.Component {
         super(props, context);
     }
 
-    handleSubmit=(ev)=>{
+    handleSubmit = (ev) => {
         ev.preventDefault();
         this.props.form.validateFieldsAndScroll(async (err, values) => {
             if (!err) {
@@ -43,17 +43,17 @@ class Register extends React.Component {
             <div className='form'>
                 <Form className="register-form" onSubmit={this.handleSubmit}>
                     <FormItem>
-                        {getFieldDecorator('userName', {
+                        {getFieldDecorator('phone', {
                             rules: [
-                                {required: true, message: '请输入用户名!'}
+                                { required: true, message: '请输入手机号!' }
                             ]
-                        })(<Input prefix={<Icon type="user" />} placeholder="请输入用户名!" />)}
+                        })(<Input prefix={<Icon type="user" />} placeholder="请输入手机号!" />)}
                     </FormItem>
 
                     <FormItem>
-                        {getFieldDecorator('userPass', {
+                        {getFieldDecorator('password', {
                             rules: [
-                                {required: true, message: '请输入密码!'}
+                                { required: true, message: '请输入密码!' }
                             ]
                         })(<Input prefix={<Icon type="lock" />} placeholder="请输入密码!" type="password" />)}
                     </FormItem>

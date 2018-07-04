@@ -55,7 +55,7 @@ route.post('/register', (req, res) => {
         name: '',
         email: '',
         phone: '',
-        password: '8376ac810bb9f231d28fcf1f'
+        password: '8376ac810bb9f231d28fcf1f',
     };
     //=>把用户传递的密码二次加密
     req.body.password = req.body.password.substr(4, 24).split('').reverse().join('');
