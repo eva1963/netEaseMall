@@ -14,12 +14,16 @@ class Banner extends React.Component {
     };
 
     render() {
+        let {dataList} = this.props;
         return (
             <Carousel afterChange={this.onchange} dots='false'>
-                <div><h3>1</h3></div>
-                <div><h3>2</h3></div>
-                <div><h3>3</h3></div>
-                <div><h3>4</h3></div>
+                {
+                    dataList.map((item,index)=>{
+                        return (
+                            <div key={index}><img src={item.pic} alt=""/></div>
+                        )
+                    })
+                }
             </Carousel>
         )
     }
