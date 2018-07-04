@@ -14,7 +14,7 @@ let reducers = combineReducers({
     home,
     classify,
     person,
-    shopcart,
+    shopCart,
     prodetail,
     order,
 });
