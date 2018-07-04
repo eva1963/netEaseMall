@@ -1,12 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link,withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
-import { Form, Button, Input, Icon, } from 'antd';
+import { Form, Button, Input, Icon, Alert } from 'antd';
 import md5 from 'blueimp-md5';
 
 import { login } from '../../api/person';
 import action from '../../store/action/index';
+
+import NavTopCart from '../../component/NavTopCart';
 
 const FormItem = Form.Item;
 
@@ -15,7 +17,7 @@ class Login extends React.Component {
         super(props, context);
     }
 
-    handleSubmit = ev => {      
+    handleSubmit = ev => {
         ev.preventDefault();
         this.props.form.validateFields(async (err, values) => {
             if (!err) {
@@ -34,10 +36,13 @@ class Login extends React.Component {
     }
 
 
+
+
     render() {
         const { getFieldDecorator } = this.props.form;
-        return <div className='personLogin'>
-
+        return <div>
+            <NavTopCart />
+            <div className='personLogin'>
             <div className='loginWrap'>
                 <img src="//yanxuan.nosdn.127.net/bd139d2c42205f749cd4ab78fa3d6c60.png" alt="" />
             </div>
@@ -53,7 +58,7 @@ class Login extends React.Component {
                     </FormItem>
 
                     <div className='tips clearfix'>
-                        <span className='leftTip'>遇到问题?</span>
+                        <span className='leftTip' >遇到问题?</span>
                         <span className='rightTip'>使用密码验证登录</span>
                     </div>
 
@@ -72,7 +77,8 @@ class Login extends React.Component {
             </div>
 
         </div>
+        </div>
     }
 }
 // export default connect()(Login);
-export default withRouter(connect(null, {...action.person})(Form.create()(Login)));
+export default withRouter(connect(null, { ...action.person })(Form.create()(Login)));

@@ -5,6 +5,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import Login from './person/Login';
 import Register from './person/Register';
 import Info from './person/Info';
+import Infonav from './person/Info/Infonav';
 
 import { checkLogin } from '../api/person';
 import '../static/less/person.less';
@@ -35,7 +36,7 @@ class Person extends React.Component {
     render() {
         return (<section>
             <Switch>
-                <Route path='/person/info' render={() => {
+                <Route path='/person/info' exact render={() => {
                     if (this.state.isLogin) {
                         return <Info />;
                     }
@@ -43,6 +44,7 @@ class Person extends React.Component {
                 }} />
                 <Route path='/person/login' component={Login} />
                 <Route path='/person/register' component={Register} />
+                <Route path='/person/info/infonav' component={Infonav} />    
                 <Redirect from='/person' to='/person/info' />
             </Switch>
         </section>)
