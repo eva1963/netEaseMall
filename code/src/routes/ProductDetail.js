@@ -108,7 +108,11 @@ class ProductDetail extends React.Component {
                             <div className="price">￥{120}</div>
                         </div>
                         <div className="comment">
-                            <b className="num">{185}</b>
+                            <b className="num">
+                                {
+                                    this.props.commentList.length ? this.props.commentList.length : 0
+                                }
+                            </b>
                             <p className="com">用户评价</p>
                             <div className="more"><Link to="/productDetail/commentList"/>查看</div>
                         </div>
@@ -116,7 +120,7 @@ class ProductDetail extends React.Component {
                     {/* 产品规格 */}
                     <ul className="commonBox">
                         <li className="bordered">
-                            <Link to="/productDetail/commentList">
+                            <Link to="/productDetail/params">
                                 <div className="inner">请选择产品规格
                                     <Icon type="right" style={{
                                         float: 'right',
@@ -181,7 +185,7 @@ class ProductDetail extends React.Component {
                 <Issues/>
 
                 {/* 加入购物车 */}
-                <ToBuy/>
+                <ToBuy toBack={true}/>
                 <Totop/>
             </div>
         )

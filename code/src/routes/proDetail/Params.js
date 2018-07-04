@@ -40,7 +40,7 @@ class Params extends React.Component {
                         </div>
                     </div>
                 </div>
-                <ToBuy/>
+                <ToBuy toBack={false}/>
             </div>
         )
     }
