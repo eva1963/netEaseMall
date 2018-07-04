@@ -33,9 +33,9 @@ render(
                     {/* 一级路由 */}
                     <Switch>
                         <Route path="/home" component={Home} style={{marginTop:'50px'}}/>
-                        <Route path="/productDetail" exact component={ProductDetail}/>
-                        <Route path="/productDetail/commentList" component={CommentPage}/>
-                        <Route path="/productDetail/params" component={Params}/>
+                        <Route path="/prodetail" exact component={ProductDetail}/>
+                        <Route path="/prodetail/commentList" component={CommentPage}/>
+                        <Route path="/prodetail/params" component={Params}/>
                         <Route path="/classify" component={Classify}/>
                         <Route path="/shopcart" component={ShopCart}/>
                         <Route path="/person" component={Person}/>
