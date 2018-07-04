@@ -1,13 +1,13 @@
 @import "_variable";
 .searchBox{
-  padding: 0 .4rem .4rem; background-color:#fff;
+  padding: 0 0 .2rem; background-color:#fff;
   .searchHeader{
-    display:flex;    height: 1.5rem;padding: .3rem 0;
+    display:flex;    height: 1.5rem;padding: .3rem .4rem;
     i{font-size: .37333rem;}
     input{
       flex:1;box-sizing:border-box;padding-left:.3rem;
       background-color: #f4f4f4;
-      height: .3rem;border:none;
+      height: .3rem;border:none;box-shadow: none;
       border-radius: 4px;font-size: .37333rem;
     }
     b{
@@ -16,6 +16,7 @@
     }
   }
   .hot{
+    padding:0 .4rem;
     h3{
       height: 1.2rem;
       font-size: .42rem;
@@ -41,6 +42,13 @@
         &.grey{ border-color:@color9; color: @color9;}
       }
 
+    }
+  }
+  .list{
+    a{
+      display:block;padding:0.2rem .4rem;font-size: .37333rem;
+      border-top:0.02rem solid #EBEBEB;color:#555;
+      &:first-child{border-top:none}
     }
   }
 }

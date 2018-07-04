@@ -1,6 +1,6 @@
 /* 首页的action派发任务 */
 import * as TYPES from '../action-types';
-import {brandList} from '../../api/home';
+import {brandList,search} from '../../api/home';
 
 let home={
     brandList(limit = 4) {
@@ -11,7 +11,6 @@ let home={
                 result,
             });
         }
-    }
-
+    },
 };
 export default home;

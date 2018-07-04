@@ -9,6 +9,8 @@ export default function home(state = {
         case TYPES.PRODUCT_BRANDFLOOR:
          state.brandData=action.result.data;
         break;
+        default:
+            break;
     }
     return state;
 }

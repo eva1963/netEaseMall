@@ -7,3 +7,10 @@ export function brandList(limit) {
         }
     });
 }
+/*@target：获取搜索结果
+* @params: 商品name*/
+export function search(name={}) {
+    return axios.get('/goods/search', {
+        params:name
+    });
+}
