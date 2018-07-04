@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom'
 import {Icon} from 'antd';
+import Qs from 'qs';
 import action from '../store/action';
 
 /* 样式 */
@@ -26,9 +27,10 @@ class ProductDetail extends React.Component {
     }
 
     render() {
-        let proId = 1;
+        let proId = parseFloat(Qs.parse(this.props.location.search.substr(1)).id);
         let {goodsList} = this.props,
             item = goodsList.find(item => item.id === proId);
+        console.log(goodsList,item);
         if (!item) return '';
         /* 商品属性列表 */
         let descList = [{
@@ -65,7 +67,7 @@ class ProductDetail extends React.Component {
                                         <dt><img src={item.pic} alt=""/>
                                         </dt>
                                         <dd>
-                                            <p>{item.name}</p>
+                                            <p>{item.name+'12122'}</p>
                                             <p>{item.desc}</p>
                                         </dd>
                                     </dl>
