@@ -7,6 +7,7 @@ import Detail from './classify/Detail';
 import '../static/less/classify.less';
 
 import NavBottom from '../component/NavBottom';
+import NavTop from '../component/NavTop';
 
 class Classify extends React.Component {
     constructor(props,context){
@@ -14,8 +15,10 @@ class Classify extends React.Component {
     }
 
     render(){
-        console.log(2);
+
+
         return <section>
+            <NavTop />
            <Switch>
                <Route path={'/classify'} exact  component={ClassifyInfo}/>
                <Route path={'/classify/detail'} component={Detail}/>
