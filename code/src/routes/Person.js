@@ -6,6 +6,7 @@ import Login from './person/Login';
 import Register from './person/Register';
 import Info from './person/Info';
 
+import { checkLogin } from '../api/person';
 import '../static/less/person.less';
 
 class Person extends React.Component {
@@ -16,13 +17,33 @@ class Person extends React.Component {
             isLogin: false
         };
     }
+
+    //check login
+    async componentWillMount() {
+        let result = await checkLogin(),
+            isLogin = parseFloat(result.code) === 0 ? true : false;
+        this.setState({ isLogin });
+    }
+
+    async componentWillReceiveProps() {
+        let result = await checkLogin(),
+            isLogin = parseFloat(result.code) === 0 ? true : false;
+        this.setState({ isLogin });
+    }
+
+
     render() {
         return (<section>
             <Switch>
-                <Route path='/person/login' component={Login}/>
-                <Route path='/person/register' component={Register}/>
-                <Route path='/person/info' component={Info}/>
-                <Redirect from='/person' to='/person/login'/>
+                <Route path='/person/info' render={() => {
+                    if (this.state.isLogin) {
+                        return <Info />;
+                    }
+                    return <Login />;
+                }} />
+                <Route path='/person/login' component={Login} />
+                <Route path='/person/register' component={Register} />
+                <Redirect from='/person' to='/person/info' />
             </Switch>
         </section>)
     }

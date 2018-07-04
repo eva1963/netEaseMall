@@ -10,7 +10,7 @@ export function register(payload) {
     return axios.post('/personal/register', payload);
 }
 
-//check
+//check login
 export function checkLogin() {
     return axios.get('/personal/login');
 }
