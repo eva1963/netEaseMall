@@ -3,10 +3,9 @@ import {connect} from 'react-redux';
 import {Rate} from 'antd';
 
 import action from '../../store/action';
+import NavTopCart from  '../../component/NavTopCart';
 
 import '../../static/less/commentList.less';
-
-import {queryComments} from '../../api/proDetail';
 import Comment from './Comment';
 
 class CommentPage extends React.Component {
@@ -47,6 +46,7 @@ class CommentPage extends React.Component {
         }];
         return (
             <div className="commentListBox">
+                <NavTopCart/>
                 <div className="commentsRate">
                     <span>评分</span>
                     <Rate disabled defaultValue={5}/>

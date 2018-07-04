@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {Switch,Route,Redirect} from 'react-router-dom';
 import action from '../store/action';
 import ClassifyInfo from './classify/ClassifyInfo';
-import Detail from './classify/Detail';
+import List from './classify/List';
 import '../static/less/classify.less';
 
 import NavBottom from '../component/NavBottom';
@@ -21,7 +21,7 @@ class Classify extends React.Component {
             <NavTop />
            <Switch>
                <Route path={'/classify'} exact  component={ClassifyInfo}/>
-               <Route path={'/classify/detail'} component={Detail}/>
+               <Route path={'/classify/list'} component={List}/>
                <Redirect to={'/classify?lx=404'}/>
            </Switch>
            <NavBottom/>

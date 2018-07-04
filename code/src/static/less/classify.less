@@ -5,14 +5,14 @@ html, body {
 .classify_box {
 
   position: relative;
-  top: 1.2rem;
-  border-top: 1px solid #ccc;
+  top: 1.29rem;
+  border-top: 1px solid #EBEBEB;
   background: #fff;
   .classify_boxL {
 
     width: 2.16rem;
     float: left;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #EBEBEB;
     ul {
       overflow-y: scroll;
     }
@@ -133,7 +133,8 @@ html, body {
 //详情表
 .classifyDetail_box {
   width: 100%;
-
+  height: 16.6rem;
+background: #fff;
   .classifyDetail_nav {
     width: 100%;
     padding-top: 1rem;
@@ -154,6 +155,7 @@ html, body {
         height: 1rem;
         &.active{
           color: #b4282d;
+          position: relative;
         }
         &.active:after{
         content: ' ';
@@ -168,6 +170,18 @@ html, body {
     }
   }
   .classifyDetail_info {
+    .classifyDetail_title{
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      line-height: 1;
+      height: 1.46667rem;
+      margin-top: .26667rem;
+      background: #fff;
+      p{
+        line-height: 1.46667rem;
+      }
+    }
     width: 100%;
     background: #fff;
     margin-top: .33rem;
@@ -203,7 +217,7 @@ html, body {
           z-index: 1;
           padding-left: .13333rem;
           margin: .26667rem 0 0 .05333rem;
-          height: .4rem;
+          height: .5rem;
           overflow: hidden;
           p {
             margin-bottom: .01333rem;

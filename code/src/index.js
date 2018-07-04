@@ -24,6 +24,7 @@ import Params from './routes/proDetail/Params';
 import Order from './routes/Order';
 import Search from './routes/SearchBox';
 import DetailConfirm from "./routes/DetailCofirm"
+import payMode from "./routes/payMode";
 
 render(
     <Provider store={store}>
@@ -43,6 +44,7 @@ render(
                         <Route path="/search" component={Search}/>
                         <Route path="/order" exact component={Order}/> {/*订单页面*/}
                         <Route path="/detailConfirm" component={DetailConfirm}/>
+                        <Route path="/payMode" component={payMode}/>
                         <Redirect to="/home"/>
                     </Switch>
                 </div>
