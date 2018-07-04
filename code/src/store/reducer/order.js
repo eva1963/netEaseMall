@@ -11,10 +11,10 @@ export default function order(state=INIT_STATE,action) {
   state = JSON.parse(JSON.stringify(state));
   switch (action.type){
       case TYPES.ORDER_UNPAY:
-          console.log('kkkkk',action);
-          state.orderCart.unpay = action.payload;
+          state.orderCart.unpay = action.payload.data;
           break;
       case TYPES.ORDER_PAY:
+          state.orderCart.pay = action.payload.data;
           break;
       default:
           break;
