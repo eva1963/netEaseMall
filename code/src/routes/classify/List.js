@@ -127,7 +127,9 @@ class List extends React.Component {
         })
 
     }
+    componentDidMount(){
 
+    }
     render() {
         if(this.props.goodsData&&this.props.goodsData.length===0) return '';
         let goodsData=this.props.goodsData;
@@ -141,7 +143,7 @@ class List extends React.Component {
         });
         result.length===0?this.props.history.push('/classify'):null;
 
-        return <div className={'classifyDetail_box'}>
+        return <div className={'classifyDetail_box'} ref={'classifyDetail_box'}>
             <div className={'classifyDetail_nav'}>
                 <ul className={'clearfix'}>
                     {
@@ -154,7 +156,9 @@ class List extends React.Component {
                 </ul>
             </div>
             <div className={'classifyDetail_info'}>
-                <p className={'classifyDetail_title'}>夏凉床品，舒适一夏</p>
+                <div className={'classifyDetail_title'}>
+                <p>夏凉床品，舒适一夏</p>
+                </div>
                 <ul className={'clearfix'}>
                         {
                             result.map((item,index) => {
