@@ -3,18 +3,15 @@ import * as TYPES from '../action-types';
 import {brandList} from '../../api/home';
 
 let home={
-    brandList(payload = {}) {
-        let {limit = 4} = payload;
+    brandList(limit = 4) {
         return async dispatch => {
-            let result = await brandList({
-                limit
-            });
+            let result = await brandList(limit);
             dispatch({
                 type: TYPES.PRODUCT_BRANDFLOOR,
                 result,
             });
         }
-    },
+    }
 
 };
 export default home;
