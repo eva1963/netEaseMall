@@ -1,11 +1,6 @@
 /*@target: 商品分类banner
 * @params: <NavClassify classifyIndex={this.state.classifyIndex} handle={this.classifyHandle}/>
 *          classifyIndex:当前索引
-*          handle:传递的函数，触发的时候传递一个对象
-*          {
-*            type:'tuijianzhuanqu',
-*            index:0
-*          }
 */
 import React from 'react'
 import {connect} from 'react-redux'

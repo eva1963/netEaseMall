@@ -14,12 +14,12 @@ import './static/less/common.less';
 
 /* 自定义组件 */
 import store from './store';
-import Navbottom from './component/NavBottom';
 import Home from './routes/Home';
 import Classify from './routes/Classify';
 import Person from './routes/Person';
-import Shopcart from './routes/Shopcart';
+import ShopCart from './routes/Shopcart';
 import ProductDetail from './routes/ProductDetail';
+import CommentPage from './routes/proDetail/CommentPage';
 import Order from './routes/Order';
 
 
@@ -32,9 +32,10 @@ render(
                     {/* 一级路由 */}
                     <Switch>
                         <Route path="/home" component={Home} style={{marginTop:'50px'}}/>
-                        <Route path="/productDetail" component={ProductDetail}/>
+                        <Route path="/productDetail" exact component={ProductDetail}/>
+                        <Route path="/productDetail/commentList" component={CommentPage}/>
                         <Route path="/classify" component={Classify}/>
-                        <Route path="/shopcart" component={Shopcart}/>
+                        <Route path="/ShopCart" component={ShopCart}/>
                         <Route path="/person" component={Person}/>
                         <Route path="/order" exact component={Order}/> {/*订单页面*/}
                         <Redirect to="/home"/>
