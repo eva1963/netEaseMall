@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 
-import { Form, Button, Input, Icon, Alert } from 'antd';
+import { Form, Button, Input, Icon, Modal } from 'antd';
 import md5 from 'blueimp-md5';
 
 import { login } from '../../api/person';
