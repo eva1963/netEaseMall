@@ -9,7 +9,7 @@ let action = {
     home,
     classify,
     person,
-    shopcart,
+    shopCart,
     prodetail,
     order
 };
