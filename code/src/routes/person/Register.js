@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link, withRouter } from 'react-router-dom';
 
 import { Form, Button, Input, Icon } from 'antd';
 import md5 from 'blueimp-md5';
@@ -45,9 +46,9 @@ class Register extends React.Component {
                     <FormItem>
                         {getFieldDecorator('phone', {
                             rules: [
-                                { required: true, message: '请输入手机号!' }
+                                { required: true, message: '请输入手机号' }
                             ]
-                        })(<Input prefix={<Icon type="user" />} placeholder="请输入手机号!" />)}
+                        })(<Input prefix={<Icon type="user" />} placeholder="请输入手机号" />)}
                     </FormItem>
 
                     <FormItem>
@@ -69,7 +70,10 @@ class Register extends React.Component {
             </div>
 
             <div className='registerfoot'>
-                <span>邮箱帐号注册</span>
+                <Link to='/person/login'>
+                    <span>登录帐号</span>
+                </Link>
+
                 <i></i>
             </div>
 

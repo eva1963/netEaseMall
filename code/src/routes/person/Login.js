@@ -35,22 +35,21 @@ class Login extends React.Component {
 
 
     render() {
-        let logo = require('../../static/img/loginLOGO.jpg');
         const { getFieldDecorator } = this.props.form;
         return <div className='personLogin'>
 
             <div className='loginWrap'>
-                <img src={logo} alt="" />
+                <img src="//yanxuan.nosdn.127.net/bd139d2c42205f749cd4ab78fa3d6c60.png" alt="" />
             </div>
 
             <div className='form'>
                 <Form onSubmit={this.handleSubmit} className="login-form">
                     <FormItem>
-                        {getFieldDecorator('userName', {})(<Input prefix={<Icon type="user" />} placeholder="请输入用户名!" />)}
+                        {getFieldDecorator('userName', {})(<Input prefix={<Icon type="user" />} placeholder="请输入用户名" />)}
                     </FormItem>
 
                     <FormItem>
-                        {getFieldDecorator('userPass', {})(<Input prefix={<Icon type="lock" />} placeholder="请输入密码!" type="password" />)}
+                        {getFieldDecorator('userPass', {})(<Input prefix={<Icon type="lock" />} placeholder="请输入密码" type="password" />)}
                     </FormItem>
 
                     <div className='tips clearfix'>
