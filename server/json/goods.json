@@ -3,13 +3,13 @@
     "id": 1,
     "type": "tuijianzhuanqu",
     "category": "xiaoshimai4mian1",
-    "name": "四件套",
+    "name": "CK制造商",
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
+    "price": 25,
     "pielist": [],
     "flag": [
-      "热卖"
+      "上新"
     ],
     "color": "red",
     "size": "large"
@@ -138,10 +138,10 @@
     "id": 10,
     "type": "baopinqu",
     "category": "gongnengxiangbao",
-    "name": "四件套",
+    "name": "Kenneth Cole制造商",
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
+    "price": 255,
     "pielist": [],
     "flag": [
       "热卖"
@@ -288,10 +288,10 @@
     "id": 20,
     "type": "xiajizhuanqu",
     "category": "qingliangchuangpin",
-    "name": "四件套",
+    "name": "Ralph Lauren制造商",
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
+    "price": 19,
     "pielist": [],
     "flag": [
       "热卖"
@@ -438,10 +438,10 @@
     "id": 30,
     "type": "jujia",
     "category": "dengju",
-    "name": "四件套",
+    "name": "海外制造商",
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
+    "price": 9.9,
     "pielist": [],
     "flag": [
       "热卖"
