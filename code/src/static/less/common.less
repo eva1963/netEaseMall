@@ -1,10 +1,12 @@
 @import '~antd/dist/antd.css';
 @import './_variable';
+@import '_minxStyle';
 
 html,body {
   font-size: 100px;
   font-family: PingFangSC-Light,helvetica,'Heiti SC';
   -webkit-tap-highlight-color: transparent;
+  background-color: @bgf4;
 }
 
 #root {
@@ -67,11 +69,154 @@ html,body {
       color: @red;
     }
     i {
-      font-size: .45rem;
+      font-size: .6rem;
     }
     span {
       display: block;
       font-size: .28rem;
+    }
+  }
+}
+/* 返回顶部 */
+
+#components-back-top-demo-custom .ant-back-top {
+  bottom: 1.8rem;
+}
+@media screen and (max-width: 480px){
+  .ant-back-top {
+    right: 20px;
+    border-radius: 50%;
+    font-size: .7rem;
+    color: @color9;
+    text-align: center;
+    background: #fff;
+    bottom: 1.8rem;
+    border: .01rem solid @borderColor;
+  }
+}
+
+#components-back-top-demo-custom .ant-back-top-inner {
+  height: 4rem;
+  width: 4rem;
+  line-height: 4rem;
+  border-radius: .4rem;
+  color: #333;
+  text-align: center;
+  font-size: .4rem;
+  background-color: #fff;
+}
+
+/* 加入购物车 */
+.toBuyBottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  display: flex;
+
+  .box{
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    color: @color3;
+    font-size: .4rem;
+    border: .01rem solid #c7c7c7;
+    background: #fff;
+    cursor: pointer;
+    &.addToCart {
+      border-color: @red;
+      color: #fff;
+      background: @red;
+    }
+    &.icon {
+      position: relative;
+      width: 2.08rem;
+      border-left: none;
+      border-right: none;
+      i {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+        margin: auto;
+        width: .8rem;
+        height: .8rem;
+        color: @color6;
+        font-size: .8rem;
+      }
+    }
+  }
+
+}
+
+//评论组件单独的样式
+.comment {
+  header {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: .4rem 0 .05333rem;
+    font-size: .4rem;
+    .name {
+      margin-right: .16rem;
+    }
+    .commentRate {
+      margin-left: .13333rem;
+    }
+  }
+  .extraInfo {
+    margin-top: .24rem;
+    .time {
+      font-size: .32rem;
+      line-height: 1;
+      color: @desc;
+    }
+    .skus {
+      display: inline-block;
+      margin-left: .21333rem;
+    }
+  }
+
+  .text {
+    padding-right: .4rem;
+    p {
+      .twoLine;
+      font-size: .4rem;
+      line-height: .53333rem;
+      font-weight: 400;
+      color: @color3;
+      overflow: hidden;
+    }
+  }
+  .commentPics {
+    padding-right: .4rem;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-items: center;
+      justify-content: flex-start;
+      li {
+        width: 2rem;
+        height: 2rem;
+        margin: 0 .3rem .3rem 0;
+        background: #000;
+        overflow: hidden;
+        &:nth-of-type(4n) {
+          margin-right: 0;
+        }
+        img {
+          width: 100%;
+          height: 100%
+        }
+      }
     }
   }
 }

@@ -1,6 +1,6 @@
 const CONFIG = require('./config'),
     PERSONAL_PATH = './json/personal.json',
-    COURSE_PATH = './json/course.json',
+    GOODS_PATH = './json/goods.json',
     STORE_PATH = './json/store.json';
 
 /*-CREATE SERVER-*/
@@ -34,14 +34,14 @@ app.use(bodyParser.json());
 const {readFile} = require('./utils/promiseFS');
 app.use(async (req, res, next) => {
     req.personalDATA = JSON.parse(await readFile(PERSONAL_PATH));
-    req.courseDATA = JSON.parse(await readFile(COURSE_PATH));
+    req.goodsDATA = JSON.parse(await readFile(GOODS_PATH));
     req.storeDATA = JSON.parse(await readFile(STORE_PATH));
     next();
 });
 
 /*-ROUTE-*/
 //=>EXPRESS中的路由管控，例如：请求的API接口地址是 '/personal/xxx' ，直接进入到 './routes/personal' 这个模块执行代码
-app.use('/course', require('./routes/course'));
+app.use('/goods', require('./routes/goods'));
 app.use('/personal', require('./routes/personal'));
 app.use('/store', require('./routes/store'));
 app.use((req, res, next) => {

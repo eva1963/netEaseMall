@@ -1,0 +1,86 @@
+/* 左浮动 */
+.fl {
+  float: left;
+}
+/*右浮动*/
+.fr {
+  float: right;
+}
+/*文字居中*/
+.txtC {
+  text-align: center;
+}
+/*设置为dispaly*/
+.block{
+  display: block;
+}
+.inline-block{
+  display: inline-block;
+}
+.none{
+  display: none;
+}
+
+/*文字靠右*/
+.txtR {
+  text-align: right;
+}
+
+/* 单行文字超出省略号标示 */
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 截取文字前两行 */
+.twoLine {
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: pre-line;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+/* 待虚线的title */
+.center-title {
+  position: relative;
+  padding: .72rem 0;
+  text-align: center;
+  .line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 3.97333rem;
+    border-bottom: .01rem solid @bgc;
+    height: .01rem;
+    background-color: @bgc;
+    z-index: 1;
+  }
+  .text {
+    position: relative;
+    display: inline-block;
+    font-size: .42667rem;
+    padding-right: .21333rem;
+    padding-left: .21333rem;
+    line-height: 1;
+    color: @color3;
+    background-color: #fff;
+    z-index: 2;
+  }
+}
+
+.redBtn(@bgcolor){
+  color:#fff;
+  background:@bgcolor;
+  border-radius: .02rem;
+  height:1.2rem;
+  line-height:1.2rem;
+  font-size: .4rem;
+  .txtC;
+}
