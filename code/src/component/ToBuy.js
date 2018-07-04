@@ -47,6 +47,13 @@ class ToBuy extends React.Component {
         notify.show('已加入购物车!', 'custom', 2000, myColor);
 
         /*加入购物车*/
+        let {id: goodsID}= this.props;
+        let {count} = this.props.productInfo;
+        this.props.addCart({
+            goodsID,
+            count
+        });
+        this.props.getCartInfo();
 
     };
     nowBuy = async () => {
@@ -62,6 +69,5 @@ class ToBuy extends React.Component {
 
     }
 }
+export default withRouter(connect(state=>state.prodetail, {...action.person,...action.prodetail,...action.shopCart})(ToBuy));
 
-
-export default withRouter(connect(null, {...action.person})(ToBuy));
