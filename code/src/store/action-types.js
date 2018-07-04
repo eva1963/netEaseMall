@@ -19,4 +19,7 @@ export const QUERY_GOODS_LIST = 'QUERY_GOODS_LIST';
 //购物车
 export const SHOP_CART_INFO = "SHOP_CART_INFO";
 
+// 商品规格
+export const SET_PRODUCT_COMMERCIAL = "SET_PRODUCT_COMMERCIAL";
+
 
