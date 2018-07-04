@@ -54,3 +54,14 @@
    msg:'xxx'
 }
 ```
+`[获取商品数据]`
+1、获取商品数据
+```javascript
+地址：/goods/info
+方式：get
+参数：type='all'// type='all'获取全部数据 ,其他则根据goodsID查询数据
+返回：{
+   code:0,//0成功 1 失败
+   msg:'xxx'
+}
+```
