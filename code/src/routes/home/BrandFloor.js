@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import {Icon} from 'antd';
 import action from "../../store/action"
-import ProductDetail from "../ProductDetail"
 
 class BrandFloor extends React.Component {
     constructor(props) {

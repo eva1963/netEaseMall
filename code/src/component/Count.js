@@ -1,22 +1,50 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import action from '../store/action';
 
 class Count extends React.Component {
-    constructor(props,context){
-        super(props,context);
+    constructor(props, context) {
+        super(props, context);
+        this.state = {
+            count: 1
+        }
     }
-    render(){
+
+    render() {
         return (
             <div className="selNum">
-                <i className="less"/>
+                <i className="less" onClick={this.lessGoods}/>
                 <div className="textWrap">
-                    <input type="tel" defaultValue="1"/>
+                    <input ref={x => this.input = x}
+                           type="tel"
+                           defaultValue='1'
+                           value={this.state.count}
+                           onChange={() => {
+                           }}
+                    />
                 </div>
-                <i className="more"/>
+                <i className="more" onClick={this.addGoods}/>
             </div>
         )
+    }
+
+    lessGoods = ev => {
+        this.setState({
+            count: --this.state.count
+        });
+        this.props.setProductCommercial({
+            count: this.state.count
+        })
+    };
+    addGoods = ev => {
+        this.setState({
+            count: ++this.state.count
+        });
+        this.props.setProductCommercial({
+            count: this.state.count
+        })
     }
 }
 
 
-export default connect()(Count);
+export default connect(null, action.prodetail)(Count);

@@ -4,23 +4,34 @@ import Count from '../../component/Count';
 import ToBuy from '../../component/ToBuy';
 
 import '../../static/less/params.less';
+import action from '../../store/action';
 
 class Params extends React.Component {
-    constructor(props,context){
-        super(props,context);
+    constructor(props, context) {
+        super(props, context);
     }
-    render(){
+
+    componentDidMount() {
+        this.props.queryGoods();
+    }
+
+    render() {
+        let proId = 1;
+        let {goodsList} = this.props,
+            item = goodsList.find(item => item.id === proId);
+        if (!item) return '';
+
         return (
             <div className="paramsList">
                 <div className="info-con">
                     <div className="left">
-                        <img src={12} alt=""/>
+                        <img src={item.pic} alt=""/>
                     </div>
                     <div className="right">
                         <div className="con">
-                            <div className="price">价格：￥{1200}</div>
+                            <div className="price">价格：￥{item.price}</div>
                             <div className="sku">
-                                已选择：{'灰色'}
+                                已选择：{this.props.productInfo.color}
                             </div>
                         </div>
                     </div>
@@ -28,8 +39,8 @@ class Params extends React.Component {
                 <div className="spec-con">
                     <div className="box">
                         <div className="tt">颜色</div>
-                        <ul className="con">
-                            <li className="tab active">浅灰色</li>
+                        <ul className="con" ref={x => this.ul = x} onClick={this.chooseColor}>
+                            <li className="tab" >浅灰色</li>
                             <li className="tab">灰色</li>
                         </ul>
                     </div>
@@ -44,7 +55,19 @@ class Params extends React.Component {
             </div>
         )
     }
+
+    chooseColor = ev => {
+        let target = ev.target,
+            tarTag = target.tagName;
+        if (tarTag === 'LI') {
+            let color = target.innerHTML;
+            this.props.productInfo.color === color ? target.className += ' active' : '';
+            this.props.setProductCommercial({
+                color,
+            })
+        }
+    }
 }
 
 
-export default connect()(Params);
+export default connect(state => ({...state.prodetail}), {...action.prodetail})(Params);

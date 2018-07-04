@@ -27,5 +27,13 @@ export default {
                 result
             })
         }
+    },
+    setProductCommercial(obj) {
+        return dispatch => {
+            dispatch({
+                type:TYPES.SET_PRODUCT_COMMERCIAL,
+                result: obj
+            })
+        }
     }
 }
