@@ -7,7 +7,8 @@ import { Button } from 'antd';
 import { exitLogin } from '../../api/person';
 import action from '../../store/action/index';
 
-import Infonav from './Info/Infonav';
+import NavBottom from '../../component/NavBottom';
+
 
 class Info extends React.Component {
     constructor(props, context) {
@@ -27,17 +28,18 @@ class Info extends React.Component {
         return <section>
             <div className='person'>
                 <div className='leftWrap'>
-
                     <div className='topWrap'>
-                        <div className='left'>
-                            <img className='avatar' src="http://yanxuan.nosdn.127.net/5b32776a47523cae0e81f423d5f37279.jpg" alt="" />
-                            <div className='info'>
-                                <p>{phone}</p>
-                                <div className='vip'>
-                                    <i></i>
+                        <Link to='/person/info/infonav'>
+                            <div className='left'>
+                                <img className='avatar' src="http://yanxuan.nosdn.127.net/5b32776a47523cae0e81f423d5f37279.jpg" alt="" />
+                                <div className='info'>
+                                    <p>{phone}</p>
+                                    <div className='vip'>
+                                        <i></i>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                         <div className='right'>
                             <a href="">
                                 <i className='QR'></i>
@@ -162,8 +164,9 @@ class Info extends React.Component {
                         this.props.history.push('/person');
                     }}>退出登录</Button>
                 </div>
-
+                
             </div>
+            <NavBottom />
         </section>
 
     }
