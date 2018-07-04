@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import NavTop from "../component/NavTop";
 import NavClassify from "../component/NavClassify";
-import IndexFloor from "./home/indexFloor";
+import BrandFloor from "./home/brandFloor";
 import NavBottom from "../component/NavBottom";
 
 class Home extends React.Component {
@@ -14,7 +14,7 @@ class Home extends React.Component {
             <div>
                 <NavTop />
                 <NavClassify classifyIndex={0}/>
-                <IndexFloor/>
+                <BrandFloor/>
                 <NavBottom/>
             </div>
         )
