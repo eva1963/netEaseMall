@@ -7,10 +7,6 @@ import '../../static/less/params.less';
 import action from '../../store/action';
 
 class Params extends React.Component {
-    constructor(props, context) {
-        super(props, context);
-    }
-
     componentDidMount() {
         this.props.queryGoods();
     }
