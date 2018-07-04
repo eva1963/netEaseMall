@@ -71,7 +71,7 @@ route.get('/info', (req, res) => {
         if (state === 0) {
             //加入购物车之后才会有值
             //只是为了测试：74行
-            req.session.storeList = [{goodsID:1,count:1},{goodsID:2, count:2}];
+            // req.session.storeList = [{goodsID:1,count:1},{goodsID:2, count:2}];
             storeList = req.session.storeList || [];
             storeList = storeList.map(({goodsID,count}) => {
                 return {goodsID, count, storeID: 0};

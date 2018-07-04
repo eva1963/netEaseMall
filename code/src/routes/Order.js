@@ -37,8 +37,9 @@ class Order extends React.Component{
             <NavTopCart/>
             <div className={'tab'}>
                 <Tabs defaultActiveKey="1" onChange={this.changeTab} className={'tab-wrapper'}>
-                    <TabPane tab="全部" key="1">
-                        <div className={'notices'}><Icon type="sound" />防诈骗公告</div>
+                    <TabPane tab="全部" key="1">{
+                        all.length!==0?( <div className={'notices'}><Icon type="sound" />防诈骗公告</div>):''
+                    }
                         <ul className={'list'}>{
                             all.length!==0?( unpay.map((item,index)=>{
                                 let {orderID,pic,name,desc,id,state} = item;

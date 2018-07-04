@@ -4,14 +4,16 @@ import '../static/less/shopCart.less'
 import NavBottom from '../component/NavBottom'
 import {Link,Switch,Route} from 'react-router-dom'
 import action from "../store/action";
-import {Icon} from 'antd';
+import {Icon, Modal, Button} from 'antd';
 
 class ShopCart extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
-            isLogin: false
+            isLogin: false,
+            isEdit:false
         };
+        //获取购物车信息
         this.props.getCartInfo(0)
     }
 
@@ -20,20 +22,43 @@ class ShopCart extends React.Component {
         //验证是否登录
         // let isLogin = checkLogin()
         this.setState({
-            isLogin: true
+            isLogin: true,
+            isEdit: false
         });
 
 
     }
 
-    render() {
-        let {isLogin} = this.state,
+    componentWillUpdate(){
+        /*let {handleAble} = this.state,
             {cartData} = this.props;
 
+        if(cartData.length && handleAble !== cartData.some(item => item.isChecked)){
+            this.setState({
+                handleAble:cartData.some(item => item.isChecked)
+            });
+        }*/
+    }
+
+    render() {
+        let {isLogin,isEdit} = this.state,
+            {cartData, selectAll,changeItemCheck,changeSelectAll,removeSele} = this.props;
+        let handleAble = cartData.some(item => item.isChecked);
         return (
             <div className='shopCartBox'>
                 <div className='shopCartContent'>
-                    <div className="shopTit">购物车</div>
+                    <div className="shopTit">购物车
+                        {
+                            cartData.length ? <span className='edit' onClick={() => {
+                                this.setState({
+                                    isEdit:!isEdit
+                                })
+                            }}>{
+                                isEdit ? '完成' : '编辑'
+                            }</span> : null
+                        }
+
+                    </div>
                     <div className="detailCart">
                         <Switch>
                             <Route path='shopcart/'/>
@@ -47,21 +72,62 @@ class ShopCart extends React.Component {
                     {/*购物车列表*/}
                     {cartData.length ? <div className="shopCarList"><ul>
                         {
-                            cartData.map(({pic, name, desc, count, price, id}, index) => {
-                                return <li key={index} className={'item'}>
-                                    <div className={'content'}>
+                            cartData.map(({pic, name, desc, count, price, id, isChecked}, index) => {
+                                return <li key={index} className='item'>
+                                    <div className='content'>
+                                        <input type="checkbox" className='checkbox' checked={isChecked} onChange={() => {
+                                            changeItemCheck(id);
+
+                                        }}/>
                                         <div className="avator"><img src={pic} alt={name}/></div>
-                                        <div className={'info'}>
-                                            <h2>{name}</h2>
-                                            <p>{desc}</p>
+                                        <div className='info'>
+                                            <h2 className='title'>{name}</h2>
+                                            <p className='desc'>{desc}</p>
+                                            <p className="price">￥{price.toFixed(2)}</p>
                                         </div>
-                                        <Icon className='del' type="delete" onClick={ev=>{this.delItem.bind(this, id)}}/>
+                                        <Icon className='del' type="delete" onClick={this.showConfirm.bind(this, this.delItem.bind(this, id))}/>
+                                        <div className="count">
+                                            <Icon type="minus" className='minus' onClick={this.changeCount.bind(this, id, -1)}/>
+                                            <input type="text" value={count} className='countNum' onChange={this.inputNum.bind(this,id)}/>
+                                            <Icon type="plus" className='plus' onClick={this.changeCount.bind(this, id, 1)}/>
+                                        </div>
 
                                     </div>
                                 </li>
                             })
                         }
                     </ul></div> : null}
+                    {
+                        cartData.length ? <div className="shopBot">
+                            <div className="botLeft">
+                                <input type="checkbox" checked={selectAll} onChange={changeSelectAll}/>
+                                <span>已选({
+                                    cartData.reduce((prev,{isChecked, count}) => {
+                                        if(isChecked){
+                                            return prev + count;
+                                        }
+                                        return prev
+                                    },0)
+                                })</span>
+                            </div>
+                            <div className="botRight">
+                            <span className={isEdit ? 'disvisble price': 'price'}>￥{
+                                (cartData.reduce((prev, {isChecked, count, price}) => {
+                                    if(isChecked){
+                                        return prev + ((+price) * (+count));
+                                    }
+                                    return prev;
+                                },0)).toFixed(2)
+                            }</span>
+                                {
+                                    isEdit ? <a className={handleAble ? 'toOrder ableDo' : 'toOrder unDo'} href='javascript:' onClick={this.showConfirm.bind(this, this.removeSele)}>删除所选</a> : <Link className={handleAble ? 'toOrder ableDo' : 'toOrder unDo'} to={isLogin ? '/detailconfirmcont' : '/person/login'}>下单</Link>
+                                }
+
+
+                            </div>
+                        </div> : null
+                    }
+
                     <div className="shopCart">
                         {
                             cartData.length ? null : <Link to='/Home' className="shopCartAdd">去添加点什么吧</Link>
@@ -77,8 +143,55 @@ class ShopCart extends React.Component {
             </div>
         )
     }
-    delItem = (id) => {
+    removeSele =() => {
+        let {cartData} = this.props;
+        let handleAble = cartData.some(item => item.isChecked);
+        if(handleAble){
+            /*
+             let selectIdList = [];
+        this.props.shopCart.unpay.forEach(item => {
+            if(item.isCheck){
+                selectIdList.push(item.id);
+            }
+        });
+        if(!selectIdList.length) {
+            alert("当前没有选中项");
+            return;
+        }
 
+        selectIdList = selectIdList.map(courseID => {
+            return removeShopCart(courseID);
+        });
+        Promise.all(selectIdList).then(() => {
+            this.props.queryUnpay();
+        });
+            */
+
+        }
+    };
+    changeCount = (id,step) => {
+        this.props.changeNum(id, step);
+    };
+
+    inputNum = (id, ev) => {
+        let val = ev.target.value;
+        val = +val ? +val : 1;
+        this.props.inputNum(id, val);
+
+    };
+
+    delItem = id => {
+        this.props.cartRemove(id);
+    };
+
+    showConfirm = (callBack) => {
+        Modal.confirm({
+            title: '删除',
+            content: '您确定要删除当前所选条目吗',
+            onOk:() => {
+                callBack();
+            }
+        });
     }
 }
 
