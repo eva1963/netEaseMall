@@ -22,7 +22,7 @@ import ProductDetail from './routes/ProductDetail';
 import CommentPage from './routes/proDetail/CommentPage';
 import Params from './routes/proDetail/Params';
 import Order from './routes/Order';
-
+import DetailConfirm from "./routes/DetailCofirm"
 
 render(
     <Provider store={store}>
@@ -40,6 +40,7 @@ render(
                         <Route path="/shopcart" component={ShopCart}/>
                         <Route path="/person" component={Person}/>
                         <Route path="/order" exact component={Order}/> {/*订单页面*/}
+                        <Route path="/detailConfirm" component={DetailConfirm}/>
                         <Redirect to="/home"/>
                     </Switch>
                 </div>
