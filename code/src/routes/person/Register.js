@@ -9,6 +9,8 @@ import action from '../../store/action/index';
 
 import { register } from '../../api/person';
 
+import NavTopCart from '../../component/NavTopCart';
+
 const FormItem = Form.Item;
 
 class Register extends React.Component {
@@ -35,8 +37,9 @@ class Register extends React.Component {
     render() {
         const { getFieldDecorator } = this.props.form;
 
-        return <div className='personRegister'>
-
+        return <div>
+            <NavTopCart />
+            <div className='personRegister'>
             <div className='registerWrap'>
                 <span>帐号注册</span>
             </div>
@@ -73,11 +76,13 @@ class Register extends React.Component {
                 <Link to='/person/login'>
                     <span>登录帐号</span>
                 </Link>
-
                 <i></i>
             </div>
 
         </div>
+        </div>
+        
+       
     }
 }
 // export default connect()(Register);

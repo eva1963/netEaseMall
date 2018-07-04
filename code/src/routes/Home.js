@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import NavTop from "../component/NavTop";
 import NavClassify from "../component/NavClassify";
-import BrandFloor from "./home/brandFloor";
+import BrandFloor from "./home/BrandFloor";
 import NavBottom from "../component/NavBottom";
 import {Link} from 'react-router-dom'
 import { Carousel } from 'antd';
