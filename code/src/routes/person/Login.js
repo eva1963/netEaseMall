@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 
-import { Form, Button, Input, Icon, Alert } from 'antd';
+import { Form, Button, Input, Icon, Modal } from 'antd';
 import md5 from 'blueimp-md5';
 
 import { login } from '../../api/person';
@@ -39,44 +39,47 @@ class Login extends React.Component {
 
 
     render() {
+        const confirm = Modal.confirm;
         const { getFieldDecorator } = this.props.form;
         return <div>
             <NavTopCart />
             <div className='personLogin'>
-            <div className='loginWrap'>
-                <img src="//yanxuan.nosdn.127.net/bd139d2c42205f749cd4ab78fa3d6c60.png" alt="" />
+                <div className='loginWrap'>
+                    <img src="//yanxuan.nosdn.127.net/bd139d2c42205f749cd4ab78fa3d6c60.png" alt="" />
+                </div>
+
+                <div className='form'>
+                    <Form onSubmit={this.handleSubmit} className="login-form">
+                        <FormItem>
+                            {getFieldDecorator('userName', {})(<Input prefix={<Icon type="user" />} placeholder="请输入用户名" />)}
+                        </FormItem>
+
+                        <FormItem>
+                            {getFieldDecorator('userPass', {})(<Input prefix={<Icon type="lock" />} placeholder="请输入密码" type="password" />)}
+                        </FormItem>
+
+                        <div className='tips clearfix'>
+
+
+                            <span className='leftTip' >遇到问题?</span>
+                            <span className='rightTip'>使用密码验证登录</span>
+                        </div>
+
+                        <FormItem>
+                            <Button type="primary" htmlType="submit" className="login-form-button">登录</Button>
+                        </FormItem>
+
+                    </Form>
+                </div>
+
+                <div className='loginfoot'>
+                    <Link to='/person/register'>
+                        <span>注册帐号</span>
+                    </Link>
+                    <i></i>
+                </div>
+
             </div>
-
-            <div className='form'>
-                <Form onSubmit={this.handleSubmit} className="login-form">
-                    <FormItem>
-                        {getFieldDecorator('userName', {})(<Input prefix={<Icon type="user" />} placeholder="请输入用户名" />)}
-                    </FormItem>
-
-                    <FormItem>
-                        {getFieldDecorator('userPass', {})(<Input prefix={<Icon type="lock" />} placeholder="请输入密码" type="password" />)}
-                    </FormItem>
-
-                    <div className='tips clearfix'>
-                        <span className='leftTip' >遇到问题?</span>
-                        <span className='rightTip'>使用密码验证登录</span>
-                    </div>
-
-                    <FormItem>
-                        <Button type="primary" htmlType="submit" className="login-form-button">登录</Button>
-                    </FormItem>
-
-                </Form>
-            </div>
-
-            <div className='loginfoot'>
-                <Link to='/person/register'>
-                    <span>注册帐号</span>
-                </Link>
-                <i></i>
-            </div>
-
-        </div>
         </div>
     }
 }

@@ -45,7 +45,7 @@ class Person extends React.Component {
                 <Route path='/person/login' component={Login} />
                 <Route path='/person/register' component={Register} />
                 <Route path='/person/info/infonav' component={Infonav} />    
-                <Redirect from='/person' to='/person/info' />
+                <Redirect from='/person' exact to='/person/info' />
             </Switch>
         </section>)
     }
