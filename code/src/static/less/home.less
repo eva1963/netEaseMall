@@ -9,7 +9,7 @@
   background:rgba(255, 255, 255, 0); width: 0;height: 0;
 }
 .home-wrapper{
-  padding-bottom:1.6rem;
+  padding-bottom:1.3rem;
   .banner{
     .ant-carousel .slick-slide {
       text-align: center;
@@ -119,6 +119,66 @@
         color: #7f7f7f;
         span{
           color: @red;}
+      }
+    }
+  }
+  .goodList{
+    margin-top:.2rem;
+    background-color:#fff;
+    .brandNav{
+      display:block;
+      font-size:.42667rem;
+      text-align: center;
+      height: 1.4rem;line-height: 1.4rem;
+      color:#444;margin-bottom:0;
+      i{margin-left: .2rem;}
+    }
+    ul{
+      li{
+        float:left;width:50%;box-sizing:border-box;
+        background-color:#fff;
+        &:nth-child(2n-1){padding: 0rem 0.13333333333333333rem 0.3rem 0.26666666666666666rem;}
+        &:nth-child(2n){padding: 0rem 0.26666666666666666rem 0.3rem 0.13333333333333333rem;}
+        a{
+          img{display:block;width:100%;}
+          display:block;background-color:@bgf4;
+          .desc{
+            width: 100%;background: #F1ECE2;border-radius: 0 0 .05333rem .05333rem;
+            font-size: .32rem;color: #9F8A60;
+            letter-spacing: 0;line-height: .38667rem;padding: .26667rem .13333rem;
+            white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+          .info{
+            background-color:#fff;
+            h2{
+              color: #333;line-height: .64rem;text-align: left;font-size: .37333rem;
+              padding-top:.2rem;
+            }
+            p{color:@red;font-size:.4rem;margin-bottom:0;}
+          }
+        }
+      }
+    }
+  }
+  .footer{
+    text-align: center;
+    padding: .72rem .26667rem .37333rem;
+    border-top: 1px solid rgba(0,0,0,.15);
+    background-color: #414141;
+    .bd{
+      a{
+        display: inline-block;width: 2.29333rem;
+        height: .82667rem;line-height: .82667rem;border-radius:.1rem;
+        font-size: .3rem;border: 1px solid #999;
+        color: #fff;background-color: transparent;
+        &:nth-of-type(2){margin-left:.3rem}
+      }
+    }
+    p{
+      padding-top:.4rem;
+      span{
+        font-size: .32rem;
+        line-height: .42667rem;
+        color: #999;
       }
     }
   }
