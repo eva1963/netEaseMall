@@ -5,6 +5,6 @@ import axios from './index'
 
 export function queryOrderInfo(state) {
     return axios.get('/store/info',{
-        params:{state}
+        params:state
     })
 }

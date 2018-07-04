@@ -1,47 +1,38 @@
 /*@target:订单页面*/
 import React from 'react'
 import {connect} from 'react-redux'
-import {Tabs,Icon} from "antd"
+import {Tabs,Icon,Button,Modal} from "antd"
 import NavTopCart from '../component/NavTopCart'
 import action from '../store/action'
+import {checkLogin} from '../api/person'
 import '../static/less/order.less'
+
+
 const TabPane = Tabs.TabPane;
 
 class Order extends React.Component{
     constructor(props,context){
         super(props,context);
         this.state={
-            classifyIndex:0
-        }
+            classifyIndex:0,
+        };
+
     }
     async componentDidMount(){
+        //验证是否登录
+        let isLogin = await checkLogin();
+        if(parseFloat(isLogin.code)===1){
+            this.hintLogin();
+            return;
+        }
         let {queryUnpay,queryPay} = this.props;
-        console.log('eeeee',this.props);
         queryUnpay();
+        queryPay();
     }
     render(){
-        let data = [{
-            orderID:'11111',
-            pic:'http://yanxuan.nosdn.127.net/e64708a0e0a69d27acbc5ef21ee8c850.png?imageView&quality=90&thumbnail=300x300',
-            name:'自然棉麻四件套',
-            desc:'杏粉色*1.5m',
-            id:'222',
-            state:1
-        },{
-            orderID:'11111',
-            pic:'http://yanxuan.nosdn.127.net/8733f40216d7d20b085a34a055e6c300.png?imageView&quality=90&thumbnail=300x300',
-            name:'自然棉麻四件套',
-            desc:'杏粉色*1.5m',
-            id:'222',
-            state:0
-        },{
-            orderID:'11111',
-            pic:'http://yanxuan.nosdn.127.net/4ac3d4d26c4584034585ba2dae40583e.png?imageView&quality=90&thumbnail=300x300',
-            name:'自然棉麻四件套',
-            desc:'杏粉色*1.5m',
-            id:'222',
-            state:1
-        }];
+        let {pay,unpay} = this.props.orderCart;
+
+        let all = unpay.concat(pay);
         return <div className={'order-container'}>
             <NavTopCart/>
             <div className={'tab'}>
@@ -49,10 +40,10 @@ class Order extends React.Component{
                     <TabPane tab="全部" key="1">
                         <div className={'notices'}><Icon type="sound" />防诈骗公告</div>
                         <ul className={'list'}>{
-                            data.map((item,index)=>{
+                            all.length!==0?( unpay.map((item,index)=>{
                                 let {orderID,pic,name,desc,id,state} = item;
                                 return <li key={index} className={'item'}>
-                                    <h3>订单编号：<span>{orderID}</span><Icon type="delete" onClick={ev=>{alert('删除')}}/></h3>
+                                    <h3>订单编号：<span>{orderID}</span><Icon type="delete" onClick={ev=>{this.removeOrder}}/></h3>
                                     <div className={'content'}>
                                         <div className="acator"><img src={pic} alt={name}/></div>
                                         <div className={'info'}>
@@ -61,19 +52,66 @@ class Order extends React.Component{
                                         </div>
                                     </div>
                                 </li>
-                            })
+                            })):(<div className="noData">暂无更多数据</div>)
                         }</ul>
                     </TabPane>
-                    <TabPane tab="待付款" key="2">待付款</TabPane>
-                    <TabPane tab="已付款" key="3">已付款</TabPane>
+                    <TabPane tab="待付款" key="2">
+                        <ul className={'list'}>{
+                           unpay.length!==0?( unpay.map((item,index)=>{
+                               let {orderID,pic,name,desc,id,state} = item;
+                               return <li key={index} className={'item'}>
+                                   <h3>订单编号：<span>{orderID}</span><Icon type="delete" onClick={ev=>{this.removeOrder}}/></h3>
+                                   <div className={'content'}>
+                                       <div className="acator"><img src={pic} alt={name}/></div>
+                                       <div className={'info'}>
+                                           <h2>{name}</h2>
+                                           <p>{desc}</p>
+                                       </div>
+                                   </div>
+                               </li>
+                           })):(<div className="noData">暂无更多数据</div>)
+                        }</ul>
+                    </TabPane>
+                    <TabPane tab="已付款" key="3">
+                        <ul className={'list'}>{
+                            pay.length!==0?( pay.map((item,index)=>{
+                                let {orderID,pic,name,desc,id,state} = item;
+                                return <li key={index} className={'item'}>
+                                    <h3>订单编号：<span>{orderID}</span></h3>
+                                    <div className={'content'}>
+                                        <div className="acator"><img src={pic} alt={name}/></div>
+                                        <div className={'info'}>
+                                            <h2>{name}</h2>
+                                            <p>{desc}</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            })):''
+                        }</ul>
+                        {pay.length!==0?' <div><Button>评价</Button></div>':(<div className="noData">暂无更多数据</div>)}
+                    </TabPane>
                 </Tabs>
             </div>
 
         </div>
     }
+    hintLogin=ev=>{
+        let that = this;
+        Modal.error({
+            title: '登录验证',
+            content: '当前没有登录，请先登录！！',
+            onOk(){
+                that.props.history.push('/person/login');
+            }
+        });
+    };
+
+    removeOrder=ev=>{
+        alert('删除');
+    };
     changeTab=ev=>{
 
     }
 }
 
-export default connect(state=>({...state.order}),action.order)(Order)
+export default connect(state=>({...state.order,...state.shopCart}),{...action.order,...action.shopCart})(Order)

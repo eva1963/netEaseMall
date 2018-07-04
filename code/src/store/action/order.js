@@ -4,17 +4,19 @@ import {queryOrderInfo} from '../../api/order'
 
 let order = {
     /*获取未支付的订单*/
-    queryUnpay(payload) {
+    async queryUnpay(payload) {
+        payload = await queryOrderInfo({state:0});
         return {
             type: TYPES.ORDER_UNPAY,
-            payload:queryOrderInfo({state:0})
+            payload,
         }
     },
     /*获取支付的订单*/
-    queryPay(payload) {
+    async queryPay(payload) {
+        payload = await queryOrderInfo({state:1});
         return {
             type: TYPES.ORDER_PAY,
-            payload:queryOrderInfo({state:1})
+            payload,
         }
     }
 };
