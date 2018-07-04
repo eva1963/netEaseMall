@@ -2,24 +2,14 @@
 @import "_variable";
 .orderTitle{margin-top:1.2rem;}
 .clearfix:after{display:block;content:"";clear:both;}
-.brandFloor{
-  padding:.06rem .1rem;background-color:#fff;
-  .brandNav{
-    display:block;
-    font-size:.42667rem;
-    text-align: center;
-    height: 1.46667rem;
-    color:#333;
-  }
-  .floorBox{
-   font-size:0;
-    .listCard{
-       
-    }
-  }
+::-webkit-scrollbar {
+  width: 0;height: 0; background: transparent;
 }
-
+::-webkit-scrollbar-thumb {
+  background:rgba(255, 255, 255, 0); width: 0;height: 0;
+}
 .home-wrapper{
+  padding-bottom:1.6rem;
   .banner{
     .ant-carousel .slick-slide {
       text-align: center;
@@ -33,7 +23,7 @@
       }
     }
     .ele{
-      display: flex;padding:0.18rem 0;background-color:#fff;
+      display: flex;padding:0.18rem 0;background-color:#fff;margin-bottom:.2rem;
       li{
         flex:1;text-align:center;
         i,span{display:inline-block;vertical-align:middle}
@@ -48,6 +38,87 @@
           color: #333;
           margin-left: .10667rem;
           line-height: .42667rem;}
+      }
+    }
+  }
+  .brandFloor{
+    padding:.06rem .1rem;background-color:#fff;
+    .brandNav{
+      display:block;
+      font-size:.42667rem;
+      text-align: center;
+      height: 1.4rem;line-height: 1.4rem;
+      color:#444;
+      i{margin-left: .2rem;}
+    }
+    .floorBox{
+      font-size:0;
+      .listCard{
+        display:inline-block;    position: relative;
+        margin-bottom: .10667rem;
+        width: 4.73333rem;
+        height: 3.14667rem;
+        overflow: hidden;
+        background-color: #f4f4f4;
+        &:nth-child(1),&:nth-child(3){margin-right: .10667rem;margin-left: .1rem;}
+        img{width:100%;height:100%}
+        .info{
+          position:absolute;top:0;left:0; padding: .3rem 0 0 .26667rem;
+          p{text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            color: #333;
+            font-size:.34rem;
+            line-height: .45333rem;
+            margin-bottom: .08rem;}
+          span{
+            display: block;
+            margin-top: .13333rem;
+            height: .42667rem;
+            width: .85333rem;
+            text-indent: -999px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-image:url("../img/new.png");
+          }
+        }
+      }
+    }
+  }
+  .newItem{
+    background: url("../img/leBanner.png");background-color:#fff;
+    background-size: 10rem 3.46667rem;width:100%;height: 3.46667rem;display:flex;justify-content:center;align-items:center;
+    a,span{display:block;}
+    span{text-align: center;font-size: .48rem;color: #8BA0B6;}
+    a{margin: .21333rem auto 0;text-align:center;color: #8BA0B6;;
+      width: 3.2rem;height: .74667rem;font-size: .37333rem;line-height: .74667rem;background: #D8E5F1;}
+    &.hot{
+      background-image: url("../img/leBannerHot.png");
+      a,span{color: #B4A078;}
+      a{background: #F4E9CB;}
+    }
+    &.fuli{
+      background: url("../img/img-fuli.jpg");background-size:100% 100%;
+      a{display:block;width:100%;height:100%;opacity:0}
+    }
+  }
+  .goodGrid{
+    height: 6.55rem;padding:.4rem;font-size:0;box-sizing:border-box;overflow-x:scroll;white-space:nowrap;background-color:#fff;
+    li{
+      display:inline-block;width: 3.73333rem;margin-left:.4rem;
+      &:first-child{margin-left:0}
+      img{width:100%;}
+      .name,p{width:100%;.ellipsis;text-align:left}
+      .name{
+        margin-bottom: .13333rem;
+        font-size: .37333rem;line-height: .45333rem;
+      }
+      p{
+        margin-bottom: .18667rem;
+        font-size: .32rem;
+        color: #7f7f7f;
+        span{
+          color: @red;}
       }
     }
   }

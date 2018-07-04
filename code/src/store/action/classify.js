@@ -11,6 +11,26 @@ let classify={
                 goodsData
             });
         }
+    },
+    queryCategory(goodsData,curType){
+        if(goodsData&&goodsData.length!==0) {
+            return dispatch => {
+                let categList = [], cateResultList = [];
+                goodsData.forEach(item => {
+                    let {type, category} = item;
+                    if (type === curType && !categList.includes(category)) {
+                        categList.push(category);
+                        cateResultList.push({type: type, category: category});
+                    }
+                });
+                categList = null;
+                dispatch({
+                    type: TYPES.CLASSIFY_QUERY_CATEGORY,
+                    cateResultList
+                });
+            }
+        }
+
     }
 };
 export default classify;
