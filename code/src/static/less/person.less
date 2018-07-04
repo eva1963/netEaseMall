@@ -3,29 +3,29 @@
 body {
   background-color: #f4f4f4;
 }
-
-.ant-input-affix-wrapper {
-  font-size: .6rem;
-  .ant-input {
-    height: 1.2rem;
-    border-bottom: 1px solid #dbdbdb;
-    border-top-width: 0;
-    border-right-width: 0;
-    border-left-width: 0;
-    &:not(:first-child) {
-      padding-left: 1rem;
+.personLogin, .personRegister {
+  .ant-input-affix-wrapper {
+    font-size: .6rem;
+    .ant-input {
+      height: 1.2rem;
+      border-bottom: 1px solid #dbdbdb;
+      border-top-width: 0;
+      border-right-width: 0;
+      border-left-width: 0;
+      &:not(:first-child) {
+        padding-left: 1rem;
+      }
+      &:hover {
+        box-shadow: none;
+        border-color: transparent;
+      }
     }
-    &:hover {
+    &:hover .ant-input:not(.ant-input-disabled) {
       box-shadow: none;
       border-color: transparent;
     }
   }
-  &:hover .ant-input:not(.ant-input-disabled) {
-    box-shadow: none;
-    border-color: transparent;
-  }
 }
-
 
 .personLogin {
 
