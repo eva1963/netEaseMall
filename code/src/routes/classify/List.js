@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import action from '../../store/action';
 import Qs from 'qs';
 
-class Detail extends React.Component {
+class List extends React.Component {
     constructor(props, context) {
         super(props, context);
         //二级汉字数据：
@@ -93,6 +93,7 @@ class Detail extends React.Component {
         //路径地址
         let {search} = this.props.location,
             newSearch = Qs.parse(search.substr(1));
+        if(search.type===''||search==='') this.props.history.push('/classify');
         let resultSearch=JSON.stringify(newSearch);
         this.state = {
             goodsData:[],
@@ -153,6 +154,7 @@ class Detail extends React.Component {
                 </ul>
             </div>
             <div className={'classifyDetail_info'}>
+                <p className={'classifyDetail_title'}>夏凉床品，舒适一夏</p>
                 <ul className={'clearfix'}>
                         {
                             result.map((item,index) => {
@@ -165,7 +167,9 @@ class Detail extends React.Component {
                                     <div className={'classifyDet_dec'}>
                                         {desc}
                                     </div>
-
+                                    <div className={'classifyDet_flg'}>
+                                        <p>{flag}</p>
+                                    </div>
                                     <div className={'classifyDet_name'}>
                                         <span> {name}</span>
                                     </div>
@@ -189,4 +193,4 @@ class Detail extends React.Component {
     }
 }
 
-export default connect(state => ({...state.classify}), action.classify)(Detail);
+export default connect(state => ({...state.classify}), action.classify)(List);
