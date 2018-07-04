@@ -3,6 +3,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Tabs,Icon} from "antd"
 import NavTopCart from '../component/NavTopCart'
+import action from '../store/action'
 import '../static/less/order.less'
 const TabPane = Tabs.TabPane;
 
@@ -14,7 +15,9 @@ class Order extends React.Component{
         }
     }
     async componentDidMount(){
-      let result
+        let {queryUnpay,queryPay} = this.props;
+        console.log('eeeee',this.props);
+        queryUnpay();
     }
     render(){
         let data = [{
@@ -73,4 +76,4 @@ class Order extends React.Component{
     }
 }
 
-export default connect()(Order)
+export default connect(state=>({...state.order}),action.order)(Order)

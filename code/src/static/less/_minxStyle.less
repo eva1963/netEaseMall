@@ -10,6 +10,16 @@
 .txtC {
   text-align: center;
 }
+/*设置为dispaly*/
+.block{
+  display: block;
+}
+.inline-block{
+  display: inline-block;
+}
+.none{
+  display: none;
+}
 
 /*文字靠右*/
 .txtR {
@@ -65,3 +75,12 @@
   }
 }
 
+.redBtn(@bgcolor){
+  color:#fff;
+  background:@bgcolor;
+  border-radius: .02rem;
+  height:1.2rem;
+  line-height:1.2rem;
+  font-size: .4rem;
+  .txtC;
+}

@@ -5,7 +5,7 @@ function ADD_STORE(req, res, item, count) {
     item = JSON.parse(JSON.stringify(item));
     //=>把某一个商品存储到JSON中，实现加入购物车的功能
     let personID = req.session.personID,
-        orderID = (+new Date()).toString().substr(0,10)+(Math.random()).toString().replace(/./,'').substr(0,8),//18位订单号
+        orderID = (+new Date()).toString().substr(0,10)+(Math.random()).toString().replace(/\./,'').substr(0,8),//18位订单号
         {
             goodsID,
             state = 0,//默认是未支付

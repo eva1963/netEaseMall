@@ -15,7 +15,7 @@ class NavBottom extends React.Component {
                     <span>首页</span>
                 </NavLink>
                 <NavLink to="/classify">
-                    <Icon type="database"/>
+                    <Icon type="profile"/>
                     <span>分类</span>
                 </NavLink>
                 <NavLink to="/shopcart">
