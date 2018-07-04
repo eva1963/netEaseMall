@@ -40,21 +40,21 @@ class ToBuy extends React.Component {
             this.props.history.go(-1);
         }
     };
-    addCartList = () => {
+     addCartList = async () => {
         let myColor = {
             background: 'rgba(0,0,0,.8)',
             text: "#fff",
             padding: '0 !important',
         };
-        notify.show('已加入购物车!', 'custom', 2000, myColor);
 
         /*加入购物车*/
         let {count} = this.props.productInfo;
-        this.props.addCart({
+        await (this.props.addCart({
             goodsID: this.proId,
             count
-        });
-        this.props.getCartInfo();
+        }));
+         notify.show('已加入购物车!', 'custom', 2000, myColor);
+         this.props.getCartInfo();
     };
     nowBuy = async () => {
         /* 验证是否登录 登录了就跳到下单页，未登录跳到登录页面*/
@@ -64,7 +64,7 @@ class ToBuy extends React.Component {
         if(isLogin) {
             this.props.history.push({
                 pathname: '/detailConfirm',
-                search: `?id=${this.props.proID}`
+                search: `?id=${this.proId}`
             });
         } else {
             this.props.history.push('/person/login');
