@@ -13,7 +13,8 @@ class Classify extends React.Component {
     async componentWillMount(){
         if(this.props.goodsData.length!=0)return;
         let {queryInfo}=this.props;
-        let goodsData=await queryInfo({all:'all'});
+        await queryInfo({type:'all'});
+        let {goodsData}=this.props;
         this.setState({
             goodsData:goodsData
         })
@@ -23,14 +24,18 @@ class Classify extends React.Component {
     }
     render(){
         let {goodsData}=this.state;
-        if(this.props.goodsData.length===0)return;
-        console.log(goodsData);
+        if(goodsData.length===0)return '';
+        let newGoodsData=[];
+        goodsData.forEach(item=>{
+            newGoodsData.includes(item.type)?null:newGoodsData.push(item.type);
+        });
+
         return <div className={'classify_box'}>
             <div className="classify_boxL">
                 <ul>
                     {
-                        goodsData.forEach((item,index)=>{
-                          return  <li className={'active'} key={index}>
+                        newGoodsData.map((item,index)=>{
+                          return  <li  key={index}>
                                 <span>{item}
                                 </span>
                             </li>
