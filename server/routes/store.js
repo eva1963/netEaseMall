@@ -11,7 +11,6 @@ route.post('/add', (req, res) => {
     goodsID = +goodsID;
     count = +count;
     let item = req.goodsDATA.find(item => +item.id === goodsID);
-
     //=>已经登录状态下，把信息直接存储到JSON中即可（用户在其它平台上登录，也可以从JSON中获取到数据，实现信息跨平台）
     if (personID) {
         utils.ADD_STORE(req, res, item, count).then(() => {
@@ -60,11 +59,13 @@ route.get('/info', (req, res) => {
         //=>登录状态下是从JSON文件中获取：在STORE.JSON中找到所有personID和登录用户相同的(服务器从SESSION中可以获取用户ID的)
         req.storeDATA.forEach(item => {
             if (parseFloat(item.personID) === personID && parseFloat(item.state) === state) {
+                // console.log('item',item);
                 storeList.push({
-                    goodsID: +item.goodsID,
-                    storeID: +item.id,
+                    goodsID: +item.id,
+                    storeID: 0,
                     count: +item.count
                 });
+                // console.log('storeList',storeList);
             }
         });
     } else {
