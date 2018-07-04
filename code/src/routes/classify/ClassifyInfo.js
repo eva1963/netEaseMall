@@ -115,10 +115,6 @@ class ClassifyInfo extends React.Component {
             categoryData: categorys
         })
     }
-
-    /*componentDidMount(){
-
-    }*/
     render() {
         let {goodsData, categorys} = this.props;
         if (goodsData.length === 0) return '';
@@ -163,7 +159,7 @@ class ClassifyInfo extends React.Component {
                         categorys.map((item, index) => {
                             let {type, category} = item;
                             return <li key={index}>
-                                <Link to={`/classify/detail?type=${type}&category=${category}`}>
+                                <Link to={`/classify/list?type=${type}&category=${category}`}>
                                     <img
                                         src="http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144"
                                         alt=""/>
@@ -181,7 +177,6 @@ class ClassifyInfo extends React.Component {
         let {queryCategory} = this.props;
         queryCategory(this.props.goodsData, type1);
         let {categorys} = this.props;
-
         this.setState({
             categoryData: categorys,
             classifyType:type1
