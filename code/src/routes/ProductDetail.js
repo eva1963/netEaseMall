@@ -21,20 +21,16 @@ class ProductDetail extends React.Component {
 
     componentDidMount() {
         this.props.queryCommentList();
+        this.props.queryGoods();
     }
 
     render() {
-        let proList = [{
-            pic: 'https://yanxuan.nosdn.127.net/a846f0112174bf09f60639fc1352d05c.jpg?imageView&thumbnail=750x0&quality=75'
-        }, {
-            pic: 'https://yanxuan.nosdn.127.net/7c28a0a7de8850dda56fe04a19beef3f.jpg?imageView&thumbnail=750x0&quality=75'
-        }, {
-            pic: 'https://yanxuan.nosdn.127.net/08bab2bea52eede24060f6886ae61b72.jpg?imageView&thumbnail=750x0&quality=75'
-        }, {
-            pic: 'https://yanxuan.nosdn.127.net/3d7c248460c3b0b9ac53dea8b7cd4606.png?imageView&thumbnail=750x0&quality=75'
-        }, {
-            pic: 'https://yanxuan.nosdn.127.net/9a8501587b7a794e39bced7be8916a6d.jpg?imageView&thumbnail=750x0&quality=75'
-        }];
+        let proId = 1;
+        let goodsList = this.props.goodsList,
+            item = goodsList.find(item => item.id === proId);
+        if(!item) return '';
+
+
         /* 商品属性列表 */
         let descList = [{
             pic: 'https://yanxuan.nosdn.127.net/2cd96e4388819c508b6292f25729cc3e.jpg',
@@ -77,11 +73,12 @@ class ProductDetail extends React.Component {
             return '';
         }
 
+
         return (
             <div className="productDetail">
                 <div className="banner">
-                    <Banner dataList={proList}/>
-                    <span>{this.props.stepIndex}/{proList.length}</span>
+                    <Banner dataList={item.pielist}/>
+                    <span>{this.props.stepIndex}/{item.pielist.length}</span>
                 </div>
 
                 <ul className="characteristic">
@@ -178,7 +175,7 @@ class ProductDetail extends React.Component {
                 <div className="detailPicList">
                     <p style={{margin: '0'}}><img
                         src="https://yanxuan.nosdn.127.net/0d4325dfe0a8574a637aa60654b582d9.jpg" alt=""/></p>
-                    {proList.map((item, index) => {
+                    {item.pielist.map((item, index) => {
                         return <p key={index} style={{margin: '0'}}><img src={item.pic} alt=""/></p>
                     })}
                 </div>

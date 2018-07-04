@@ -12,6 +12,9 @@ export const PRODUCT_DETAIL_COMMENTLIST = 'PRODUCT_DETAIL_COMMENTLIST';
 /*首页*/
 export const PRODUCT_BRANDFLOOR='PRODUCT_BRANDFLOOR';
 
+/* 获取产品列表 */
+export const QUERY_GOODS_LIST = 'QUERY_GOODS_LIST';
+
 //购物车
 export const SHOP_CART_INFO = "SHOP_CART_INFO";
 
