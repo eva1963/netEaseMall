@@ -3,13 +3,41 @@
     "id": 1,
     "type": "tuijianzhuanqu",
     "category": "xiaoshimai4mian1",
-    "name": "四件套",
+    "name": "CK制造商",
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
-    "pielist": [],
+    "price": 25,
+    "pielist": [
+      "https://yanxuan.nosdn.127.net/a846f0112174bf09f60639fc1352d05c.jpg?imageView&thumbnail=750x0&quality=75",
+      "https://yanxuan.nosdn.127.net/7c28a0a7de8850dda56fe04a19beef3f.jpg?imageView&thumbnail=750x0&quality=75",
+      "https://yanxuan.nosdn.127.net/08bab2bea52eede24060f6886ae61b72.jpg?imageView&thumbnail=750x0&quality=75",
+      "https://yanxuan.nosdn.127.net/3d7c248460c3b0b9ac53dea8b7cd4606.png?imageView&thumbnail=750x0&quality=75",
+      "https://yanxuan.nosdn.127.net/9a8501587b7a794e39bced7be8916a6d.jpg?imageView&thumbnail=750x0&quality=75"
+    ],
+    "parameterList": [
+      {
+        "name": "适用季节",
+        "value": "四季通用"
+      },
+      {
+        "name": "工艺",
+        "value": "绣花"
+      },
+      {
+        "name": "面料",
+        "value": "腰带：正面面料：100%聚酯纤；背面/里料：100%棉，草本香包：100%棉"
+      },
+      {
+        "name": "草本主要成分",
+        "value": "当归、芍药、川穹、茯苓、白术、泽泻"
+      },
+      {
+        "name": "温馨提示",
+        "value": "非生理期建议草本香包靠近人体使用，生理期为达到更好的温热体验，议将石墨烯靠近人体使用"
+      }
+    ],
     "flag": [
-      "热卖"
+      "上新"
     ],
     "color": "red",
     "size": "large"
@@ -18,13 +46,41 @@
     "id": 2,
     "type": "tuijianzhuanqu",
     "category": "xiaricanchuman199jian20",
-    "name": "四件套",
-    "desc": "描述",
+    "name": "破壁机/冷热双杯",
+    "desc": "高速破壁，释放营养",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
-    "pielist": [],
+    "price": 699,
+    "pielist": [
+      "https://yanxuan.nosdn.127.net/a846f0112174bf09f60639fc1352d05c.jpg?imageView&thumbnail=750x0&quality=75",
+      "https://yanxuan.nosdn.127.net/7c28a0a7de8850dda56fe04a19beef3f.jpg?imageView&thumbnail=750x0&quality=75",
+      "https://yanxuan.nosdn.127.net/08bab2bea52eede24060f6886ae61b72.jpg?imageView&thumbnail=750x0&quality=75",
+      "https://yanxuan.nosdn.127.net/3d7c248460c3b0b9ac53dea8b7cd4606.png?imageView&thumbnail=750x0&quality=75",
+      "https://yanxuan.nosdn.127.net/9a8501587b7a794e39bced7be8916a6d.jpg?imageView&thumbnail=750x0&quality=75"
+    ],
+    "parameterList": [
+      {
+        "name": "适用季节",
+        "value": "四季通用"
+      },
+      {
+        "name": "工艺",
+        "value": "绣花"
+      },
+      {
+        "name": "面料",
+        "value": "腰带：正面面料：100%聚酯纤；背面/里料：100%棉，草本香包：100%棉"
+      },
+      {
+        "name": "草本主要成分",
+        "value": "当归、芍药、川穹、茯苓、白术、泽泻"
+      },
+      {
+        "name": "温馨提示",
+        "value": "非生理期建议草本香包靠近人体使用，生理期为达到更好的温热体验，议将石墨烯靠近人体使用"
+      }
+    ],
     "flag": [
-      "热卖"
+      "满额减"
     ],
     "color": "red",
     "size": "large"
@@ -33,11 +89,39 @@
     "id": 3,
     "type": "tuijianzhuanqu",
     "category": "qinzihaowuman199jian30",
-    "name": "四件套",
-    "desc": "描述",
+    "name": "水光气垫精华粉底霜",
+    "desc": "雾面透皙，水润持久好肤色",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
-    "pielist": [],
+    "price": 87,
+    "pielist": [
+      "https://yanxuan.nosdn.127.net/a846f0112174bf09f60639fc1352d05c.jpg?imageView&thumbnail=750x0&quality=75",
+      "https://yanxuan.nosdn.127.net/7c28a0a7de8850dda56fe04a19beef3f.jpg?imageView&thumbnail=750x0&quality=75",
+      "https://yanxuan.nosdn.127.net/08bab2bea52eede24060f6886ae61b72.jpg?imageView&thumbnail=750x0&quality=75",
+      "https://yanxuan.nosdn.127.net/3d7c248460c3b0b9ac53dea8b7cd4606.png?imageView&thumbnail=750x0&quality=75",
+      "https://yanxuan.nosdn.127.net/9a8501587b7a794e39bced7be8916a6d.jpg?imageView&thumbnail=750x0&quality=75"
+    ],
+    "parameterList": [
+      {
+        "name": "适用季节",
+        "value": "四季通用"
+      },
+      {
+        "name": "工艺",
+        "value": "绣花"
+      },
+      {
+        "name": "面料",
+        "value": "腰带：正面面料：100%聚酯纤；背面/里料：100%棉，草本香包：100%棉"
+      },
+      {
+        "name": "草本主要成分",
+        "value": "当归、芍药、川穹、茯苓、白术、泽泻"
+      },
+      {
+        "name": "温馨提示",
+        "value": "非生理期建议草本香包靠近人体使用，生理期为达到更好的温热体验，议将石墨烯靠近人体使用"
+      }
+    ],
     "flag": [
       "热卖"
     ],
@@ -48,11 +132,36 @@
     "id": 4,
     "type": "tuijianzhuanqu",
     "category": "yanxuanheibiao",
-    "name": "四件套",
-    "desc": "描述",
+    "name": "美国制造 除甲醛空气净化剂227g",
+    "desc": "有效吸收甲醛、去除空间异味",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
-    "pielist": [],
+    "price": 63,
+    "pielist": [
+      "http://yanxuan.nosdn.127.net/e73e4c27838c078e5b6ee71bef371b81.jpg?imageView&thumbnail=750x0&quality=75",
+      "http://yanxuan.nosdn.127.net/387446ad6fc5bdebe6b3d5fec7d37822.jpg?imageView&thumbnail=750x0&quality=75"
+    ],
+    "parameterList": [
+      {
+        "name": "适用季节",
+        "value": "四季通用"
+      },
+      {
+        "name": "工艺",
+        "value": "绣花"
+      },
+      {
+        "name": "面料",
+        "value": "腰带：正面面料：100%聚酯纤；背面/里料：100%棉，草本香包：100%棉"
+      },
+      {
+        "name": "草本主要成分",
+        "value": "当归、芍药、川穹、茯苓、白术、泽泻"
+      },
+      {
+        "name": "温馨提示",
+        "value": "非生理期建议草本香包靠近人体使用，生理期为达到更好的温热体验，议将石墨烯靠近人体使用"
+      }
+    ],
     "flag": [
       "热卖"
     ],
@@ -63,11 +172,39 @@
     "id": 5,
     "type": "tuijianzhuanqu",
     "category": "ziranxi",
-    "name": "四件套",
-    "desc": "描述",
+    "name": "女式基础无钢圈文胸",
+    "desc": "随身而动的安心",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
-    "pielist": [],
+    "price": 869,
+    "pielist": [
+      "https://yanxuan.nosdn.127.net/a846f0112174bf09f60639fc1352d05c.jpg?imageView&thumbnail=750x0&quality=75",
+      "https://yanxuan.nosdn.127.net/7c28a0a7de8850dda56fe04a19beef3f.jpg?imageView&thumbnail=750x0&quality=75",
+      "https://yanxuan.nosdn.127.net/08bab2bea52eede24060f6886ae61b72.jpg?imageView&thumbnail=750x0&quality=75",
+      "https://yanxuan.nosdn.127.net/3d7c248460c3b0b9ac53dea8b7cd4606.png?imageView&thumbnail=750x0&quality=75",
+      "https://yanxuan.nosdn.127.net/9a8501587b7a794e39bced7be8916a6d.jpg?imageView&thumbnail=750x0&quality=75"
+    ],
+    "parameterList": [
+      {
+        "name": "适用季节",
+        "value": "四季通用"
+      },
+      {
+        "name": "工艺",
+        "value": "绣花"
+      },
+      {
+        "name": "面料",
+        "value": "腰带：正面面料：100%聚酯纤；背面/里料：100%棉，草本香包：100%棉"
+      },
+      {
+        "name": "草本主要成分",
+        "value": "当归、芍药、川穹、茯苓、白术、泽泻"
+      },
+      {
+        "name": "温馨提示",
+        "value": "非生理期建议草本香包靠近人体使用，生理期为达到更好的温热体验，议将石墨烯靠近人体使用"
+      }
+    ],
     "flag": [
       "热卖"
     ],
@@ -78,11 +215,37 @@
     "id": 6,
     "type": "tuijianzhuanqu",
     "category": "dingleidehaohuotuijian",
-    "name": "四件套",
-    "desc": "描述",
+    "name": "网易智造3D揉捏按摩肩带",
+    "desc": "透气吸汗麻+亲肤柔软棉",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
-    "pielist": [],
+    "price": 85,
+    "pielist": [
+      "http://yanxuan.nosdn.127.net/11d989209bb7c2c37400087820f58b76.jpg?imageView&thumbnail=750x0&quality=75",
+      "http://yanxuan.nosdn.127.net/ba1a389f080d7d681efbbe483bb1f10e.jpg?imageView&thumbnail=750x0&quality=75",
+      "http://yanxuan.nosdn.127.net/bc52a195c2fdc489a3a18313bf1c5989.jpg?imageView&thumbnail=750x0&quality=75"
+    ],
+    "parameterList": [
+      {
+        "name": "适用季节",
+        "value": "四季通用"
+      },
+      {
+        "name": "工艺",
+        "value": "绣花"
+      },
+      {
+        "name": "面料",
+        "value": "腰带：正面面料：100%聚酯纤；背面/里料：100%棉，草本香包：100%棉"
+      },
+      {
+        "name": "草本主要成分",
+        "value": "当归、芍药、川穹、茯苓、白术、泽泻"
+      },
+      {
+        "name": "温馨提示",
+        "value": "非生理期建议草本香包靠近人体使用，生理期为达到更好的温热体验，议将石墨烯靠近人体使用"
+      }
+    ],
     "flag": [
       "热卖"
     ],
@@ -97,7 +260,32 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": [
+      "http://yanxuan.nosdn.127.net/adc99ac4714a0b08d29fb26fc0b94784.png?imageView&thumbnail=750x0&quality=75",
+      "http://yanxuan.nosdn.127.net/abad617f9f9638ff69d8d6419b395083.jpg?imageView&thumbnail=750x0&quality=75"
+    ],
+    "parameterList": [
+      {
+        "name": "适用季节",
+        "value": "四季通用"
+      },
+      {
+        "name": "工艺",
+        "value": "绣花"
+      },
+      {
+        "name": "面料",
+        "value": "腰带：正面面料：100%聚酯纤；背面/里料：100%棉，草本香包：100%棉"
+      },
+      {
+        "name": "草本主要成分",
+        "value": "当归、芍药、川穹、茯苓、白术、泽泻"
+      },
+      {
+        "name": "温馨提示",
+        "value": "非生理期建议草本香包靠近人体使用，生理期为达到更好的温热体验，议将石墨烯靠近人体使用"
+      }
+    ],
     "flag": [
       "热卖"
     ],
@@ -127,7 +315,33 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": [
+      "http://yanxuan.nosdn.127.net/040cf6e5c5dfbdb31f7724af1ddf63c7.jpg?imageView&thumbnail=750x0&quality=75",
+      "http://yanxuan.nosdn.127.net/48aea9d9dab88e3abf013b4e1034cdff.jpg?imageView&thumbnail=750x0&quality=75"
+    ],
+
+    "parameterList": [
+      {
+        "name": "适用季节",
+        "value": "四季通用"
+      },
+      {
+        "name": "工艺",
+        "value": "绣花"
+      },
+      {
+        "name": "面料",
+        "value": "腰带：正面面料：100%聚酯纤；背面/里料：100%棉，草本香包：100%棉"
+      },
+      {
+        "name": "草本主要成分",
+        "value": "当归、芍药、川穹、茯苓、白术、泽泻"
+      },
+      {
+        "name": "温馨提示",
+        "value": "非生理期建议草本香包靠近人体使用，生理期为达到更好的温热体验，议将石墨烯靠近人体使用"
+      }
+    ],
     "flag": [
       "热卖"
     ],
@@ -138,11 +352,36 @@
     "id": 10,
     "type": "baopinqu",
     "category": "gongnengxiangbao",
-    "name": "四件套",
+    "name": "Kenneth Cole制造商",
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
-    "pielist": [],
+    "price": 255,
+    "pielist": [
+      "http://yanxuan.nosdn.127.net/aa38c65290ab9e61035df5431bf0f8ce.jpg?imageView&thumbnail=750x0&quality=75",
+      "http://yanxuan.nosdn.127.net/2831dc26a01cf7cc0f08faf2b7195134.jpg?imageView&thumbnail=750x0&quality=75"
+    ],
+    "parameterList": [
+      {
+        "name": "适用季节",
+        "value": "四季通用"
+      },
+      {
+        "name": "工艺",
+        "value": "绣花"
+      },
+      {
+        "name": "面料",
+        "value": "腰带：正面面料：100%聚酯纤；背面/里料：100%棉，草本香包：100%棉"
+      },
+      {
+        "name": "草本主要成分",
+        "value": "当归、芍药、川穹、茯苓、白术、泽泻"
+      },
+      {
+        "name": "温馨提示",
+        "value": "非生理期建议草本香包靠近人体使用，生理期为达到更好的温热体验，议将石墨烯靠近人体使用"
+      }
+    ],
     "flag": [
       "热卖"
     ],
@@ -157,7 +396,29 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/7f92737091b22017a97e2635f138bfee.jpg?imageView&thumbnail=750x0&quality=75"],
+    "parameterList": [
+      {
+        "name": "适用季节",
+        "value": "四季通用"
+      },
+      {
+        "name": "工艺",
+        "value": "绣花"
+      },
+      {
+        "name": "面料",
+        "value": "腰带：正面面料：100%聚酯纤；背面/里料：100%棉，草本香包：100%棉"
+      },
+      {
+        "name": "草本主要成分",
+        "value": "当归、芍药、川穹、茯苓、白术、泽泻"
+      },
+      {
+        "name": "温馨提示",
+        "value": "非生理期建议草本香包靠近人体使用，生理期为达到更好的温热体验，议将石墨烯靠近人体使用"
+      }
+    ],
     "flag": [
       "热卖"
     ],
@@ -172,7 +433,10 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": [
+      "http://yanxuan.nosdn.127.net/9d581d4ec02cf86ff2a05cf81868f159.png?imageView&thumbnail=750x0&quality=75",
+      "http://yanxuan.nosdn.127.net/7f92737091b22017a97e2635f138bfee.jpg?imageView&thumbnail=750x0&quality=75"
+    ],
     "flag": [
       "热卖"
     ],
@@ -187,7 +451,10 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": [
+      "http://yanxuan.nosdn.127.net/66b9f1638c0517d179262f14ed1345f9.png?imageView&thumbnail=750x0&quality=75",
+      "http://yanxuan.nosdn.127.net/3ab485daa79ebb15767d8a21136be2e5.jpg?imageView&thumbnail=750x0&quality=75"
+    ],
     "flag": [
       "热卖"
     ],
@@ -202,7 +469,10 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": [
+      "http://yanxuan.nosdn.127.net/97a8167f7f69b49dcd0390ee39b586db.jpg?imageView&thumbnail=750x0&quality=75",
+      "http://yanxuan.nosdn.127.net/2e5fa5362e3fd550bcc0f5f43f0517c6.jpg?imageView&thumbnail=750x0&quality=75"
+    ],
     "flag": [
       "热卖"
     ],
@@ -217,7 +487,9 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": [
+      "http://yanxuan.nosdn.127.net/deef25eec37d47b67a8e3ee345fc80f5.jpg?imageView&thumbnail=750x0&quality=75"
+    ],
     "flag": [
       "热卖"
     ],
@@ -232,7 +504,9 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": [
+      "http://yanxuan.nosdn.127.net/22a3954b7a77ccb346a917772c45ddfa.jpg?imageView&thumbnail=750x0&quality=75"
+    ],
     "flag": [
       "热卖"
     ],
@@ -247,7 +521,10 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": [
+      "http://yanxuan.nosdn.127.net/b797b809d72d6ea963f8106cf852ddb5.jpg?imageView&thumbnail=750x0&quality=75",
+      "http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"
+    ],
     "flag": [
       "热卖"
     ],
@@ -262,7 +539,9 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": [
+      "http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"
+    ],
     "flag": [
       "热卖"
     ],
@@ -277,7 +556,9 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": [
+      "http://yanxuan.nosdn.127.net/488310fb5cf19c5f95b8b29582623d21.jpg?imageView&thumbnail=750x0&quality=75"
+    ],
     "flag": [
       "热卖"
     ],
@@ -288,11 +569,13 @@
     "id": 20,
     "type": "xiajizhuanqu",
     "category": "qingliangchuangpin",
-    "name": "四件套",
+    "name": "Ralph Lauren制造商",
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
-    "pielist": [],
+    "price": 19,
+    "pielist": [
+      "http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"
+    ],
     "flag": [
       "热卖"
     ],
@@ -307,7 +590,9 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": [
+      "http://yanxuan.nosdn.127.net/ad9432b7b9a980b0c566159345957672.jpg?imageView&thumbnail=750x0&quality=75"
+    ],
     "flag": [
       "热卖"
     ],
@@ -322,7 +607,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/ad9432b7b9a980b0c566159345957672.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -337,7 +622,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/ad9432b7b9a980b0c566159345957672.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -352,7 +637,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -367,7 +652,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -382,7 +667,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -397,7 +682,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -412,7 +697,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -427,7 +712,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -438,11 +723,11 @@
     "id": 30,
     "type": "jujia",
     "category": "dengju",
-    "name": "四件套",
+    "name": "海外制造商",
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
-    "pielist": [],
+    "price": 9.9,
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75","http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -457,7 +742,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -472,7 +757,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -487,7 +772,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -502,7 +787,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -517,7 +802,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -532,7 +817,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -547,7 +832,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -562,7 +847,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -577,7 +862,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -592,7 +877,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -607,7 +892,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -622,7 +907,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -637,7 +922,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -652,7 +937,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -667,7 +952,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -682,7 +967,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -697,7 +982,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -712,7 +997,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -727,7 +1012,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -742,7 +1027,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -757,7 +1042,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -772,7 +1057,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -787,7 +1072,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -802,7 +1087,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -817,7 +1102,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -832,7 +1117,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -847,7 +1132,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -862,7 +1147,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -877,7 +1162,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -892,7 +1177,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -907,7 +1192,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -922,7 +1207,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -937,7 +1222,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -952,7 +1237,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -967,7 +1252,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/d94c1df5b4cabe9a07fc2c35397a09fb.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -982,7 +1267,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -997,7 +1282,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75","http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1012,7 +1297,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75","http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1027,7 +1312,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1042,7 +1327,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1057,7 +1342,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1072,7 +1357,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1087,7 +1372,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1102,7 +1387,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1117,7 +1402,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1132,7 +1417,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1143,11 +1428,11 @@
     "id": 77,
     "type": "yinshi",
     "category": "shijiebeimeishi",
-    "name": "四件套",
-    "desc": "描述",
+    "name": "自由躺 真皮电动功能沙发",
+    "desc": "一键自由躺 选款师力荐",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1158,11 +1443,11 @@
     "id": 78,
     "type": "yinshi",
     "category": "gaodian",
-    "name": "四件套",
-    "desc": "描述",
+    "name": "牛皮方形锁扣双肩包",
+    "desc": "挺括梯形包身 兼顾颜值与实用",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
-    "pielist": [],
+    "price": 569,
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1173,11 +1458,11 @@
     "id": 79,
     "type": "yinshi",
     "category": "xiaoshi",
-    "name": "四件套",
-    "desc": "描述",
+    "name": "草本石墨烯暖宫腰带",
+    "desc": "石墨烯暖宫，草本甘香惬意",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1188,11 +1473,11 @@
     "id": 80,
     "type": "yinshi",
     "category": "jianguochaohuo",
-    "name": "四件套",
-    "desc": "描述",
+    "name": "健康饮水 宠物自循环活氧饮水器",
+    "desc": "活氧体验，让萌宠爱上喝水，呵护爱宠健康",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
-    "pielist": [],
+    "price": 239,
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1203,11 +1488,11 @@
     "id": 81,
     "type": "yinshi",
     "category": "guogan",
-    "name": "四件套",
-    "desc": "描述",
+    "name": "大蝴蝶结女士软木拖鞋",
+    "desc": "软木鞋身，完美贴合足部",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
-    "pielist": [],
+    "price": 99,
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1218,11 +1503,11 @@
     "id": 82,
     "type": "yinshi",
     "category": "rouleilingshi",
-    "name": "四件套",
-    "desc": "描述",
+    "name": "菱形拼接束口双肩包",
+    "desc": "大容量设计，轻盈储物",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
-    "pielist": [],
+    "price": 169,
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75","http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1237,7 +1522,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1252,7 +1537,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1267,7 +1552,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1282,7 +1567,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1297,7 +1582,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1312,7 +1597,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1327,7 +1612,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1342,7 +1627,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1357,7 +1642,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1372,7 +1657,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1387,7 +1672,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1402,7 +1687,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1417,7 +1702,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75","http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1432,7 +1717,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1447,7 +1732,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1462,7 +1747,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1477,7 +1762,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1492,7 +1777,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1507,7 +1792,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1522,7 +1807,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1537,7 +1822,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75","http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1552,7 +1837,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75","http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1567,7 +1852,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75","http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1582,7 +1867,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75","http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1597,7 +1882,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75","http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1612,7 +1897,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75","http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1627,7 +1912,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1642,7 +1927,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1657,7 +1942,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1672,7 +1957,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1687,7 +1972,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1702,7 +1987,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1717,7 +2002,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1732,7 +2017,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1747,7 +2032,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],
@@ -1762,7 +2047,7 @@
     "desc": "描述",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
     "price": 188,
-    "pielist": [],
+    "pielist": ["http://yanxuan.nosdn.127.net/530c2b239d39cf77a10e521af98f9a5e.jpg?imageView&thumbnail=750x0&quality=75"],
     "flag": [
       "热卖"
     ],

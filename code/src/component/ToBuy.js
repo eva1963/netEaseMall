@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import {Icon} from  'antd';
 import Notifications, {notify} from 'react-notify-toast';
 import {withRouter} from 'react-router-dom';
+import action from '../store/action';
+import {checkLogin} from '../api/person';
 
 class ToBuy extends React.Component {
     constructor(props, context) {
@@ -42,13 +44,29 @@ class ToBuy extends React.Component {
             text: "#fff",
             padding: '0 !important',
         };
-        notify.show('已加入购物车!','custom',2000,myColor);
+        notify.show('已加入购物车!', 'custom', 2000, myColor);
+
+        /*加入购物车*/
+        let {id: goodsID}= this.props;
+        let {count} = this.props.productInfo;
+        this.props.addCart({
+            goodsID,
+            count
+        });
+        this.props.getCartInfo();
     };
-    nowBuy = () => {
+    nowBuy = async () => {
         /* 验证是否登录 登录了就跳到下单页，未登录跳到登录页面*/
+        let result = await checkLogin();
+        let isLogin = parseFloat(result.code === 0) ? true : false;
+
+        if(isLogin) {
+            this.prop.history.push('/home');
+        } else {
+            this.props.history.push('/person/login');
+        }
 
     }
 }
 
-
-export default withRouter(connect()(ToBuy));
+export default withRouter(connect(state=>state.prodetail, {...action.person,...action.prodetail,...action.shopCart})(ToBuy));

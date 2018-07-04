@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link,withRouter } from 'react-router-dom';
 
 import { Form, Button, Input, Icon, } from 'antd';
 import md5 from 'blueimp-md5';
@@ -15,8 +15,7 @@ class Login extends React.Component {
         super(props, context);
     }
 
-    handleSubmit = ev => {
-        console.log(1);
+    handleSubmit = ev => {      
         ev.preventDefault();
         this.props.form.validateFields(async (err, values) => {
             if (!err) {
@@ -34,6 +33,7 @@ class Login extends React.Component {
         });
     }
 
+
     render() {
         const { getFieldDecorator } = this.props.form;
         return <div className='personLogin'>
@@ -45,11 +45,11 @@ class Login extends React.Component {
             <div className='form'>
                 <Form onSubmit={this.handleSubmit} className="login-form">
                     <FormItem>
-                        {getFieldDecorator('userName', {})(<Input prefix={<Icon type="user" />} placeholder="请输入用户名!" />)}
+                        {getFieldDecorator('userName', {})(<Input prefix={<Icon type="user" />} placeholder="请输入用户名" />)}
                     </FormItem>
 
                     <FormItem>
-                        {getFieldDecorator('userPass', {})(<Input prefix={<Icon type="lock" />} placeholder="请输入密码!" type="password" />)}
+                        {getFieldDecorator('userPass', {})(<Input prefix={<Icon type="lock" />} placeholder="请输入密码" type="password" />)}
                     </FormItem>
 
                     <div className='tips clearfix'>
@@ -75,4 +75,4 @@ class Login extends React.Component {
     }
 }
 // export default connect()(Login);
-export default Form.create()(connect(null, {})(Login));
+export default withRouter(connect(null, {...action.person})(Form.create()(Login)));
