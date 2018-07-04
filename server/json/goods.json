@@ -18,13 +18,13 @@
     "id": 2,
     "type": "tuijianzhuanqu",
     "category": "xiaricanchuman199jian20",
-    "name": "四件套",
-    "desc": "描述",
-    "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
+    "name": "破壁机/冷热双杯",
+    "desc": "高速破壁，释放营养",
+    "pic": "http://yanxuan.nosdn.127.net/0d0cc7b126a7dbf47a8bbed48c9dfe9d.png?imageView&quality=65&thumbnail=330x330",
+    "price": 699,
     "pielist": [],
     "flag": [
-      "热卖"
+      "满额减"
     ],
     "color": "red",
     "size": "large"
@@ -33,10 +33,10 @@
     "id": 3,
     "type": "tuijianzhuanqu",
     "category": "qinzihaowuman199jian30",
-    "name": "四件套",
-    "desc": "描述",
+    "name": "水光气垫精华粉底霜",
+    "desc": "雾面透皙，水润持久好肤色",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
+    "price": 87,
     "pielist": [],
     "flag": [
       "热卖"
@@ -48,10 +48,10 @@
     "id": 4,
     "type": "tuijianzhuanqu",
     "category": "yanxuanheibiao",
-    "name": "四件套",
-    "desc": "描述",
+    "name": "美国制造 除甲醛空气净化剂227g",
+    "desc": "有效吸收甲醛、去除空间异味",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
+    "price": 63,
     "pielist": [],
     "flag": [
       "热卖"
@@ -63,10 +63,10 @@
     "id": 5,
     "type": "tuijianzhuanqu",
     "category": "ziranxi",
-    "name": "四件套",
-    "desc": "描述",
+    "name": "女式基础无钢圈文胸",
+    "desc": "随身而动的安心",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
+    "price": 869,
     "pielist": [],
     "flag": [
       "热卖"
@@ -78,10 +78,10 @@
     "id": 6,
     "type": "tuijianzhuanqu",
     "category": "dingleidehaohuotuijian",
-    "name": "四件套",
-    "desc": "描述",
+    "name": "网易智造3D揉捏按摩肩带",
+    "desc": "透气吸汗麻+亲肤柔软棉",
     "pic": "http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144",
-    "price": 188,
+    "price": 85,
     "pielist": [],
     "flag": [
       "热卖"
