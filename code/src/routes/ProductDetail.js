@@ -29,7 +29,7 @@ class ProductDetail extends React.Component {
     render() {
         let proId = parseFloat(Qs.parse(this.props.location.search.substr(1)).id);
         let {goodsList} = this.props,
-            item = goodsList.find(item => item.id === proId);
+            item = goodsList.find(item => parseFloat(item.id) === parseFloat(proId));
         console.log(goodsList,item);
         if (!item) return '';
         /* 商品属性列表 */
@@ -78,9 +78,9 @@ class ProductDetail extends React.Component {
                     <div className="detailBaseInfo">
                         <div className="content">
                             <div className="info">
-                                <div className="name">草本石墨烯暖宫腰带</div>
-                                <div className="desc">石墨烯暖宫，草本甘香惬意</div>
-                                <div className="price">￥{120}</div>
+                                <div className="name">{item.name}</div>
+                                <div className="desc">{item.desc}</div>
+                                <div className="price">￥{item.price}</div>
                             </div>
                             <div className="comment">
                                 <b className="num">{this.props.commentList.length ? this.props.commentList.length : 0}</b>
@@ -121,8 +121,8 @@ class ProductDetail extends React.Component {
                             <div className="bordered">
                                 <Link to="/prodetail/commentList">
                                     <header className="common-header">
-                                        <div className="title">用户评价{199}</div>
-                                        <div className="comment-checkAll">100%好评<Icon type="right"/></div>
+                                        <div className="title">用户评价{this.props.commentList.length ? this.props.commentList.length : 0}</div>
+                                        <div className="comment-checkAll">90%好评<Icon type="right"/></div>
                                     </header>
                                 </Link>
                                 {this.props.commentList.length ? <Comment item={this.props.commentList[0]}/> : null}
@@ -154,13 +154,12 @@ class ProductDetail extends React.Component {
                     <Issues/>
 
                     {/* 加入购物车 */}
-                    <ToBuy toBack={true}/>
+                    <ToBuy toBack={true} id={item.id}/>
                     <Totop/>
                 </div>
             </div>
         )
     }
 }
-
 
 export default connect(state => ({...state.prodetail}), {...action.prodetail})(ProductDetail);

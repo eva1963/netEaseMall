@@ -1,5 +1,5 @@
 import * as TYPES from '../action-types';
-import {queryComments,queryGoods} from '../../api/proDetail';
+import {queryComments,queryGoods,addGoods} from '../../api/proDetail';
 
 export default {
     updateIndex(index) {
@@ -33,6 +33,18 @@ export default {
             dispatch({
                 type:TYPES.SET_PRODUCT_COMMERCIAL,
                 result: obj
+            })
+        }
+    },
+    addCart(payload) {
+        let {goodsID,count} = payload;
+        return async dispatch => {
+            let result = await addGoods({
+
+            });
+            dispatch({
+                type: TYPES.ADD_SHOP_CART,
+                result
             })
         }
     }
