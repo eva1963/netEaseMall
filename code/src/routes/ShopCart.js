@@ -4,6 +4,7 @@ import '../static/less/shopCart.less'
 import NavBottom from '../component/NavBottom'
 import {Link,Switch,Route} from 'react-router-dom'
 import action from "../store/action";
+import {Icon} from 'antd';
 
 class ShopCart extends React.Component {
     constructor(props, context) {
@@ -22,10 +23,6 @@ class ShopCart extends React.Component {
             isLogin: true
         });
 
-
-    }
-
-    componentWillReceiveProps() {
 
     }
 
@@ -50,8 +47,17 @@ class ShopCart extends React.Component {
                     {/*购物车列表*/}
                     {cartData.length ? <div className="shopCarList"><ul>
                         {
-                            cartData.map(({pic, name, desc, count, price}, index) => {
-                                return <li key={index}>
+                            cartData.map(({pic, name, desc, count, price, id}, index) => {
+                                return <li key={index} className={'item'}>
+                                    <div className={'content'}>
+                                        <div className="avator"><img src={pic} alt={name}/></div>
+                                        <div className={'info'}>
+                                            <h2>{name}</h2>
+                                            <p>{desc}</p>
+                                        </div>
+                                        <Icon className='del' type="delete" onClick={ev=>{this.delItem.bind(this, id)}}/>
+
+                                    </div>
                                 </li>
                             })
                         }
@@ -70,6 +76,9 @@ class ShopCart extends React.Component {
                 <NavBottom/>
             </div>
         )
+    }
+    delItem = (id) => {
+
     }
 }
 

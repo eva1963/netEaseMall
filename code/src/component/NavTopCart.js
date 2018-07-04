@@ -17,7 +17,8 @@ class NavTopCart extends React.Component{
         return <div className={'navTopCart'}>
             <div className={'home'}><Link to={"/home"}><Icon type="home"/></Link></div>
                 <img src={this.state.imgSrc}/>
-            <div className={'cart'}><Link to={"/order"}><Icon type="search" /></Link><Link to={"/order"}><Icon type="shopping-cart" /></Link></div>
+            <div className={'cart'}><Link to={"/order"}><Icon type="search"/></Link><Link to={"/order"}></Link>
+                <Link to={"/shopcart"}><Icon type="shopping-cart" /></Link></div>
         </div>
     }
 }

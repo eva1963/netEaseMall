@@ -20,7 +20,7 @@ class Banner extends React.Component {
                 {
                     dataList.map((item,index)=>{
                         return (
-                            <div key={index}><img src={item.pic} alt=""/></div>
+                            <div key={index}><img src={item}/></div>
                         )
                     })
                 }

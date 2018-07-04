@@ -17,9 +17,10 @@ import store from './store';
 import Home from './routes/Home';
 import Classify from './routes/Classify';
 import Person from './routes/Person';
-import ShopCart from './routes/Shopcart';
+import ShopCart from './routes/ShopCart';
 import ProductDetail from './routes/ProductDetail';
 import CommentPage from './routes/proDetail/CommentPage';
+import Params from './routes/proDetail/Params';
 import Order from './routes/Order';
 
 
@@ -32,10 +33,11 @@ render(
                     {/* 一级路由 */}
                     <Switch>
                         <Route path="/home" component={Home} style={{marginTop:'50px'}}/>
-                        <Route path="/productDetail" exact component={ProductDetail}/>
-                        <Route path="/productDetail/commentList" component={CommentPage}/>
+                        <Route path="/prodetail" exact component={ProductDetail}/>
+                        <Route path="/prodetail/commentList" component={CommentPage}/>
+                        <Route path="/prodetail/params" component={Params}/>
                         <Route path="/classify" component={Classify}/>
-                        <Route path="/ShopCart" component={ShopCart}/>
+                        <Route path="/shopcart" component={ShopCart}/>
                         <Route path="/person" component={Person}/>
                         <Route path="/order" exact component={Order}/> {/*订单页面*/}
                         <Redirect to="/home"/>

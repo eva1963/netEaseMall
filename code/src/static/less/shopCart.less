@@ -2,9 +2,9 @@
 @import "_minxStyle";
 
 .shopCartBox {
-  .shopCartContent{
+  .shopCartContent {
     //position:relative;
-    padding-bottom:1.3rem;
+    padding-bottom: 1.3rem;
     .shopTit {
       .txtC;
       height: 1.15rem;
@@ -24,32 +24,82 @@
     }
     .shopCart {
       .txtC;
-      position:absolute;
-      top:50%;
+      position: absolute;
+      top: 50%;
       transform: translateY(-65%);
-      width:100%;
-      .shopCartAdd{
+      width: 100%;
+      .shopCartAdd {
         .block;
         padding-top: 3.1rem;
         background: url('../img/bigCart.png') no-repeat center top / 3.3rem 3.3rem;
         line-height: .5rem;
         font-size: .37rem;
-        color:@color9;
+        color: @color9;
       }
-      .toLogin{
+      .toLogin {
         .redBtn(@red);
         .block;
-        width:6.4rem;
-        margin:.15rem auto;
+        width: 6.4rem;
+        margin: .15rem auto;
 
       }
     }
 
     //购物车列表
-    .shopCarList{
-      padding-top:2rem;
+    .shopCarList {
+      //padding-top:2rem;
+      .item {
+        margin-top: .2rem;
+        padding: 0 .3rem;
+        background-color: #fff;
+        h3 {
+          padding: .2rem;
+          border-bottom: 0.02rem solid #EBEBEB;
+          color: @color6;
+          margin: 0;
+          font-size: 0.38rem;
+          i {
+            float: right;
+            font-size: 0.42rem;
+            color: @color9
+          }
+        }
+        .content {
+          display: flex;
+          align-items: center;
+          padding: .3rem 0;
+          .avator {
+            flex:2;
+            background-color: #f4f4f4;
+            position: relative;
+            width: 1.8rem;
+            height: 1.8rem;
+            margin-right: .27rem;
+            img {
+              width: 100%;
+              height: 100%
+            }
+          }
+          .info {
+            flex:4;
+            h2 {
+              font-size: .38rem;
+              padding-top: .1rem;
+            }
+            p {
+              padding-top: 0.3rem;
+              font-size: 0.34rem;
+              color: @color9
+            }
+          }
+          .del{
+            flex:1;
+            font-size: .6rem;
+            color:@red;
+          }
+        }
+      }
     }
-
 
   }
 }
