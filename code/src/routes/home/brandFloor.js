@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {withRouter, NavLink, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {Icon} from 'antd';
 import action from "../../store/action"
 import ProductDetail from "../ProductDetail"
@@ -44,19 +44,20 @@ class BrandFloor extends React.Component {
                 type={'right-circle-o'}/></Link>
             <ul className={'floorBox'}>
                 {brandData.map((item, index) => {
-                    console.log(item);
-                    let {name, pic, price,flag} = item;
+                    let {name, pic, price,flag,id} = item;
                     return <li key={index} className={'listCard'}>
-                        <img src={pic} alt={name}/>
-                        <div className="info">
-                            <p>{name}</p>
-                            <p>{price}起</p>
-                            <p><span>{flag}</span></p>
-                        </div>
+                        <Link to={`/prodetail?id=${id}`}>
+                            <img src={pic} alt={name}/>
+                            <div className="info">
+                                <p>{name}</p>
+                                <p>{price}起</p>
+                                <p><span>{flag}</span></p>
+                            </div>
+                        </Link>
                     </li>
                 })}
             </ul>
         </div>
     }
 };
-export default withRouter(connect(state => ({...state.home}), action.home)(BrandFloor));
+export default connect(state => ({...state.home}), action.home)(BrandFloor);

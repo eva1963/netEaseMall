@@ -20,7 +20,7 @@ class Info extends React.Component {
     render() {
         let { baseInfo } = this.props;
         if (!baseInfo) return '';
-        let { userName } = baseInfo;
+        let { phone } = baseInfo;
 
         return <div className='person'>
             <div className='leftWrap'>
@@ -29,7 +29,7 @@ class Info extends React.Component {
                     <div className='left'>
                         <img className='avatar' src="http://yanxuan.nosdn.127.net/5b32776a47523cae0e81f423d5f37279.jpg" alt="" />
                         <div className='info'>
-                            <p>{userName}</p>
+                            <p>{phone}</p>
                             <div className='vip'>
                                 <i></i>
                             </div>

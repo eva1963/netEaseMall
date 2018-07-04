@@ -32,18 +32,7 @@
         "id": 5,
         "name": "",
         "email": "",
-        "phone": "",
-        "password": "0219f67f03d775ca084c6523",
-        "userName": "13698813309",
-        "userPass": "Mago1102"
-    },
-    {
-        "id": 6,
-        "name": "",
-        "email": "",
-        "phone": "",
-        "password": "0219f67f03d775ca084c6523",
-        "userName": "13698813309",
-        "userPass": "Mago1102"
+        "phone": "13698813309",
+        "password": "c2aace08c250d0980c195ace"
     }
 ]
