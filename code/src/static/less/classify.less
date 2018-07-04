@@ -106,7 +106,99 @@ html,body{
           color: #333;
           text-align: center;
           line-height: .45333rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: block;
         }
+      }
+    }
+  }
+}
+//详情表
+.classifyDetail_box{
+  width: 100%;
+  .classifyDetail_nav{
+
+  }
+  .classifyDetail_info{
+    width:100%;
+    background: #fff;
+    ul{
+      width:100%;
+
+      li{
+        float: left;
+        position: relative;
+        width: 50%;
+        padding: 0 .26667rem .44rem;
+        overflow: hidden;
+        background-color: #fff;
+        img{
+          display: block;
+          width: 100%;
+        }
+      .classifyDet_dec{
+        width: 100%;
+        background: #F1ECE2;
+        border-radius: 0 0 .05333rem .05333rem;
+        font-size: .32rem;
+        color: #9F8A60;
+        letter-spacing: 0;
+        line-height: .38667rem;
+        padding: .26667rem .13333rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+        .classifyDet_flg{
+          width: 100%;
+          z-index: 1;
+          padding-left: .13333rem;
+          margin: .26667rem 0 0 .05333rem;
+          height: .4rem;
+          overflow: hidden;
+          p{
+            margin-bottom: .01333rem;
+            height: .4rem;
+            padding: .06667rem .21333rem;
+            line-height: .26667rem;
+            text-align: center;
+            color: #fff;
+            font-size: .26667rem;
+            border-radius: .02667rem;
+            display: inline-block;
+            vertical-align: middle;
+            background-color: #cdb694;
+          }
+        }
+      .classifyDet_name{
+        margin-top: .13333rem;
+        padding: 0 .13333rem;
+        line-height: .64rem;
+        text-align: left;
+        font-size: .37333rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        color: #333;
+        span{
+          line-height: .64rem;
+          text-align: left;
+          font-size: .37333rem;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          color: #333;
+        }
+      }
+      .classifyPrice{
+        line-height: 1;
+        font-size: .42667rem;
+        text-align: left;
+        color: #b4282d;
+        padding: 0 .13333rem;
+      }
       }
     }
   }
