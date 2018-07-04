@@ -24,7 +24,7 @@ route.post('/add', (req, res) => {
 
     //=>未登录状态下，临时存储到SESSION中(等到下一次登录成功，也要把SESSION中存储的信息，直接存储到文件中（并且清空SESSION中的信息）
     !req.session.storeList ? req.session.storeList = [] : null;
-    req.session.storeList.push(goodsID);
+    req.session.storeList.push({goodsID, count});
     res.send({code: 0, msg: 'OK!'});
 });
 
@@ -47,7 +47,7 @@ route.post('/remove', (req, res) => {
 
     !req.session.storeList ? req.session.storeList = [] : null;
     req.session.storeList = req.session.storeList.filter(item => {
-        return parseFloat(item) !== goodsID;
+        return parseFloat(item.goodsID) !== goodsID;
     });
     res.send({code: 0, msg: 'OK!'});
 });
@@ -69,18 +69,22 @@ route.get('/info', (req, res) => {
         });
     } else {
         if (state === 0) {
+            //加入购物车之后才会有值
+            //只是为了测试：74行
+            req.session.storeList = [{goodsID:1,count:1},{goodsID:2, count:2}];
             storeList = req.session.storeList || [];
-            storeList = storeList.map(item => {
-                return {goodsID: item, storeID: 0};
+            storeList = storeList.map(({goodsID,count}) => {
+                return {goodsID, count, storeID: 0};
             });
         }
     }
 
     //=>根据上面查找到的商品ID（storeList），把每一个商品的详细信息获取到，返回给客户端
     let data = [];
-    storeList.forEach(({goodsID, storeID} = {}) => {
+    storeList.forEach(({goodsID, count, storeID} = {}) => {
         let item = req.goodsDATA.find(item => parseFloat(item.id) === goodsID);
         item.storeID = storeID;
+        item.count = count;
         data.push(item);
     });
     res.send({

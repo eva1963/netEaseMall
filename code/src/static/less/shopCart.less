@@ -1,23 +1,55 @@
 @import "_variable";
 @import "_minxStyle";
-.shopCartBox{
-  min-height: 100%;
-  background:@bgf4;
-  .shopTit{
-    .txtC;
-    height:1.15rem;
-    line-height: 1.15rem;
-    background: @white;
-    color:@color3;
-    font-size: .48rem;
-  }
-  .shopTips{
-    display: flex;
-    text-align: center;
-    line-height: .9rem;
-    li{
-      flex:1;
-      color: @color6;
+
+.shopCartBox {
+  .shopCartContent{
+    //position:relative;
+    padding-bottom:1.3rem;
+    .shopTit {
+      .txtC;
+      height: 1.15rem;
+      line-height: 1.15rem;
+      background: @white;
+      color: @color3;
+      font-size: .48rem;
     }
+    .shopTips {
+      display: flex;
+      text-align: center;
+      line-height: .9rem;
+      li {
+        flex: 1;
+        color: @color6;
+      }
+    }
+    .shopCart {
+      .txtC;
+      position:absolute;
+      top:50%;
+      transform: translateY(-65%);
+      width:100%;
+      .shopCartAdd{
+        .block;
+        padding-top: 3.1rem;
+        background: url('../img/bigCart.png') no-repeat center top / 3.3rem 3.3rem;
+        line-height: .5rem;
+        font-size: .37rem;
+        color:@color9;
+      }
+      .toLogin{
+        .redBtn(@red);
+        .block;
+        width:6.4rem;
+        margin:.15rem auto;
+
+      }
+    }
+
+    //购物车列表
+    .shopCarList{
+      padding-top:2rem;
+    }
+
+
   }
 }
