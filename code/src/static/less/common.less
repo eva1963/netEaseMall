@@ -13,6 +13,11 @@ html,body {
   margin: 0 auto;
   max-width: 1000px;
   font-size: .37rem;
+  height: 100%;
+}
+.wrapper {
+  position: relative;
+  height: 100%;
 }
 
 .navTop {
@@ -220,3 +225,49 @@ html,body {
     }
   }
 }
+
+/*加减法*/
+.selNum {
+  vertical-align: middle;
+  display: inline-block;
+  background-position: 0 -12.42667rem;
+  width: 4.13333rem;
+  height: .93333rem;
+  background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/selnum-s47503e6ace-461ff5d65c.png);
+  background-repeat: no-repeat;
+  background-size: 4.12rem 13.34rem;
+  .less, .more {
+    width: 1.2rem;
+  }
+  .less, .more, .textWrap {
+    position: relative;
+    font-size: .32rem;
+    float: left;
+    height: .88rem;
+    border: none;
+    background-color: transparent;
+    input {
+      border: none;
+      background-color: transparent;
+    }
+  }
+  .textWrap {
+    width: 1.72rem;
+    text-align: center;
+    line-height: .88rem;
+    input {
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 0;
+      text-align: center;
+      color: #333;
+    }
+  }
+
+}
+
+.toast-notification {
+  padding: 0;
+}
+
