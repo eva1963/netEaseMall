@@ -12,6 +12,21 @@ import NavTopCart from '../../component/NavTopCart';
 
 const FormItem = Form.Item;
 
+
+function success1() {
+    Modal.success({
+        title: '亲爱的',
+        content: '哎哟，遇到问题啦，我也不知道咋解决，你自己再看看',
+    });
+}
+function success2() {
+    Modal.success({
+        title: '亲爱的',
+        content: '我们现在还没有别的验证方式呢，将就着用吧',
+    });
+}
+
+
 class Login extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -33,13 +48,11 @@ class Login extends React.Component {
                 }
             }
         });
-    }
-
+    };
 
 
 
     render() {
-        const confirm = Modal.confirm;
         const { getFieldDecorator } = this.props.form;
         return <div>
             <NavTopCart />
@@ -61,8 +74,8 @@ class Login extends React.Component {
                         <div className='tips clearfix'>
 
 
-                            <span className='leftTip' >遇到问题?</span>
-                            <span className='rightTip'>使用密码验证登录</span>
+                            <span className='leftTip' onClick={success1}>遇到问题?</span>
+                            <span className='rightTip' onClick={success2}>使用密码验证登录</span>
                         </div>
 
                         <FormItem>

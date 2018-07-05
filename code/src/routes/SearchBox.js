@@ -14,16 +14,14 @@ class SearchBox extends React.Component{
             result:[]
         }
     }
-    componentWillUpdate(){
-        queryRes = this.state.result;
-        console.log(queryRes);
-    }
     render(){
+        queryRes = this.state.result;
         return <div className={'searchBox'}>
             <div className="searchHeader">
                 <Search
                     placeholder="站立办公学习可升降桌疯抢中"
                     onSearch={this.enterSearch}
+                    onChange={this.inputChange}
                 />
                 <b onClick={this.cancel}>取消</b>
             </div>
@@ -45,6 +43,15 @@ class SearchBox extends React.Component{
                 })}</div>)}
         </div>
     }
+    inputChange = ev=>{
+       let target = ev.target,
+           value = target.value;
+       if(value===''){
+           this.setState({
+               result:[]
+           })
+       }
+    };
     enterSearch = async value =>{
         let result = await search({name:value});
         if(parseFloat(result.code)===0 && result.data.length!==0){
@@ -56,10 +63,9 @@ class SearchBox extends React.Component{
                 content: '没搜到一条符合的数据╮(╯﹏╰）╭',
             });
         }
-    }
+    };
     cancel = ev=>{
-        console.log(this.props);
-        this.props.history.push('/home')
+        this.props.history.go(-1);
     }
 };
 export default SearchBox;

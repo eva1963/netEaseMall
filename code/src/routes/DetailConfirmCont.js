@@ -11,30 +11,29 @@ class DetailConfirmCont extends React.Component {
 
 
     render() {
+        let {shopCartData}=this.props;
+        console.log(this.props);
         return <section className={'confirmCont'}>
             <ul>
                 <li className={'userInfo'}>
                     <p>
-                        <span>镇南关</span>
+                        <span style={{
+                            marginRight:'1.4rem'}}>镇南关</span>
                         <span>137****2370</span>
                     </p>
                     <p className={'addr clearfix'}>
                         <span className={'default fl'}>默认</span>
                         <span>河北省邢台市威县******30号</span>
-                        <Icon type={'right fr'}></Icon>
                     </p>
                 </li>
                 <li className={'discount'}>
                     <p className={'clearfix'}>
                         <span className={'fl'}>暂无优惠券</span>
-                        <Icon type={'right fr'}/>
-                        <span className={'fr'}>0张</span>
+                        <span className={'fr'} style={{marginRight:'.3rem'}}>0张</span>
                     </p>
                     <Divider/>
                     <p className={'clearfix'}>
-                        <Checkbox className='fl' defaultChecked={false} disabled/>
                         <span className={'fl'}>礼品卡:￥00</span>
-                        <Icon className="fr" type={'right'}/>
                     </p>
                 </li>
                 <li className={'aboutMoney'}>
@@ -56,7 +55,6 @@ class DetailConfirmCont extends React.Component {
                     <p className={'clearfix'}>
                         <Checkbox className={'fl'}/>
                         <span>我要开发票</span>
-                        <Icon type={'right fr'}/>
                     </p>
                 </li>
                 <li className={'shooes clearfix'}>

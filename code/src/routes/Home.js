@@ -6,6 +6,7 @@ import BrandFloor from "./home/BrandFloor";
 import NavBottom from "../component/NavBottom";
 import {Link} from 'react-router-dom'
 import { Carousel } from 'antd';
+import Totop from '../component/Totop';
 /*css*/
 import "../static/less/home.less"
 import ShopItem from "../component/ShopItem";
@@ -189,6 +190,7 @@ class Home extends React.Component {
                         <span>食品经营许可证：JY13301080111719</span>
                     </p>
                 </div>
+                <Totop/>
             </div>
         )
     }

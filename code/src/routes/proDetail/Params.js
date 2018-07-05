@@ -36,7 +36,7 @@ class Params extends React.Component {
                     <div className="box">
                         <div className="tt">颜色</div>
                         <ul className="con" ref={x => this.ul = x} onClick={this.chooseColor}>
-                            <li className="tab" >浅灰色</li>
+                            <li className="tab">浅灰色</li>
                             <li className="tab">灰色</li>
                         </ul>
                     </div>
@@ -56,8 +56,11 @@ class Params extends React.Component {
         let target = ev.target,
             tarTag = target.tagName;
         if (tarTag === 'LI') {
+            [].forEach.call(target.parentElement.children, item => {
+                item.className = 'tab';
+            });
             let color = target.innerHTML;
-            this.props.productInfo.color === color ? target.className += ' active' : '';
+            target.className += ' active';
             this.props.setProductCommercial({
                 color,
             })

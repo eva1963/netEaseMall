@@ -21,7 +21,7 @@ class NavTopCart extends React.Component {
             </div>
             <img src={this.state.imgSrc}/>
             <div className={'cart'}>
-                <Icon type="search"/>
+                <Link to={"/search"}><Icon type="search"/></Link>
                 <Link to={"/shopcart"}><Icon type="shopping-cart"/></Link></div>
         </div>
     }
