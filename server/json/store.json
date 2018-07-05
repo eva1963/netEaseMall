@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 [{"id":1,"goodsID":1,"personID":8,"orderID":"153074877200993672","state":0,"count":2,"name":"CK制造商","pic":"http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144","desc":"描述","price":25,"time":1530748773306},{"id":2,"goodsID":30,"personID":9,"orderID":"153076574909811816","state":0,"count":1,"name":"海外制造商","pic":"http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144","desc":"描述","price":9.9,"time":1530765749707}]
+=======
+[{"id":1,"goodsID":1,"personID":8,"orderID":"153076583200532025","state":0,"count":2,"name":"CK制造商","pic":"http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144","desc":"描述","price":25,"time":1530765835606},{"id":2,"goodsID":10,"personID":8,"orderID":"153076588703414838","state":0,"count":2,"name":"Kenneth Cole制造商","pic":"http://yanxuan.nosdn.127.net/7148a182ffe00ba67de2c6d8cd403a80.png?imageView&quality=85&thumbnail=144x144","desc":"描述","price":255,"time":1530765889114}]
+>>>>>>> 1d4454770b4ed651c32bb1c15e892094873e8c54

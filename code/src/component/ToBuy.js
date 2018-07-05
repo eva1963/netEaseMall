@@ -1,11 +1,18 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Icon} from  'antd';
+import {Icon, Modal} from  'antd';
 import Qs from 'qs';
 import Notifications, {notify} from 'react-notify-toast';
 import {withRouter} from 'react-router-dom';
 import action from '../store/action';
 import {checkLogin} from '../api/person';
+
+function success() {
+    Modal.success({
+        title: '客服小姐姐',
+        content: '有什么好反馈的，我们做的都是最好的，回去吧~',
+    });
+}
 
 class ToBuy extends React.Component {
     constructor(props, context) {
@@ -27,13 +34,14 @@ class ToBuy extends React.Component {
             <div className="toBuyBottom">
                 <Notifications/>
                 <div className="box icon" onClick={this.handleBack}>{
-                    this.state.show ? <Icon type="customer-service"/> : '返回'
+                    this.state.show ? <Icon type="customer-service" onClick={success}/> : '返回'
                 }</div>
                 <div className="box" onClick={this.nowBuy}>立即购买</div>
                 <div className="box addToCart" onClick={this.addCartList}>加入购物车</div>
             </div>
         )
     }
+
 
     handleBack = ev => {
         if (ev.target.innerHTML === '返回') {

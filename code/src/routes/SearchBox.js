@@ -65,7 +65,7 @@ class SearchBox extends React.Component{
         }
     };
     cancel = ev=>{
-        this.props.history.push('/home')
+        this.props.history.go(-1);
     }
 };
 export default SearchBox;

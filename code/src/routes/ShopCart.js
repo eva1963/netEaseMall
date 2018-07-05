@@ -5,6 +5,7 @@ import NavBottom from '../component/NavBottom'
 import {Link, Switch, Route} from 'react-router-dom'
 import action from "../store/action";
 import {Icon, Modal, Button} from 'antd';
+import {checkLogin} from "../api/person";
 
 class ShopCart extends React.Component {
     constructor(props, context) {
@@ -17,15 +18,18 @@ class ShopCart extends React.Component {
         this.props.getCartInfo(0)
     }
 
-    componentDidMount() {
-        let {getCartInfo} = this.props;
+    async componentDidMount() {
         //验证是否登录
-        // let isLogin = checkLogin()
-        this.setState({
-            isLogin: true,
-            isEdit: false
-        });
+        let result = await checkLogin(),
+            isLogin = parseFloat(result.code) === 0 ? true : false;
+        this.setState({ isLogin });
 
+    }
+    async componentWillReceiveProps() {
+        //验证是否登录
+        let result = await checkLogin(),
+            isLogin = parseFloat(result.code) === 0 ? true : false;
+        this.setState({ isLogin });
 
     }
 
@@ -33,6 +37,12 @@ class ShopCart extends React.Component {
         let {isLogin, isEdit} = this.state,
             {cartData, selectAll, changeItemCheck, changeSelectAll, removeSele} = this.props;
         let handleAble = cartData.some(item => item.isChecked);
+        let checkedId = [];
+        cartData.filter(({isChecked, goodsID}) => {
+            if(isChecked){
+                checkedId.push(goodsID);
+            }
+        });
         return (
             <div className='shopCartBox'>
                 <div className='shopCartContent'>
@@ -120,7 +130,7 @@ class ShopCart extends React.Component {
                                         <a className={handleAble ? 'toOrder ableDo' : 'toOrder unDo'} href='javascript:'
                                            onClick={this.showConfirm.bind(this, this.removeSele)}>删除所选</a> :
                                         <Link className={handleAble ? 'toOrder ableDo' : 'toOrder unDo'}
-                                              to={isLogin ? '/detailconfirmcont' : '/person/login'}>下单</Link>
+                                              to={isLogin ? `/detailconfirm?id=${checkedId}` : '/person/login'}>下单</Link>
                                 }
 
 
@@ -154,6 +164,7 @@ class ShopCart extends React.Component {
                 selAry.push(item.id);
             });
 
+            console.log(selAry);
             selAry = selAry.map(id => {
                 return this.delItem(id);
             });
