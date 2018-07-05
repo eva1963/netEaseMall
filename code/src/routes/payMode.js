@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {withRouter, NavLink, Link} from 'react-router-dom';
 import {Icon, Radio, Input,Divider} from 'antd';
+import {payGoods} from "../api/payGoods";
 /*css*/
 import "../static/less/payMode.less"
 
@@ -14,6 +15,8 @@ class PayMode extends React.Component {
     };
 
     render() {
+        let {payGoods}=this.props;
+        console.log(this.props);
         const RadioGroup = Radio.Group;
         const radioStyle = {
             display: 'block',
@@ -27,12 +30,9 @@ class PayMode extends React.Component {
                 <Divider/>
                 <Radio style={radioStyle} value={2}><Icon type={'alipay'} style={{color:'blue'}}></Icon><span>支付宝</span></Radio>
                 <Divider/>
-                <Radio style={radioStyle} value={3}><Icon type={'pay-circle-o'} style={{color:'red'}}></Icon><span>网易支付</span></Radio>
-                <Radio style={radioStyle} value={4}>
-                    More...
-                    {this.state.value === 4 ? <Input style={{width: 100, marginLeft: 10}}/> : null}
-                </Radio>
+                <Radio style={radioStyle} value={3} disabled><Icon type={'pay-circle-o'} style={{color:'red'}}></Icon><span>网易支付</span></Radio>
             </RadioGroup>
+            <button className={'confirmPay'} onClick={this.payConfirm}>确定</button>
         </section>
     };
 
@@ -41,6 +41,9 @@ class PayMode extends React.Component {
         this.setState({
             value: e.target.value,
         });
-    }
+    };
+    async payConfirm(){
+
+    };
 };
 export default connect()(PayMode);

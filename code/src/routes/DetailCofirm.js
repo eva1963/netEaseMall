@@ -5,8 +5,6 @@ import NavTopCart from "../component/NavTopCart";
 import DetailConfirmCont from "./DetailConfirmCont";
 
 
-
-
 class DetailCofirm extends React.Component{
     constructor(props){
         super(props);
