@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import action from '../../store/action';
 import Qs from 'qs';
+import Totop from '../../component/Totop';
 
 class List extends React.Component {
     constructor(props, context) {
@@ -28,17 +29,17 @@ class List extends React.Component {
             {
                 "type": "baopinqu",
 
-                "categorys": ["夏季出行", "清凉床品" ,"夏季茶饮", "减脂好物" ,"女士夏装", "男士夏装", "萌宝夏装", "夏季凉拖"]
+                "categorys": ["夏季出行", "清凉床品", "夏季茶饮", "减脂好物", "女士夏装", "男士夏装", "萌宝夏装", "夏季凉拖"]
             },
             {
                 "type": "jujia",
 
-                "categorys": ["夏凉床品件套", "被枕" ,"家具", "灯具", "收纳", "布艺软装", "家饰", "旅行用品", "宠物"]
+                "categorys": ["夏凉床品件套", "被枕", "家具", "灯具", "收纳", "布艺软装", "家饰", "旅行用品", "宠物"]
             },
             {
                 "type": "xiebaopeishi",
 
-                "categorys": ["行李箱", "男士包袋" ,"女士包袋", "钱包及小皮件" ,"女鞋", "男鞋", "拖鞋", "鞋配", "袜子", "丝袜", "配饰", "眼镜", "围巾件套"]
+                "categorys": ["行李箱", "男士包袋", "女士包袋", "钱包及小皮件", "女鞋", "男鞋", "拖鞋", "鞋配", "袜子", "丝袜", "配饰", "眼镜", "围巾件套"]
             },
             {
                 "type": "fuzhuang",
@@ -93,11 +94,11 @@ class List extends React.Component {
         //路径地址
         let {search} = this.props.location,
             newSearch = Qs.parse(search.substr(1));
-        if(search.type===''||search==='') this.props.history.push('/classify');
-        let resultSearch=JSON.stringify(newSearch);
+        if (search.type === '' || search === '') this.props.history.push('/classify');
+        let resultSearch = JSON.stringify(newSearch);
         this.state = {
-            goodsData:[],
-            search:JSON.parse(resultSearch)
+            goodsData: [],
+            search: JSON.parse(resultSearch)
         };
 
 
@@ -106,20 +107,20 @@ class List extends React.Component {
 
     async componentWillMount() {
         //根据category获取下面数据
-        let categorysData=[];
-        this.categorysHan.forEach(item=>{
-            let {type,categorys}=item;
-            if(type===this.state['search']['type']){
-                categorysData=[...categorys];
+        let categorysData = [];
+        this.categorysHan.forEach(item => {
+            let {type, categorys} = item;
+            if (type === this.state['search']['type']) {
+                categorysData = [...categorys];
             }
         });
-        this.categorysData=categorysData;
+        this.categorysData = categorysData;
         //判断当前页面是否存在props.goodsData
         let goodsData = this.props.goodsData.length === 0 ? [] : this.props.goodsData;
         if (this.props.goodsData.length === 0) {
             await this.props.queryInfo({type: 'all'});
             goodsData = this.props.goodsData;
-            this.props.queryCategory(goodsData,this.state.search['type']);
+            this.props.queryCategory(goodsData, this.state.search['type']);
 
         }
         this.setState({
@@ -127,12 +128,14 @@ class List extends React.Component {
         })
 
     }
-    componentDidMount(){
+
+    componentDidMount() {
 
     }
+
     render() {
-        if(this.props.goodsData&&this.props.goodsData.length===0) return '';
-        let goodsData=this.props.goodsData;
+        if (this.props.goodsData && this.props.goodsData.length === 0) return '';
+        let goodsData = this.props.goodsData;
         let search = this.state.search;
         let result = [];
         goodsData.forEach(item => {
@@ -141,61 +144,66 @@ class List extends React.Component {
                 result.push(item);
             }
         });
-        result.length===0?this.props.history.push('/classify'):null;
+        result.length === 0 ? this.props.history.push('/classify') : null;
 
         return <div className={'classifyDetail_box'} ref={'classifyDetail_box'}>
             <div className={'classifyDetail_nav'}>
                 <ul className={'clearfix'}>
                     {
-                        this.props.categorys.map((item,index)=>{
-                            return  <li key={index} className={item.category===search.category?'active':''} onClick={()=>{this.updateType(item.type,item.category)}}>
+                        this.props.categorys.map((item, index) => {
+                            return <li key={index} className={item.category === search.category ? 'active' : ''}
+                                       onClick={() => {
+                                           this.updateType(item.type, item.category)
+                                       }}>
                                 {this.categorysData[index]}
-                          </li>
+                            </li>
                         })
                     }
                 </ul>
             </div>
             <div className={'classifyDetail_info'}>
                 <div className={'classifyDetail_title'}>
-                <p>夏凉床品，舒适一夏</p>
+                    <p>夏凉床品，舒适一夏</p>
                 </div>
                 <ul className={'clearfix'}>
-                        {
-                            result.map((item,index) => {
-                                let {pic,desc,name,flag,price,pielist}=item;
-                                return <li key={index}>
-                                    {/*http://yanxuan.nosdn.127.net/ca08ce64a38254146778f38f0be06f1b.jpg?imageView&quality=65&thumbnail=330x330*/}
-                                    <img
-                                        src={pielist[0]}
-                                        alt=""/>
-                                    <div className={'classifyDet_dec'}>
-                                        {desc}
-                                    </div>
-                                    <div className={'classifyDet_flg'}>
-                                        <p>{flag}</p>
-                                    </div>
-                                    <div className={'classifyDet_name'}>
-                                        <span> {name}</span>
-                                    </div>
-                                    <div className={'classifyPrice'}>
+                    {
+                        result.map((item, index) => {
+                            let {pic, desc, name, flag, price, pielist} = item;
+                            return <li key={index}>
+                                {/*http://yanxuan.nosdn.127.net/ca08ce64a38254146778f38f0be06f1b.jpg?imageView&quality=65&thumbnail=330x330*/}
+                                <img
+                                    src={pielist[0]}
+                                    alt=""/>
+                                <div className={'classifyDet_dec'}>
+                                    {desc}
+                                </div>
+                                <div className={'classifyDet_flg'}>
+                                    <p>{flag}</p>
+                                </div>
+                                <div className={'classifyDet_name'}>
+                                    <span> {name}</span>
+                                </div>
+                                <div className={'classifyPrice'}>
                                 <span>
                                     ￥{price}
                                 </span>
-                                    </div>
-                                </li>
-                            })
-                        }
+                                </div>
+                            </li>
+                        })
+                    }
                 </ul>
 
             </div>
             <div className="classifyDetail_more">
                 <p>更多内容，敬请期待</p>
             </div>
+            <Totop/>
         </div>;
     }
-    updateType=(type,category)=>{
+
+    updateType = (type, category) => {
         this.setState({
-            search:{type,category}
+            search: {type, category}
         })
     }
 }
