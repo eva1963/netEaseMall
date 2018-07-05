@@ -29,4 +29,6 @@ export const SHOP_CART_SELECTEALL = "SHOP_CART_SELECTALL";
 // 商品规格
 export const SET_PRODUCT_COMMERCIAL = "SET_PRODUCT_COMMERCIAL";
 
+//支付
+export const PAY_GOODS='PAY_GOODS';
 
