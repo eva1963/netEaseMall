@@ -48,7 +48,7 @@
 ```javascript
 地址：/store/pay
 方式：POST
-参数：storeID=xxx
+参数：orderID=xxx
 返回：{
    code:0,
    msg:'xxx'

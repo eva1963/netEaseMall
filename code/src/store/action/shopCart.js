@@ -1,8 +1,9 @@
 /* 购物车的action派发任务 */
 import * as TYPES from '../action-types';
-import {getCartInfo, removeCart} from "../../api/shopCart";
+import {getCartInfo, removeCart, removeCartAry} from "../../api/shopCart";
 
 export default {
+    //获取购物车中的信息
     getCartInfo(state){
         return async dispatch => {
             let shopCartData = await getCartInfo(state);
@@ -12,6 +13,7 @@ export default {
             })
         }
     },
+    //删除购物车中的某一个商品
     cartRemove(goodsID){
         return async dispatch => {
             let removeItem = await removeCart(goodsID);
@@ -22,7 +24,7 @@ export default {
             })
         }
     },
-
+    //文本框输入购物车中商品数量
     inputNum(itemId,val){
         return {
             type:TYPES.SHOP_CART_INPUTNUM,
@@ -30,6 +32,7 @@ export default {
             itemId
         }
     },
+    //点击加减号改变数量
     changeNum(itemId,step){
         return {
             type:TYPES.SHOP_CART_CHANGENUM,
@@ -37,15 +40,18 @@ export default {
             step
         }
     },
+    //商品选中与否
     changeItemCheck(id){
         return {
             type:TYPES.SHOP_CART_CHANGECHECK,
             checkId:id
         }
     },
+    //全选和全不选
     changeSelectAll(){
         return {
             type:TYPES.SHOP_CART_SELECTEALL
         }
-    }
+    },
+
 }
