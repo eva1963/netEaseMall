@@ -34,6 +34,7 @@ class PayMode extends React.Component {
     payConfirm =async () =>{
         let {cartData, payOrder,history,getCartInfo} = this.props,
         selAry = [];
+        console.log(1,this.props.location);
         let orderID = Qs.parse(this.props.location.search.substr(1)).orderID;
         if(!orderID){
             this.props.history.push('/shopcart');
