@@ -4,6 +4,7 @@ import person from './person';
 import shopCart from './shopCart';
 import  prodetail from './prodetail';
 import  order from './order';
+import  prodDetailConfirm from "./proDetailConfirm";
 
 let action = {
     home,
@@ -11,6 +12,7 @@ let action = {
     person,
     shopCart,
     prodetail,
-    order
+    order,
+    prodDetailConfirm
 };
 export default action;

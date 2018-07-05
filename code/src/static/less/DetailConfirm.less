@@ -8,21 +8,17 @@
   margin-bottom: @mb0;
   }
   background:#F2F5F4;
-  font-size:0.2rem;
+  font-size:0.3733rem;
   .ant-divider{margin:.1rem 0;}
   .userInfo{
     padding:0 0.3rem;
     background:#fff;;
     margin:1.4rem 0 0.3rem;
-    p{
+    p:nth-child(0){
       margin-bottom:@mb0;
-      span:nth-child(0){
-        margin-right:1.4rem;
-      }
     }
     .addr{
       line-height: .8rem;
-      font-size: .37333rem;
       color: #333;
       text-align: center;
       .default{
@@ -33,7 +29,22 @@
         line-height: .66rem;
       }
       i{
-        font-size:.42rem;
+        display: inline-block;
+        width: .66667rem;
+        height: .66667rem;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+      }
+      i.anticon-right{
+        margin-top: 0.4rem;
+        margin-right: .3rem;
+        display: inline-block;
+        width: .66667rem;
+        height: .66667rem;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        vertical-align: middle;
       }
     }
     }
@@ -79,6 +90,9 @@
     height:1.4rem;
     line-height: 1.4rem;
     padding-left:.5rem;
+    input.ant-checkbox-checked{
+      background:#b4282d;
+    }
   }
   .pay{
     position:fixed;
