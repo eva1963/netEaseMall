@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import action from '../../store/action';
+
 import Qs from 'qs';
 import Totop from '../../component/Totop';
 
@@ -166,31 +168,33 @@ class List extends React.Component {
                     <p>夏凉床品，舒适一夏</p>
                 </div>
                 <ul className={'clearfix'}>
-                    {
-                        result.map((item, index) => {
-                            let {pic, desc, name, flag, price, pielist} = item;
-                            return <li key={index}>
-                                {/*http://yanxuan.nosdn.127.net/ca08ce64a38254146778f38f0be06f1b.jpg?imageView&quality=65&thumbnail=330x330*/}
-                                <img
-                                    src={pielist[0]}
-                                    alt=""/>
-                                <div className={'classifyDet_dec'}>
-                                    {desc}
-                                </div>
-                                <div className={'classifyDet_flg'}>
-                                    <p>{flag}</p>
-                                </div>
-                                <div className={'classifyDet_name'}>
-                                    <span> {name}</span>
-                                </div>
-                                <div className={'classifyPrice'}>
+                        {
+                            result.map((item,index) => {
+                                let {id,pic,desc,name,flag,price,pielist}=item;
+                                return <li key={index}>
+                                    <Link to={`/prodetail?id=${id}`}>
+                                    {/*http://yanxuan.nosdn.127.net/ca08ce64a38254146778f38f0be06f1b.jpg?imageView&quality=65&thumbnail=330x330*/}
+                                    <img
+                                        src={pielist[0]}
+                                        alt=""/>
+                                    <div className={'classifyDet_dec'}>
+                                        {desc}
+                                    </div>
+                                    <div className={'classifyDet_flg'}>
+                                        <p>{flag}</p>
+                                    </div>
+                                    <div className={'classifyDet_name'}>
+                                        <span> {name}</span>
+                                    </div>
+                                    <div className={'classifyPrice'}>
                                 <span>
                                     ￥{price}
                                 </span>
-                                </div>
-                            </li>
-                        })
-                    }
+                                    </div>
+                                    </Link>
+                                </li>
+                            })
+                        }
                 </ul>
 
             </div>
