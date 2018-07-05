@@ -107,6 +107,7 @@ route.post('/pay', (req, res) => {
         personID = req.session.personID,
         isUpdate = false;
     if (personID) {
+        console.log(orderID);
         req.storeDATA = req.storeDATA.map(item => {
             if (parseFloat(item.orderID) === parseFloat(orderID) && parseFloat(item.personID) === parseFloat(personID)) {
                 isUpdate = true;

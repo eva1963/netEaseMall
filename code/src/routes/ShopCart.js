@@ -164,7 +164,6 @@ class ShopCart extends React.Component {
                 selAry.push(item.id);
             });
 
-            console.log(selAry);
             selAry = selAry.map(id => {
                 return this.delItem(id);
             });

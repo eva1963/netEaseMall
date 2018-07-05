@@ -20,6 +20,7 @@ class NavBottom extends React.Component {
                 </NavLink>
                 <NavLink to="/shopcart">
                     <Icon type="shopping-cart"/>
+                    {/*<i className='cartNum'>5</i>*/}
                     <span>购物车</span>
                 </NavLink>
                 <NavLink to="/person">

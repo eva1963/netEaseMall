@@ -47,8 +47,13 @@ export default function shopCart (state = {
             state.selectAll = !state.selectAll;
             state.cartData.forEach(item => item.isChecked = state.selectAll);
             break;
-
-
+        //支付
+        case TYPES.PRODUCT_DETAIL_COMMENTLIST:
+            let {orderID,result:payRes} = action;
+            if(+payRes.code === 0){
+                state.cartData = state.cartData.filter(({orderID}) => +orderID !== +orderID);
+            }
+            break;
     }
     return state;
 }

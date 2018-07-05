@@ -10,3 +10,7 @@ export function getCartInfo(state = 0){
 export function removeCart(goodsID){
     return axios.post('/store/remove',{goodsID});
 }
+//支付
+export function payOrder(orderID){
+    return axios.post('/store/pay',{orderID})
+}

@@ -1,6 +1,6 @@
 /* 购物车的action派发任务 */
 import * as TYPES from '../action-types';
-import {getCartInfo, removeCart, removeCartAry} from "../../api/shopCart";
+import {getCartInfo, payOrder, removeCart, removeCartAry} from "../../api/shopCart";
 
 export default {
     //获取购物车中的信息
@@ -53,5 +53,16 @@ export default {
             type:TYPES.SHOP_CART_SELECTEALL
         }
     },
+    //支付
+    payOrder(orderID){
+        return async dispatch => {
+            let result = payOrder(orderID);
+            dispatch({
+                type:TYPES.PRODUCT_DETAIL_CONFIRM,
+                result,
+                orderID
+            })
+        }
+    }
 
 }
