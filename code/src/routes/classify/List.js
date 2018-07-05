@@ -162,11 +162,11 @@ class List extends React.Component {
                 <ul className={'clearfix'}>
                         {
                             result.map((item,index) => {
-                                let {pic,desc,name,flag,price}=item;
+                                let {pic,desc,name,flag,price,pielist}=item;
                                 return <li key={index}>
                                     {/*http://yanxuan.nosdn.127.net/ca08ce64a38254146778f38f0be06f1b.jpg?imageView&quality=65&thumbnail=330x330*/}
                                     <img
-                                        src={pic}
+                                        src={pielist[0]}
                                         alt=""/>
                                     <div className={'classifyDet_dec'}>
                                         {desc}
@@ -186,8 +186,11 @@ class List extends React.Component {
                             })
                         }
                 </ul>
-            </div>
 
+            </div>
+            <div className="classifyDetail_more">
+                <p>更多内容，敬请期待</p>
+            </div>
         </div>;
     }
     updateType=(type,category)=>{

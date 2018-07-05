@@ -8,6 +8,7 @@ html, body {
   top: 1.29rem;
   border-top: 1px solid #EBEBEB;
   background: #fff;
+  height:15.5rem;
   .classify_boxL {
 
     width: 2.16rem;
@@ -53,6 +54,8 @@ html, body {
     float: left;
     padding: .4rem .4rem .28rem;
     width: 7.74rem;
+    height: 15.2rem;
+    overflow: scroll;
     .classify_boxR_banner {
       position: relative;
       width: 100%;
@@ -63,6 +66,11 @@ html, body {
       border-radius: 4px;
       background: url("http://yanxuan.nosdn.127.net/8932ed42f62703c638c3af7bd8bf7a59.jpg?imageView&thumbnail=0x196&quality=75") no-repeat;
       background-size: 100% 100%;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
     }
     .classify_r_title {
       height: 1.44rem;
@@ -134,7 +142,6 @@ html, body {
 .classifyDetail_box {
   width: 100%;
   height: 16.6rem;
-background: #fff;
   .classifyDetail_nav {
     width: 100%;
     padding-top: 1rem;
@@ -170,6 +177,7 @@ background: #fff;
     }
   }
   .classifyDetail_info {
+
     .classifyDetail_title{
       display: flex;
       text-align: center;
@@ -187,7 +195,7 @@ background: #fff;
     margin-top: .33rem;
     ul {
       width: 100%;
-
+      margin-bottom: 0;
       li {
         float: left;
         position: relative;
@@ -262,5 +270,45 @@ background: #fff;
         }
       }
     }
+
+  }
+  .classifyDetail_more{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -moz-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    height: 1.06667rem;
+    margin-bottom: 1.6rem;
+    p{
+      margin: 0 .26667rem;
+      font-size: .32rem;
+      color: #666;
+
+
+    }
+    &:before,&:after{
+      content: ' ';
+      display: block;
+      width: .96rem;
+      height: 1px;
+      background-color: #ccc;
+      -webkit-tap-highlight-color: transparent;
+    }
+
   }
 }

@@ -149,7 +149,7 @@ class ClassifyInfo extends React.Component {
             </div>
             <div className={'classify_boxR'}>
                 <div className={'classify_boxR_banner'}>
-                    <a href="http://www.baidu.com"></a>
+                    <a href="https://m.you.163.com/item/saleRank?categoryId=1005000" target={'_blank'}></a>
                 </div>
                 <div className={'classify_r_title'}>
                     <p><span className={'classify_r_title1'}>推荐专区</span><span className={'classify_r_title2'}>分类</span>
