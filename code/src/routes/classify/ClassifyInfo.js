@@ -101,7 +101,7 @@ class ClassifyInfo extends React.Component {
     }
 
     async componentDidMount() {
-        if (this.props.goodsData.length != 0) return;
+        if (this.props.goodsData.length !== 0) return;
         let {queryInfo, queryCategory} = this.props;
         await queryInfo({type: 'all'});
         this.setState({

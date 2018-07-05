@@ -95,47 +95,56 @@ class List extends React.Component {
         //路径地址
         let {search} = this.props.location,
             newSearch = Qs.parse(search.substr(1));
-        if(search.type===''||search==='') this.props.history.push('/classify');
         let resultSearch=JSON.stringify(newSearch);
         this.state = {
             goodsData:[],
             search:JSON.parse(resultSearch)
         };
-
-
     }
 
 
     async componentWillMount() {
         //根据category获取下面数据
-        let categorysData=[];
-        this.categorysHan.forEach(item=>{
-            let {type,categorys}=item;
-            if(type===this.state['search']['type']){
-                categorysData=[...categorys];
+        let {search}=this.props.location;
+        this.routeState=true;
+        if(search.indexOf('type')===-1||search.indexOf('category')===-1){
+            this.routeState=false;
+        }
+
+        if(this.routeState) {
+            let categorysData = [];
+            this.categorysHan.forEach(item => {
+                let {type, categorys} = item;
+                if (type === this.state['search']['type']) {
+                    categorysData = [...categorys];
+                }
+            });
+            this.categorysData = categorysData;
+            //判断当前页面是否存在props.goodsData
+            let goodsData = this.props.goodsData.length === 0 ? [] : this.props.goodsData;
+            if (this.props.goodsData.length === 0) {
+                await this.props.queryInfo({type: 'all'});
+                goodsData = this.props.goodsData;
+                this.props.queryCategory(goodsData, this.state.search['type']);
+
             }
-        });
-        this.categorysData=categorysData;
-        //判断当前页面是否存在props.goodsData
-        let goodsData = this.props.goodsData.length === 0 ? [] : this.props.goodsData;
-        if (this.props.goodsData.length === 0) {
-            await this.props.queryInfo({type: 'all'});
-            goodsData = this.props.goodsData;
-            this.props.queryCategory(goodsData,this.state.search['type']);
+            this.setState({
+                goodsData: goodsData
+            })
 
         }
-        this.setState({
-            goodsData: goodsData
-        })
-
-    }
-    componentDidMount(){
 
     }
     render() {
+
+        if(!this.routeState) {
+            console.log('render',!this.routeState);
+            this.props.history.push('/classify');
+            return '';
+        }
         if(this.props.goodsData&&this.props.goodsData.length===0) return '';
         let goodsData=this.props.goodsData;
-        let search = this.state.search;
+        let {search} = this.state;
         let result = [];
         goodsData.forEach(item => {
             let {type, category} = item;
@@ -144,18 +153,16 @@ class List extends React.Component {
             }
         });
         result.length===0?this.props.history.push('/classify'):null;
-
+        //导航样式
         return <div className={'classifyDetail_box'}>
             <div className={'classifyDetail_nav'}>
                 <ul className={'clearfix'}>
                     {
                         this.props.categorys.map((item,index)=>{
-                            return  <li key={index} className={item.category===search.category?'active':''} onClick={()=>{
-                                // console.log(this.props);
+                            return  <li key={index} className={item.category===search.category?'active':''} onClick={()=>{// console.log(this.props);
                                 this.props.history.push(`/classify/list?type=${item.type}&category=${item.category}`); this.updateType(item.type,item.category)
 
                             }}>
-
                                 {/*this.updateType(item.type,item.category)*/}
                                 {this.categorysData[index]}
                           </li>
