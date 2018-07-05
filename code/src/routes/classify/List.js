@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
+import {Link,withRouter} from 'react-router-dom';
 import action from '../../store/action';
 
 import Qs from 'qs';
@@ -145,12 +145,18 @@ class List extends React.Component {
         });
         result.length===0?this.props.history.push('/classify'):null;
 
-        return <div className={'classifyDetail_box'} ref={'classifyDetail_box'}>
+        return <div className={'classifyDetail_box'}>
             <div className={'classifyDetail_nav'}>
                 <ul className={'clearfix'}>
                     {
                         this.props.categorys.map((item,index)=>{
-                            return  <li key={index} className={item.category===search.category?'active':''} onClick={()=>{this.updateType(item.type,item.category)}}>
+                            return  <li key={index} className={item.category===search.category?'active':''} onClick={()=>{
+                                // console.log(this.props);
+                                this.props.history.push(`/classify/list?type=${item.type}&category=${item.category}`); this.updateType(item.type,item.category)
+
+                            }}>
+
+                                {/*this.updateType(item.type,item.category)*/}
                                 {this.categorysData[index]}
                           </li>
                         })
@@ -204,4 +210,4 @@ class List extends React.Component {
     }
 }
 
-export default connect(state => ({...state.classify}), action.classify)(List);
+export default withRouter(connect(state => ({...state.classify}), action.classify)(List));
