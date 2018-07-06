@@ -86,7 +86,6 @@ class Register extends React.Component {
                                 content: '都是我们的人了，还要什么隐私，天真~'
                             })}>《网易隐私政策》</a></label>
                         </div>
-                        <input type="button" className="register-btn" value='立即注册' onClick={this.handleSubmit}/>
                     </form>
                 </div>
 
