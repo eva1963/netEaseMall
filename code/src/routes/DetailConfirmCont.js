@@ -42,7 +42,7 @@ class DetailConfirmCont extends React.Component {
         }
         return <section className={'confirmCont'}>
             <ul>
-                <div class="u-icon u-address-bg" data-reactid=".0.1:2.0"></div>
+                <div className="u-icon u-address-bg" data-reactid=".0.1:2.0"></div>
                 <li className={'userInfo'}>
                     <p>
                         <span style={{

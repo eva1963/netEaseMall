@@ -140,7 +140,6 @@ class List extends React.Component {
 
     render() {
         if (!this.routeState) {
-            console.log('render', !this.routeState);
             this.props.history.push('/classify');
             return '';
         }
@@ -157,8 +156,6 @@ class List extends React.Component {
         result.length === 0 ? this.props.history.push('/classify') : null;
         //导航样式
         return <div className={'classifyDetail_box'}>
-
-
             <div className={'classifyDetail_nav'}>
                 <ul className={'clearfix'}>
                     {
@@ -166,7 +163,13 @@ class List extends React.Component {
                             return <li key={index}
                                        className={item.category === search.category ? 'active' : ''}
                                        onClick={() => {
-                                           this.updateType(item.type, item.category)
+                                           let curSearch=`?type=${item.type}&category=${item.category}`;
+                                           console.log(curSearch);
+                                           if(this.props.location.search!==curSearch){
+                                               this.props.history.push(`/classify/list/${curSearch}`);
+                                               this.updateType(item.type, item.category)
+                                           }
+
                                        }}>
                                 {this.categorysData[index]}
                             </li>
