@@ -19,7 +19,7 @@ class NavClassify extends React.Component{
             <ul ref={x=>this.classifyWrap=x}>{
                 type.map((item,index)=>{
                     return <li key={index} className={classifyIndex===index?'active':''} onClick={ev=>{
-                       this.props.history.push(`/classify/list?type=${item}&category=`)
+                       this.props.history.push(`/classify/navlist?type=${item}`)
                     }
                     }>{classifyData[index]}</li>
                 })
