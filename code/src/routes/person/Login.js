@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link, withRouter} from 'react-router-dom';
 
-import {Form, Button, Input, Icon} from 'antd';
+import {Form, Button, Input, Icon,Modal} from 'antd';
 import md5 from 'blueimp-md5';
 
 import {login} from '../../api/person';
@@ -10,7 +10,6 @@ import action from '../../store/action/index';
 
 import NavTopCart from '../../component/NavTopCart';
 import qs from 'qs'
-
 import {utils} from '../../utils/utils'
 
 const FormItem = Form.Item;
@@ -85,6 +84,7 @@ class Login extends React.Component {
         ev.preventDefault();
         this.props.form.validateFields(async (err, values) => {
             if (!err) {
+                console.log(2);
                 let {userName, userPass} = values;
                 let result = await login({
                     name: userName,
@@ -93,6 +93,12 @@ class Login extends React.Component {
                 if (+result.code === 0) {
                     this.props.history.push('/person/info');
                     return;
+                }else{
+                    console.log(1);
+                    Modal.error({
+                        title: '登录失败',
+                        content: '请确认账号密码是否正确',
+                    });
                 }
             }
         });

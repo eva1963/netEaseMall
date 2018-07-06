@@ -20,6 +20,7 @@ class Count extends React.Component {
                 <div className="textWrap">
                     <input ref={x => this.input = x}
                            type="tel"
+                           defaultValue={1}
                            value={this.state.count}
                     />
                 </div>
