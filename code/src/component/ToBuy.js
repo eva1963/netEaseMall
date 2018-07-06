@@ -71,7 +71,7 @@ class ToBuy extends React.Component {
 
         if(isLogin) {
             this.props.history.push({
-                pathname: '/detailConfirm',
+                pathname: '/detailconfirm',
                 search: `?id=${this.proId}`
             });
         } else {

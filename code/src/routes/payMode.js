@@ -11,26 +11,46 @@ class PayMode extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: 1
+            value: 1,
+            isCheck:true,
         }
     };
 
     render() {
         let {payGoods}=this.props;
-        const RadioGroup = Radio.Group;
         return <section className={'payCont'}>
             <p className={'chooseMode'}>请选择支付方式</p>
-            <RadioGroup value={this.state.value}>
-                <Radio value={1}><Icon type={'wechat'} style={{color:'green'}}></Icon><span>微信支付</span></Radio>
+            <ul className={'radioBox'} onClick={this.isChecked} >
+                 <li><a className={'radioActive'}>√</a><Icon type={'wechat'} style={{color:'green'}}></Icon><span>微信支付</span></li>
                 <Divider/>
+                <li ><a className={'radioSelef'}>√</a><Icon type={'alipay'} style={{color:'blue'}}></Icon><span>支付宝支付</span></li>
+                <Divider/>
+                <li ><a className={'radioSelef'} >√</a><Icon type={'pay-circle-o'} style={{color:'red'}}></Icon><span>网易支付</span></li>
+            </ul>
+            {/*<RadioGroup >
+                <Radio value={1}><Icon type={'wechat'} style={{color:'green'}}></Icon><span>微信支付</span></Radio>
+
                 <Radio value={2}><Icon type={'alipay'} style={{color:'blue'}}></Icon><span>支付宝</span></Radio>
                 <Divider/>
                 <Radio value={3}><Icon type={'pay-circle-o'} style={{color:'red'}}></Icon><span>网易支付</span></Radio>
-            </RadioGroup>
+            </RadioGroup>*/}
             <button className={'confirmPay'} onClick={this.payConfirm}>确定</button>
         </section>
     };
+    isChecked=(ev)=>{
+        let aCheck=document.getElementsByTagName('a');
+        for(var i=0;i<aCheck.length;i++){
+            aCheck[i].onclick=(function(i){
+                return function(){
+                    [...aCheck].forEach(item => {
+                        item.style.backgroundColor="#fff"
+                    })
+                    aCheck[i].style.backgroundColor='#B4282D';
+                };
+            })(i)
 
+        }
+    };
     payConfirm =async () =>{
         let {cartData, payOrder,history,getCartInfo} = this.props,
         selAry = [];
