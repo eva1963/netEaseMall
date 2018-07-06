@@ -5,6 +5,8 @@ import Qs from 'qs';
 import action from '../../store/action';
 import '../../static/less/navlist.less';
 
+let classifyData = ['推荐专区','爆品区','夏季专区','居家','鞋包配饰','服装','电器','洗护','银饰','餐厨','婴童','文体'],
+    type = ['tuijianzhuanqu','baopinqu','xiajizhuanqu','jujia','xiebaopeishi','fuzhuang','dianqi','xihu','yinshi','canchu','yingtong','wenti'];
  class NavList extends  React.Component{
     constructor(props,context){
         super(props,context);
@@ -31,11 +33,13 @@ import '../../static/less/navlist.less';
        })
 
     }
+    componentDidMount(){
+       this.changeMenu();
+    };
     render(){
         if(this.isHasType)return '';
         if(this.props.goodsData===0)return '';
-        let classifyData = ['推荐专区','爆品区','夏季专区','居家','鞋包配饰','服装','电器','洗护','银饰','餐厨','婴童','文体'],
-            type = ['tuijianzhuanqu','baopinqu','xiajizhuanqu','jujia','xiebaopeishi','fuzhuang','dianqi','xihu','yinshi','canchu','yingtong','wenti'];
+
         //二级汉字数据：
         let categorysHan = [
             {
@@ -144,10 +148,11 @@ import '../../static/less/navlist.less';
         return <div className={'navList_box'}>
             {/*导航*/}
             <div className={'navlist_nav'}>
-            <ul className={'clearfix'}>
+            <ul className={'clearfix'} ref={x=>this.navList=x}>
                 {
                     type.map((item,index)=>{
                         return <li key={index} className={item===this.state.curType?'active':''} onClick={()=>{
+                            this.changeMenu(index);
                             this.props.history.push(`/classify/navlist?type=${item}`);
                             this.setState({
                                 curType:item
@@ -200,6 +205,21 @@ import '../../static/less/navlist.less';
 
             </div>
         </div>;
+    }
+    changeMenu=index=>{
+        if(!type) return;
+        let  target = this.navList;
+        let t_menu = null;
+        if(!index){
+            let _index = type.indexOf(this.state.curType);
+            t_menu = target.childNodes[_index];
+        }else{
+            t_menu = target.childNodes[index];
+        }
+
+        let space = window.innerWidth / 2 - t_menu.offsetWidth / 2;
+        target.style.transition="-webkit-transform 500ms ease-in";
+        target.scrollLeft = t_menu.offsetLeft - space;
     }
 }
 export default connect(state => ({...state.classify}), action.classify)(NavList);
