@@ -69,6 +69,9 @@ class ToBuy extends React.Component {
         }));
          notify.show('已加入购物车!', 'custom', 2000, myColor);
          this.props.getCartInfo();
+         setTimeout(()=>{
+            this.props.history.push(`/prodetail?id=${this.proId}`);
+         }, 1000);
     };
     nowBuy = async () => {
         /* 验证是否登录 登录了就跳到下单页，未登录跳到登录页面*/
