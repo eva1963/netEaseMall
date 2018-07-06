@@ -166,8 +166,13 @@ class List extends React.Component {
                             return <li key={index}
                                        className={item.category === search.category ? 'active' : ''}
                                        onClick={() => {
-                                           this.props.history.push(`/classify/list?type=${item.type}&category=${item.category}`);
-                                           this.updateType(item.type, item.category)
+                                           let curSearch=`?type=${item.type}&category=${item.category}`;
+                                           console.log(curSearch);
+                                           if(this.props.location.search!==curSearch){
+                                               this.props.history.push(`/classify/list/${curSearch}`);
+                                               this.updateType(item.type, item.category)
+                                           }
+
                                        }}>
                                 {this.categorysData[index]}
                             </li>
