@@ -140,14 +140,15 @@ class List extends React.Component {
                 this.props.queryCategory(goodsData, this.state.search['type']);
 
             }
-
             this.setState({
                 goodsData
-            })
+            });
 
-            this.changeMenu();
         }
     }
+    componentDidMount() {
+        this.changeMenu();
+    };
     render() {
         if (!this.routeState) {
             this.props.history.push('/classify');
@@ -178,6 +179,7 @@ class List extends React.Component {
                                                this.props.history.push(`/classify/list/${curSearch}`);
                                                this.updateType(item.type, item.category)
                                            }
+                                           this.changeMenu(index);
                                        }}>
                                 {this.categorysData[index]}
                             </li>
@@ -228,7 +230,7 @@ class List extends React.Component {
             this.setState({
                  search: {type, category}
                  })
-        }
+        };
     changeMenu = index => {
         if (!this.props.categorys) return;
         let target = this.navList;
