@@ -1,8 +1,5 @@
 @import '_variable';
-
-body {
-  background-color: #f4f4f4;
-}
+@import "_minxStyle";
 .personLogin, .personRegister {
   .ant-input-affix-wrapper {
     font-size: .6rem;
@@ -24,6 +21,36 @@ body {
       box-shadow: none;
       border-color: transparent;
     }
+  }
+}
+
+.personLogin, .personRegister {
+  .register-form {
+    padding-left: .4rem;
+    .formItem {
+      position: relative;
+      padding-bottom: .6rem;
+      .input-required:before {
+        content: "*";
+        color: @error;
+        position: absolute;
+        left: -.4rem;
+        top: .2rem;
+      }
+      .anticon.err{
+        color:@error
+      }
+      .checkMsg {
+        color: @error;
+        position:absolute;
+        left:.2rem;
+        bottom:.1rem;
+        font-size: .34rem;
+        .ellipsis;
+
+      }
+    }
+
   }
 }
 
@@ -96,8 +123,7 @@ body {
 
   .registerWrap {
     text-align: center;
-    padding-top: 2.13333rem;
-    padding-bottom: 2.13333rem;
+    padding: 1.8rem 0 .5rem;
 
     span {
       font-size: .48rem;
