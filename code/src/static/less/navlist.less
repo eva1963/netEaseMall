@@ -1,0 +1,81 @@
+@import './_variable';
+
+.navList_box {
+
+  .navlist_nav {
+    width: 100%;
+    height: 1rem;
+    overflow: hidden;
+    background-color: #fff;
+    margin-top: 1.2rem;
+    /* 隐藏滚动条*/
+    ::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0);
+      width: 0;
+      height: 0;
+    }
+    ul {
+      width: 100%;
+      color: #fff;
+      white-space: nowrap;
+      font-size: 0;
+      padding: 0 0.1rem;
+      overflow-x: scroll;
+      li {
+        display: inline-block;
+        padding: 0.2rem 0.3rem;
+        color: @color6;
+        font-size: .38rem;
+        height: 1rem;
+        &:first-child {
+          margin-left: 0;
+        }
+        &.active {
+          color: @red;
+          border-bottom-color: @red;
+        }
+      }
+    }
+  }
+  .navlist_bottom {
+    .navlist_info {
+      background: #fff;
+      margin-top: .3rem;
+      .navlist_title {
+        text-align: center;
+        p:first-child {
+          margin-bottom: .21333rem;
+          font-size: .42667rem;
+          line-height: 1;
+          font-size: #333;
+        }
+        p:last-child {
+          line-height: 1;
+          color: #999;
+          font-size: .32rem;
+        }
+      }
+      ul {
+        width: 100%;
+        margin-top: 1.2rem;
+        padding:0 .2rem;
+        li {
+          float: left;
+          background:#f4f4f4;
+          &:nth-child(2n+1){
+            margin-left: .2rem;
+          }
+
+        }
+      }
+    }
+
+  }
+
+}
+

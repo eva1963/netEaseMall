@@ -52,17 +52,16 @@ route.post('/register', (req, res) => {
     //=>先准备一套完成的新用户信息模型
     let personInfo = {
         id: req.personalDATA.length === 0 ? 1 : (parseFloat(req.personalDATA[req.personalDATA.length - 1].id) + 1),//=>用户的ID是在当前最大ID基础上自动累加1的
-        name: '亲',
+        name: '',
         email: '',
         phone: '',
-        password: '8376ac810bb9f231d28fcf1f',
+        password: ''
     };
     //=>把用户传递的密码二次加密
-    req.body.password = req.body.password.substr(4, 24).split('').reverse().join('');
+    req.body.password = req.body.password.slice(4, -4).split('').reverse().join('');
 
     //=>把用户传递的信息替换用户模型中的信息，此时personInfo就是要新增加用户的全部信息
     personInfo = {...personInfo, ...req.body};
-
     //=>先把信息放到原始数据中
     req.personalDATA.push(personInfo);
 
@@ -97,5 +96,24 @@ route.get('/out', (req, res) => {
     req.session.personID = null;
     res.send({code: 0, msg: 'OK!'});
 });
+
+route.post('/checkInfo', (req, res) => {
+    //=>先准备一套完成的新用户信息模型
+    let {
+        name,
+        phone
+    } = req.body;
+
+    //=>原始是否存在用户名，保证用户名的唯一性
+    if(req.personalDATA.find(item => item.name === name)) {
+        res.send({code: 1, msg: 'NO!'});
+    }
+    //=>原始是否存在手机号
+    if(req.personalDATA.find(item => item.phone === phone)) {
+        res.send({code: 1, msg: 'NO!'});
+    }
+    res.send({code: 0, msg:'OK!'});
+});
+
 
 module.exports = route;

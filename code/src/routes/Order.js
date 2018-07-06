@@ -16,6 +16,7 @@ class Order extends React.Component{
         super(props,context);
         this.state={
             classifyIndex:0,
+            all:[]
         };
 
     }
@@ -32,17 +33,16 @@ class Order extends React.Component{
     }
     render(){
         let {pay,unpay} = this.props.orderCart;
-
         let all = unpay.concat(pay);
+
         return <div className={'order-container'}>
             <NavTopCart/>
             <div className={'tab'}>
                 <Tabs defaultActiveKey="1" onChange={this.changeTab} className={'tab-wrapper'}>
-                    <TabPane tab="全部" key="1">{
-                        all.length!==0?( <div className={'notices'}><Icon type="sound" />防诈骗公告</div>):''
-                    }
+                    <TabPane tab="全部" key="1">
+                        <div className={'notices'}><Icon type="sound" />防诈骗公告</div>
                         <ul className={'list'}>{
-                            all.length!==0?( unpay.map((item,index)=>{
+                            all.length!==0?( all.map((item,index)=>{
                                 let {orderID,pic,name,desc,id,state} = item;
                                 return <li key={index} className={'item'}>
                                     <Link to={`/prodetail?id=${id}`}>

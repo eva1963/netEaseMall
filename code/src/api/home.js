@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "./index";
 
 export function brandList(limit) {
     return axios.get('/goods/list', {

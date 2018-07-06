@@ -16,8 +16,7 @@ let classify={
         if(goodsData&&goodsData.length!==0) {
             return dispatch => {
                 let categList = [], cateResultList = [];
-                goodsData.forEach(item => {
-                    let {type, category} = item;
+                goodsData.forEach(({type,category}) => {
                     if (type === curType && !categList.includes(category)) {
                         categList.push(category);
                         cateResultList.push({type: type, category: category});
