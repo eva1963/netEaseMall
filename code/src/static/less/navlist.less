@@ -3,11 +3,11 @@
 .navList_box {
 
   .navlist_nav {
+    position:fixed;top:1.2rem;left:0;
     width: 100%;
     height: 1rem;
     overflow: hidden;
     background-color: #fff;
-    margin-top: 1.2rem;
     /* 隐藏滚动条*/
     ::-webkit-scrollbar {
       width: 0;
@@ -59,11 +59,13 @@
     }
   }
   .navlist_bottom {
+    margin-top: 2.36rem;
     .navlist_info {
       background: #fff;
       margin-top: .3rem;
       .navlist_title {
         display: -webkit-box;
+        display: -webkit-flex;
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flexbox;
@@ -71,18 +73,12 @@
         -webkit-box-direction: normal;
         -webkit-box-orient: vertical;
         -webkit-flex-direction: column;
-        -moz-flex-direction: column;
-        -ms-flex-direction: column;
         flex-direction: column;
         -webkit-box-align: center;
-        -ms-flex-align: center;
         -webkit-align-items: center;
-        -moz-align-items: center;
         align-items: center;
         -webkit-box-pack: center;
-        -ms-flex-pack: center;
         -webkit-justify-content: center;
-        -moz-justify-content: center;
         justify-content: center;
         height: 1.6rem;
         text-align: center;
