@@ -74,7 +74,6 @@ class Register extends React.Component {
                             })(<Input prefix={<Icon type="mail"/>} placeholder="请输入邮箱"/>)}
                         </Form.Item>
 
-                        <input type="button" value='立即注册' onClick={this.handleSubmit}/>
 
                         <div className='agree'>
                             <label>我同意 <a href="javascript:;" onClick={utils.modalSuccess.bind(this, {
@@ -85,6 +84,7 @@ class Register extends React.Component {
                                 content: '都是我们的人了，还要什么隐私，天真~'
                             })}>《网易隐私政策》</a></label>
                         </div>
+                        <input type="button" className="register-btn" value='立即注册' onClick={this.handleSubmit}/>
                     </form>
                 </div>
 
