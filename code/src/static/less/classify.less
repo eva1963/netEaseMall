@@ -172,7 +172,17 @@ html, body {
         width: 100%;
         height: .05333rem;
         background-color: #b4282d;
+          animation:Afterchange .3s;
+          -webkit-animation:Afterchange .3s;
       }
+        @keyframes Afterchange
+        { from {transform:scale(0)}
+          to {transform: scale(1)}
+        }
+        @-webkit-keyframes Afterchange
+        { from {transform:scale(0)}
+          to {transform: scale(1)}
+        }
       }
     }
   }

@@ -109,9 +109,10 @@ class List extends React.Component {
         let {search} = this.props.location,
             newSearch = Qs.parse(search.substr(1));
         let resultSearch = JSON.stringify(newSearch);
+        this.categoryIndex=0;
         this.state = {
             goodsData: [],
-            search: JSON.parse(resultSearch)
+            search: JSON.parse(resultSearch),
         };
     }
     async componentWillMount() {
@@ -163,14 +164,13 @@ class List extends React.Component {
         //导航样式
         return <div className={'classifyDetail_box'}>
             <div className={'classifyDetail_nav'}>
-                <ul className={'clearfix'}>
+                <ul className={'clearfix'} ref={'nav'}>
                     {
                         this.props.categorys.map((item, index) => {
-                            return <li key={index}
-                                       className={item.category === search.category ? 'active' : ''}
+                                   return <li key={index}
+                                       className={item.category === search.category? 'active' : ''}
                                        onClick={() => {
                                            let curSearch=`?type=${item.type}&category=${item.category}`;
-                                           console.log(curSearch);
                                            if(this.props.location.search!==curSearch){
                                                this.props.history.push(`/classify/list/${curSearch}`);
                                                this.updateType(item.type, item.category)
@@ -229,4 +229,4 @@ class List extends React.Component {
 
  }
 
- export default withRouter(connect(state => ({...state.classify}), action.classify)(List))
+ export default connect(state => ({...state.classify}), action.classify)(List)

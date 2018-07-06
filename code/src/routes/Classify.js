@@ -4,6 +4,7 @@ import {Switch,Route,Redirect} from 'react-router-dom';
 import action from '../store/action';
 import ClassifyInfo from './classify/ClassifyInfo';
 import List from './classify/List';
+import NavList from './classify/NavList';
 import '../static/less/classify.less';
 
 import NavBottom from '../component/NavBottom';
@@ -19,6 +20,7 @@ class Classify extends React.Component {
             <NavTop />
            <Switch>
                <Route path={'/classify'} exact  component={ClassifyInfo}/>
+               <Route path={'/classify/navlist'} component={NavList}/>
                <Route path={'/classify/list'} component={List}/>
                <Redirect to={'/classify?lx=404'}/>
            </Switch>
