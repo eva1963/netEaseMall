@@ -75,11 +75,13 @@ class ShopCart extends React.Component {
                                 cartData.map(({pic, name, desc, count, price, id, isChecked}, index) => {
                                     return <li key={index} className='item'>
                                         <div className='content'>
-                                            <input type="checkbox" className='checkbox' checked={isChecked}
-                                                   onChange={() => {
-                                                       changeItemCheck(id);
+                                            <label className={'checkbox'}>
+                                                <input type="checkbox" className='checkRed' checked={isChecked}
+                                                       onChange={() => {
+                                                           changeItemCheck(id);
 
-                                                   }}/>
+                                                       }}/>
+                                            </label>
                                             <div className="avator"><img src={pic} alt={name}/></div>
                                             <div className='info'>
                                                 <h2 className='title'>{name}</h2>
@@ -106,7 +108,7 @@ class ShopCart extends React.Component {
                     {
                         cartData.length ? <div className="shopBot">
                             <div className="botLeft">
-                                <input type="checkbox" checked={selectAll} onChange={changeSelectAll}/>
+                                <input type="checkbox" className={'checkRed'} checked={selectAll} onChange={changeSelectAll}/>
                                 <span>已选({
                                     cartData.reduce((prev, {isChecked, count}) => {
                                         if (isChecked) {
