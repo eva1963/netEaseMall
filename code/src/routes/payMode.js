@@ -43,7 +43,6 @@ class PayMode extends React.Component {
         selAry = orderID.split(/\,/g).map(Number);
 
         selAry = selAry.map(id => {
-            console.log(id);
             return payOrder(id);
         });
         Promise.all(selAry).then(() => {
