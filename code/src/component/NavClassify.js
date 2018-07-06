@@ -4,19 +4,12 @@
 */
 import React from 'react'
 import {connect} from 'react-redux'
+import {withRouter} from "react-router-dom"
 import '../static/less/orderTitle.less'
 
 class NavClassify extends React.Component{
     constructor(props,context){
         super(props,context);
-    }
-    componentWillReceiveProps(){
-        let el = this.classifyWrap,
-          t_menu = el.childNodes[this.props.classifyIndex];
-
-        let space = document.documentElement.clientWidth / 2 - t_menu.offsetWidth / 2 - t_menu.offsetWidth;
-        el.style.transition="-webkit-transform 500ms";
-        el.scrollLeft = t_menu.offsetLeft - space;
     }
     render(){
         let {classifyIndex,handle} = this.props;
@@ -26,7 +19,7 @@ class NavClassify extends React.Component{
             <ul ref={x=>this.classifyWrap=x}>{
                 type.map((item,index)=>{
                     return <li key={index} className={classifyIndex===index?'active':''} onClick={ev=>{
-                       alert('跳转到分类列表')
+                       this.props.history.push(`/classify/list?type=${item}&category=`)
                     }
                     }>{classifyData[index]}</li>
                 })
@@ -35,4 +28,4 @@ class NavClassify extends React.Component{
     }
 }
 
-export default connect()(NavClassify)
+export default withRouter(connect()(NavClassify));

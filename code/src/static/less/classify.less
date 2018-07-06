@@ -27,26 +27,26 @@ html, body {
       span {
         display: block;
         color: #333;
-        font-size: .37333rem;
+        font-size: .34rem;
         line-height: .66667rem;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
+        &:before{
+          content: ' ';
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: .08rem;height:100%;transform:scale(0);
+          background-color: #ab2b2b;
+        }
       }
       &.active span {
-        font-size: .48rem;
+        font-size: .42rem;
         color: #ab2b2b;
         position: relative;
-
-      }
-      &.active span:before {
-        content: ' ';
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: .08rem;
-        background-color: #ab2b2b;
+        &:before{height:100%;transform:scale(1);transition:all .3s;}
       }
     }
   }
