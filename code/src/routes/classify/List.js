@@ -135,9 +135,6 @@ class List extends React.Component {
             })
 
         }
-
-
-
     }
 
 
