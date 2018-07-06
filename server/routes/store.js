@@ -41,7 +41,7 @@ route.post('/remove', (req, res) => {
     if (personID) {
         req.storeDATA = req.storeDATA.filter(item => {
             return !(parseFloat(item.id) === goodsID && parseFloat(item.personID) === personID);
-    });
+        });
         writeFile(STORE_PATH, req.storeDATA).then(() => {
             res.send({code: 0, msg: 'OK!'});
         }).catch(() => {
@@ -67,7 +67,7 @@ route.get('/info', (req, res) => {
             if (parseFloat(item.personID) === personID && parseFloat(item.state) === state) {
 
                 storeList.push({
-                    goodsID: +item.id,
+                    goodsID: +item.goodsID,
                     storeID: 0,
                     count: +item.count
                 });
@@ -89,7 +89,7 @@ route.get('/info', (req, res) => {
     let data = [];
     storeList.forEach(({goodsID, count, storeID} = {}) => {
         // let item = req.goodsDATA.find(item => parseFloat(item.id) === goodsID);
-        let item = req.storeDATA.find(item => parseFloat(item.id) === goodsID);
+        let item = req.storeDATA.find(item => +item.goodsID === goodsID);
         item.storeID = storeID;
         item.count = count;
         data.push(item);

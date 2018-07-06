@@ -220,7 +220,7 @@ class Register extends React.Component {
         let payload = {};
         payload.name=this.userName.input.value;
         payload.phone = this.phone.input.value;
-        payload.password = this.password.input.value;
+        payload.password = md5(this.state.pwd);
         payload.passwordAgain = this.passwordAgain.input.value;
         if(payload.name && payload.phone && payload.password && payload.passwordAgain && this.state.msgFla){
             delete payload.passwordAgain;

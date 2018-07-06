@@ -84,7 +84,6 @@ class Login extends React.Component {
         ev.preventDefault();
         this.props.form.validateFields(async (err, values) => {
             if (!err) {
-                console.log(2);
                 let {userName, userPass} = values;
                 let result = await login({
                     name: userName,
@@ -94,7 +93,6 @@ class Login extends React.Component {
                     this.props.history.push('/person/info');
                     return;
                 }else{
-                    console.log(1);
                     Modal.error({
                         title: '登录失败',
                         content: '请确认账号密码是否正确',
