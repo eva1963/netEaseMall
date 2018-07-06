@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import action from '../store/action';
+import Notifications, {notify} from 'react-notify-toast';
 
 class Count extends React.Component {
     constructor(props, context) {
@@ -13,13 +14,13 @@ class Count extends React.Component {
     render() {
         return (
             <div className="selNum">
+
+                <Notifications/>
                 <i className="less" onClick={this.lessGoods}/>
                 <div className="textWrap">
                     <input ref={x => this.input = x}
                            type="tel"
                            value={this.state.count}
-                           onChange={() => {
-                           }}
                     />
                 </div>
                 <i className="more" onClick={this.addGoods}/>
@@ -28,6 +29,13 @@ class Count extends React.Component {
     }
 
     lessGoods = ev => {
+        if(this.state.count <= 1) {
+            notify.show('已经最少啦', 'custom', 2000, {
+                background: 'rgba(0,0,0,.8)',
+                text: "#fff",
+            });
+            return;
+        }
         this.setState({
             count: --this.state.count
         });
