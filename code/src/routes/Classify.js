@@ -15,8 +15,6 @@ class Classify extends React.Component {
     }
 
     render(){
-
-
         return <section>
             <NavTop />
            <Switch>
