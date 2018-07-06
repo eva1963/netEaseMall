@@ -73,6 +73,8 @@ class Register extends React.Component {
                                 }],
                             })(<Input prefix={<Icon type="mail"/>} placeholder="请输入邮箱"/>)}
                         </Form.Item>
+                        
+                        <input className='button' type="button" value='立即注册' onClick={this.handleSubmit}/>
 
 
                         <div className='agree'>
@@ -101,7 +103,7 @@ class Register extends React.Component {
 
     checkNameForm = async ev => {
         let name = ev.target.value,
-            reg = /^[a-zA-Z][a-zA-Z0-9_]{5,11}$/;
+            reg = /^[a-zA-Z][a-zA-Z0-9_]{4,11}$/;
         if (name && name.trim()) {
             name = name.trim();
             if (!reg.test(name)) {
