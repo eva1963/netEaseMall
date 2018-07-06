@@ -1,15 +1,20 @@
 .payCont {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   .ant-radio-group {
     background: #FFFFFF;
     padding-left:.25rem;
+    box-sizing:border-box;
     width:100%;
     .anticon {
-      font-size:.7rem;
+      font-size:.6rem;
       color: blue;
-      margin-right:.26rem;
+      margin-right:.13rem;
     }
     .ant-divider-horizontal{
-     margin-left:.3rem;
+     padding:0 .3rem 0;
+  margin:0;
     }
     .ant-radio-inner{
       width: .48rem;
@@ -24,16 +29,25 @@
     padding-left: .2rem;
   margin-bottom:0;
   }
+  .ant-radio-wrapper{
+    min-height: 1.386rem;
+    display:flex;
+    align-items:center;
+    span{
+      align-items: center;
+      font-size:.32rem;
+    }
+  }
   .confirmPay{
     display:block;
     width: 100%;
-    height: 1.32rem;
-    line-height: 1.32rem;
+    height: 1.28rem;
+    line-height: 1.28rem;
     position: fixed;
     bottom: 0;
     background: #B4282D;
     color: #FFF;
-    font-size: .42rem;
+    font-size:.37rem;
     border:none;
   }
 }

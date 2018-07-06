@@ -2,6 +2,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Tabs,Icon,Button,Modal} from "antd"
+import {Link} from "react-router-dom"
 import NavTopCart from '../component/NavTopCart'
 import action from '../store/action'
 import {checkLogin} from '../api/person'
@@ -15,6 +16,7 @@ class Order extends React.Component{
         super(props,context);
         this.state={
             classifyIndex:0,
+            all:[]
         };
 
     }
@@ -31,27 +33,28 @@ class Order extends React.Component{
     }
     render(){
         let {pay,unpay} = this.props.orderCart;
-
         let all = unpay.concat(pay);
+
         return <div className={'order-container'}>
             <NavTopCart/>
             <div className={'tab'}>
                 <Tabs defaultActiveKey="1" onChange={this.changeTab} className={'tab-wrapper'}>
-                    <TabPane tab="全部" key="1">{
-                        all.length!==0?( <div className={'notices'}><Icon type="sound" />防诈骗公告</div>):''
-                    }
+                    <TabPane tab="全部" key="1">
+                        <div className={'notices'}><Icon type="sound" />防诈骗公告</div>
                         <ul className={'list'}>{
-                            all.length!==0?( unpay.map((item,index)=>{
+                            all.length!==0?( all.map((item,index)=>{
                                 let {orderID,pic,name,desc,id,state} = item;
                                 return <li key={index} className={'item'}>
-                                    <h3>订单编号：<span>{orderID}</span><Icon type="delete" onClick={ev=>{this.removeOrder}}/></h3>
-                                    <div className={'content'}>
-                                        <div className="acator"><img src={pic} alt={name}/></div>
-                                        <div className={'info'}>
-                                            <h2>{name}</h2>
-                                            <p>{desc}</p>
+                                    <Link to={`/prodetail?id=${id}`}>
+                                        <h3>订单编号：<span>{orderID}</span><Icon type="delete" onClick={ev=>{this.removeOrder}}/></h3>
+                                        <div className={'content'}>
+                                            <div className="acator"><img src={pic} alt={name}/></div>
+                                            <div className={'info'}>
+                                                <h2>{name}</h2>
+                                                <p>{desc}</p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </li>
                             })):(<div className="noData">暂无更多数据</div>)
                         }</ul>
@@ -61,14 +64,16 @@ class Order extends React.Component{
                            unpay.length!==0?( unpay.map((item,index)=>{
                                let {orderID,pic,name,desc,id,state} = item;
                                return <li key={index} className={'item'}>
-                                   <h3>订单编号：<span>{orderID}</span><Icon type="delete" onClick={ev=>{this.removeOrder}}/></h3>
-                                   <div className={'content'}>
-                                       <div className="acator"><img src={pic} alt={name}/></div>
-                                       <div className={'info'}>
-                                           <h2>{name}</h2>
-                                           <p>{desc}</p>
+                                   <Link to={`/prodetail?id=${id}`}>
+                                       <h3>订单编号：<span>{orderID}</span><Icon type="delete" onClick={ev=>{this.removeOrder}}/></h3>
+                                       <div className={'content'}>
+                                           <div className="acator"><img src={pic} alt={name}/></div>
+                                           <div className={'info'}>
+                                               <h2>{name}</h2>
+                                               <p>{desc}</p>
+                                           </div>
                                        </div>
-                                   </div>
+                                   </Link>
                                </li>
                            })):(<div className="noData">暂无更多数据</div>)
                         }</ul>
@@ -78,22 +83,22 @@ class Order extends React.Component{
                             pay.length!==0?( pay.map((item,index)=>{
                                 let {orderID,pic,name,desc,id,state} = item;
                                 return <li key={index} className={'item'}>
-                                    <h3>订单编号：<span>{orderID}</span></h3>
-                                    <div className={'content'}>
-                                        <div className="acator"><img src={pic} alt={name}/></div>
-                                        <div className={'info'}>
-                                            <h2>{name}</h2>
-                                            <p>{desc}</p>
+                                    <Link to={`/prodetail?id=${id}`}>
+                                        <h3>订单编号：<span>{orderID}</span></h3>
+                                        <div className={'content'}>
+                                            <div className="acator"><img src={pic} alt={name}/></div>
+                                            <div className={'info'}>
+                                                <h2>{name}</h2>
+                                                <p>{desc}</p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </li>
-                            })):''
+                            })):(<div className="noData">暂无更多数据</div>)
                         }</ul>
-                        {pay.length!==0?' <div><Button>评价</Button></div>':(<div className="noData">暂无更多数据</div>)}
                     </TabPane>
                 </Tabs>
             </div>
-
         </div>
     }
     hintLogin=ev=>{
