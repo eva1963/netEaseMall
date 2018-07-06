@@ -141,10 +141,14 @@ class List extends React.Component {
 
             }
             this.setState({
-                goodsData: goodsData
-            })
+                goodsData
+            });
+
         }
     }
+    componentDidMount() {
+        this.changeMenu();
+    };
     render() {
         if (!this.routeState) {
             this.props.history.push('/classify');
@@ -164,7 +168,7 @@ class List extends React.Component {
         //导航样式
         return <div className={'classifyDetail_box'}>
             <div className={'classifyDetail_nav'}>
-                <ul className={'clearfix'} ref={'nav'}>
+                <ul className={'clearfix'}  ref={x => this.navList = x}>
                     {
                         this.props.categorys.map((item, index) => {
                                    return <li key={index}
@@ -175,6 +179,7 @@ class List extends React.Component {
                                                this.props.history.push(`/classify/list/${curSearch}`);
                                                this.updateType(item.type, item.category)
                                            }
+                                           this.changeMenu(index);
                                        }}>
                                 {this.categorysData[index]}
                             </li>
@@ -225,7 +230,26 @@ class List extends React.Component {
             this.setState({
                  search: {type, category}
                  })
+        };
+    changeMenu = index => {
+        if (!this.props.categorys.length) return;
+        let target = this.navList;
+        let t_menu = null;
+        if (!index) {
+            let newCategory=[];
+            this.props.categorys.forEach(({category},index)=>{
+                newCategory.push(category);
+            });
+            let _index =newCategory.indexOf(this.state.search.category);
+            t_menu = target.childNodes[_index];
+
+        } else {
+            t_menu = target.childNodes[index];
         }
+        let space = window.innerWidth / 2 - t_menu.offsetWidth / 2;
+        target.style.transition = "-webkit-transform 500ms ease-in";
+        target.scrollLeft = t_menu.offsetLeft - space;
+    }
 
  }
 
