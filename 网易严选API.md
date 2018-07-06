@@ -65,3 +65,72 @@
    msg:'xxx'
 }
 ```
+`[个人中心]`
+1、用户登录接口 && 验证是否登录
+```javascript
+  地址：/personal/login
+  方式：POST
+  参数：name=xxx&password=xxx
+  返回：{
+     code:0,  //=>0 登录成功   1 登录失败
+     msg:'xxx'
+  }
+
+  方式：GET
+  参数：--
+  返回：{
+     code:0,  //=>0 已登录   1 未登录
+     msg:'xxx'
+  }
+```
+2、用户注册接口
+```javascript
+  地址：/personal/register
+  方式：POST
+  参数：name=xxx&password=xxx&phone=xxx&email=xxx
+  返回：{
+     code:0,  //=>0 注册成功   1 失败
+     msg:'xxx'
+  }
+```
+3、获取个人信息
+```javascript
+  地址：/personal/info
+  方式：GET
+  参数：--
+  返回：{
+     code:0  //=>0 成功  1=>失败
+     msg:'xxx',
+     data:{
+         id,
+         name,
+         email,
+         phone
+     }
+  }
+```
+4、退出登录
+```javascript
+  地址：/personal/out
+  方式：GET
+  参数：--
+  返回：{
+     code:0  //=>0 成功  1=>失败
+     msg:'xxx'
+  }
+```
+5、验证用户名和密码是否重复
+```javascript
+  地址：/personal/checkInfo
+  方式：POST
+  参数：name=xxx&phone=xxx，可以每次只传递一个值
+  返回：{
+    code:0,  //=>0 可注册  1=>不可注册
+    msg:'xxx'
+  }
+```
+
+
+
+
+
