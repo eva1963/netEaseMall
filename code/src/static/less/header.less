@@ -1,0 +1,55 @@
+@import "_variable";
+/*带购物车的header*/
+.navTopCart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 1.16rem;
+  line-height: 1.16rem;
+  text-align: center;
+  background-color: #fafafa;
+  .anticon {
+    line-height: inherit;
+    font-size: .64rem
+  }
+  a {
+    color: @color3;
+    display: inline-block;
+  }
+  img {
+    width: 2.29333rem;
+    height: .72rem;
+  }
+  .home {
+    position: absolute;
+    left: 0;
+    width: 1.4rem;
+    text-align: center;
+  }
+  .cart {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0;
+    a {
+      text-align: left;
+      font-size: .64rem;
+      i {
+        margin: 0 .3rem
+      }
+    }
+  }
+}
+/*带搜索框的header*/
+.navTop{
+  .search{
+    a{
+      display: inline-block;vertical-align:middle;text-align:center;
+      height: .74667rem; width: 100%;line-height: .74667rem;
+      font-size: .37333rem;
+      background-color: #ededed;
+      border-radius: .10667rem;color:@color6}
+  }
+}

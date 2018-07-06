@@ -13,11 +13,20 @@ route.get('/banner', (req, res) => {
 
 route.get('/info', (req, res) => {
     //=>客户端会传一个商品ID进来，我们在所有商品中找到和ID相同的信息，返回
-    let {goodsID} = req.query;//=>GET请求问号传递信息都在REQ.QUERY上呢
-    goodsID = parseFloat(goodsID);
-    let item = req.goodsDATA.find(item => {
-        return parseFloat(item.id) === goodsID;
-    });
+    let {type,goodsID} = req.query;//=>GET请求问号传递信息都在REQ.QUERY上呢
+    let item;
+    if(type==='all'){
+        item=req.goodsDATA = req.goodsDATA.filter(item => {
+            return true;
+        });
+    }
+    else{
+        goodsID = parseFloat(goodsID);
+        item = req.goodsDATA.find(item => {
+            return parseFloat(item.id) === goodsID;
+        });
+    }
+
     if (item) {
         res.send({
             code: 0,
@@ -32,7 +41,34 @@ route.get('/info', (req, res) => {
         data: null
     });
 });
+/*获取搜索结果*/
+route.get('/search', (req, res) => {
+    //=>客户端会传一个商品name进来，我们在所有商品中找到和ID相同的信息，返回
+    let {name} = req.query;//=>GET请求问号传递信息都在REQ.QUERY上呢
+    let searchRes = [];
 
+    searchRes = req.goodsDATA.filter(item => {
+        let reg=eval('/'+ name +'/g');
+        return reg.test(item.name);
+    });
+    if (searchRes) {
+        if(searchRes.length>=10){
+            searchRes = searchRes.splice(0,10)
+        }
+        res.send({
+            code: 0,
+            msg: 'OK!',
+            data: searchRes
+        });
+
+        return;
+    }
+    res.send({
+        code: 1,
+        msg: 'NO!',
+        data: null
+    });
+});
 route.get('/list', (req, res) => {
     //=>接收客户端传递的参数值，不传的给默认值：limit每页展示条数，page是第几页，type是筛选的类型
     let {limit = 10, page = 1, type = 'all'} = req.query;
@@ -71,5 +107,4 @@ route.get('/list', (req, res) => {
         data: result
     });
 });
-
 module.exports = route;

@@ -1,0 +1,50 @@
+@import "_variable";
+
+//订单页面
+.order-container{
+  padding-top: 1.2rem;
+  .ant-tabs-ink-bar{background-color: @red;}
+  .ant-tabs-bar{margin-bottom:0;}
+  .ant-tabs-nav{
+    width:100vw;display:flex;background-color:#fff;
+    .ant-tabs-tab-active{
+      color:@red;
+    }
+    .ant-tabs-tab{
+      flex:1;margin:0;text-align:center;
+    }
+  }
+  .notices{
+    width:100%;padding:.2rem .4rem;color: #f48f18;font-size: .37333rem;
+    background-color: #fff8d8;
+    i{margin-right:.4rem;font-size:.4rem}
+  }
+  .list{
+    .item{
+      margin-top:.2rem;padding:0 .3rem;
+      background-color:#fff;
+      h3{
+        padding:.2rem;border-bottom:0.02rem solid #EBEBEB;color:@color6;margin:0;font-size:0.38rem;
+        i{float:right;font-size:0.42rem;color:@color9}
+      }
+      .content{
+        display:flex;align-items:center; padding: .3rem 0;
+        .acator{
+          background-color: #f4f4f4;
+          position: relative;
+          width: 1.86667rem;
+          height: 1.86667rem;
+          margin-right: .26667rem;
+          img{width:100%;height:100%}
+        }
+        .info{
+          h2{font-size:.38rem;padding-top: .1rem;}
+          p{padding-top:0.3rem;font-size:0.34rem;color:@color9}
+        }
+      }
+    }
+  }
+  .noData{text-align:center;font-size:.36rem;color:@color9;padding:.3rem 0}
+}
+.ant-confirm-btns{.ant-btn-primary{background-color:@red;border-color:@red;}}
+.ant-confirm-error .ant-confirm-body > .anticon{color:@red;}

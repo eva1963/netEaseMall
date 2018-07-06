@@ -1,12 +1,16 @@
 import home from './home';
-import classfify from './classify';
+import classify from './classify';
 import person from './person';
-import shopcart from './shopCart';
+import shopCart from './shopCart';
+import  prodetail from './prodetail';
+import  order from './order';
 
 let action = {
     home,
-    classfify,
+    classify,
     person,
-    shopcart
+    shopCart,
+    prodetail,
+    order
 };
 export default action;
