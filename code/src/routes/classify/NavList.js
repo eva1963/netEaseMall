@@ -5,40 +5,47 @@ import Qs from 'qs';
 import action from '../../store/action';
 import '../../static/less/navlist.less';
 
-let classifyData = ['推荐专区','爆品区','夏季专区','居家','鞋包配饰','服装','电器','洗护','银饰','餐厨','婴童','文体'],
-    type = ['tuijianzhuanqu','baopinqu','xiajizhuanqu','jujia','xiebaopeishi','fuzhuang','dianqi','xihu','yinshi','canchu','yingtong','wenti'];
- class NavList extends  React.Component{
-    constructor(props,context){
-        super(props,context);
-        let search=this.props.location.search;
+let classifyData = ['推荐专区', '爆品区', '夏季专区', '居家', '鞋包配饰', '服装', '电器', '洗护', '银饰', '餐厨', '婴童', '文体'],
+    type = ['tuijianzhuanqu', 'baopinqu', 'xiajizhuanqu', 'jujia', 'xiebaopeishi', 'fuzhuang', 'dianqi', 'xihu', 'yinshi', 'canchu', 'yingtong', 'wenti'];
+
+class NavList extends React.Component {
+    constructor(props, context) {
+        super(props, context);
+        let search = this.props.location.search;
         //判断search是否包含type
-        this.isHasType=search.indexOf('type')===-1;
-        if(this.isHasType){this.props.history.push('/home');return;}
-        let curType=Qs.parse(search.substr(1))['type'];
-        this.state={
-            goodsData:[],
-            categoryData:[],
+        this.isHasType = search.indexOf('type') === -1;
+        if (this.isHasType) {
+            this.props.history.push('/home');
+            return;
+        }
+        let curType = Qs.parse(search.substr(1))['type'];
+        this.state = {
+            goodsData: [],
+            categoryData: [],
             curType
         };
     }
-   async componentWillMount(){
-        if(this.isHasType)return;
-        let {queryInfo,queryCategory}=this.props;
-       this.props.goodsData.length===0?await queryInfo({type: 'all'}):null;
-       let goodsData=this.props.goodsData;
-       let categoryData=queryCategory(goodsData,this.state.curType);
-       this.setState({
-           goodsData,
-           categoryData
-       })
+
+    async componentWillMount() {
+        if (this.isHasType) return;
+        let {queryInfo, queryCategory} = this.props;
+        this.props.goodsData.length === 0 ? await queryInfo({type: 'all'}) : null;
+        let goodsData = this.props.goodsData;
+        let categoryData = queryCategory(goodsData, this.state.curType);
+        this.setState({
+            goodsData,
+            categoryData
+        })
 
     }
-    componentDidMount(){
-       this.changeMenu();
+
+    componentDidMount() {
+        this.changeMenu();
     };
-    render(){
-        if(this.isHasType)return '';
-        if(this.props.goodsData===0)return '';
+
+    render() {
+        if (this.isHasType) return '';
+        if (this.props.goodsData === 0) return '';
 
         //二级汉字数据：
         let categorysHan = [
@@ -76,17 +83,17 @@ let classifyData = ['推荐专区','爆品区','夏季专区','居家','鞋包�
             {
                 "type": "xiajizhuanqu",
 
-                "categorys": ["夏季出行", "清凉床品" ,"夏季茶饮", "减脂好物" ,"女士夏装", "男士夏装", "萌宝夏装", "夏季凉拖"]
+                "categorys": ["夏季出行", "清凉床品", "夏季茶饮", "减脂好物", "女士夏装", "男士夏装", "萌宝夏装", "夏季凉拖"]
             },
             {
                 "type": "jujia",
 
-                "categorys": ["夏凉床品件套", "被枕" ,"家具", "灯具", "收纳", "布艺软装", "家饰", "旅行用品", "宠物"]
+                "categorys": ["夏凉床品件套", "被枕", "家具", "灯具", "收纳", "布艺软装", "家饰", "旅行用品", "宠物"]
             },
             {
                 "type": "xiebaopeishi",
 
-                "categorys": ["行李箱", "男士包袋" ,"女士包袋", "钱包及小皮件" ,"女鞋", "男鞋", "拖鞋", "鞋配", "袜子", "丝袜", "配饰", "眼镜", "围巾件套"]
+                "categorys": ["行李箱", "男士包袋", "女士包袋", "钱包及小皮件", "女鞋", "男鞋", "拖鞋", "鞋配", "袜子", "丝袜", "配饰", "眼镜", "围巾件套"]
             },
             {
                 "type": "fuzhuang",
@@ -139,87 +146,88 @@ let classifyData = ['推荐专区','爆品区','夏季专区','居家','鞋包�
 
         ];
         //英转汉
-        let categoryGetHan=[];
-        categorysHan.forEach(item=>{
-           if(item.type===this.state.curType){
-               categoryGetHan=[...item.categorys];
-           }
+        let categoryGetHan = [];
+        categorysHan.forEach(item => {
+            if (item.type === this.state.curType) {
+                categoryGetHan = [...item.categorys];
+            }
         });
         return <div className={'navList_box'}>
             {/*导航*/}
             <div className={'navlist_nav'}>
-            <ul className={'clearfix'} ref={x=>this.navList=x}>
-                {
-                    type.map((item,index)=>{
-                        return <li key={index} className={item===this.state.curType?'active':''} onClick={()=>{
-                            this.changeMenu(index);
-                            this.props.history.push(`/classify/navlist?type=${item}`);
-                            this.setState({
-                                curType:item
-                            })
-                        }}>
+                <ul className={'clearfix'} ref={x => this.navList = x}>
+                    {
+                        type.map((item, index) => {
+                            return <li key={index} className={item === this.state.curType ? 'active' : ''}
+                                       onClick={() => {
+                                           this.changeMenu(index);
+                                           this.props.history.push(`/classify/navlist?type=${item}`);
+                                           this.setState({
+                                               curType: item
+                                           })
+                                       }}>
                                 {classifyData[index]}
-                        </li>;
-                    })
-                }
-            </ul>
+                            </li>;
+                        })
+                    }
+                </ul>
             </div>
             {/*商品信息*/}
             <div className="navlist_bottom">
-                    {
-                        this.props.categorys.map(({type,category},index)=>{
-                            let newGoods=this.props.goodsData.filter(item=>item.type===type&&item.category===category);
-                           return <div className={'navlist_info'} key={index}>
-                                <div className={'navlist_title'}>
-                                    <p>{categoryGetHan[index]}</p>
-                                    <p>描述</p>
-                                </div>
+                {
+                    this.props.categorys.map(({type, category}, index) => {
+                        let newGoods = this.props.goodsData.filter(item => item.type === type && item.category === category);
+                        return <div className={'navlist_info'} key={index}>
+                            <div className={'navlist_title'}>
+                                <p>{categoryGetHan[index]}</p>
+                                <p>描述</p>
+                            </div>
+                            <ul className={'clearfix'}>
+                                {
+                                    newGoods.map(({id, name, desc, pic, price, flag}, index) => {
+                                        return <li key={index}>
+                                            <Link to={`/prodetail?id=${id}`}>
+                                                <div className={'navlist_pic'}>
+                                                    <img src={pic} alt=""/>
+                                                </div>
+                                                <div className={'navlist_desc'}>
+                                                    {desc}
+                                                </div>
+                                                <div className={'navlist_name'}>
+                                                    <p>{name}</p>
+                                                </div>
+                                                <div className={'navlist_price'}>
+                                                    ￥{price}
+                                                </div>
+                                            </Link>
+                                        </li>
+                                    })
+                                }
+                            </ul>
+                        </div>
 
-                                   <ul className={'clearfix'}>
-                                   {
-                                       newGoods.map(({id,name,desc,pic,price,flag},index)=>{
-                                           return <li key={index}>
-                                               <Link to={`/prodetail?id=${id}`}>
-                                               <div className={'navlist_pic'}>
-                                               <img src={pic} alt=""/>
-                                               </div>
-                                               <div className={'navlist_desc'}>
-                                                   {desc}
-                                               </div>
-                                               <div className={'navlist_name'}>
-                                                   <p>{name}</p>
-                                               </div>
-                                               <div className={'navlist_price'}>
-                                                   ￥{price}
-                                               </div>
-                                               </Link>
-                                           </li>
-                                       })
-                                   }
-                                   </ul>
-                               </div>
-
-                        })
-                    }
+                    })
+                }
 
 
             </div>
         </div>;
     }
-    changeMenu=index=>{
-        if(!type) return;
-        let  target = this.navList;
+
+    changeMenu = index => {
+        if (!type) return;
+        let target = this.navList;
         let t_menu = null;
-        if(!index){
+        if (!index) {
             let _index = type.indexOf(this.state.curType);
             t_menu = target.childNodes[_index];
-        }else{
+        } else {
             t_menu = target.childNodes[index];
         }
-
         let space = window.innerWidth / 2 - t_menu.offsetWidth / 2;
-        target.style.transition="-webkit-transform 500ms ease-in";
+        target.style.transition = "-webkit-transform 500ms ease-in";
         target.scrollLeft = t_menu.offsetLeft - space;
     }
 }
+
 export default connect(state => ({...state.classify}), action.classify)(NavList);

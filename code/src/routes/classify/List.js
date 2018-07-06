@@ -140,9 +140,12 @@ class List extends React.Component {
                 this.props.queryCategory(goodsData, this.state.search['type']);
 
             }
+
             this.setState({
-                goodsData: goodsData
+                goodsData
             })
+
+            this.changeMenu();
         }
     }
     render() {
@@ -164,7 +167,7 @@ class List extends React.Component {
         //导航样式
         return <div className={'classifyDetail_box'}>
             <div className={'classifyDetail_nav'}>
-                <ul className={'clearfix'} ref={'nav'}>
+                <ul className={'clearfix'}  ref={x => this.navList = x}>
                     {
                         this.props.categorys.map((item, index) => {
                                    return <li key={index}
@@ -226,6 +229,27 @@ class List extends React.Component {
                  search: {type, category}
                  })
         }
+    changeMenu = index => {
+        if (!this.props.categorys) return;
+        let target = this.navList;
+        let t_menu = null;
+        if (!index) {
+            let newCategory=[];
+            this.props.categorys.forEach(({category},index)=>{
+                newCategory.push(category);
+            })
+            console.log(newCategory);
+            let _index =newCategory.indexOf(this.state.search.category);
+            console.log(_index);
+            t_menu = target.childNodes[_index];
+
+        } else {
+            t_menu = target.childNodes[index];
+        }
+        let space = window.innerWidth / 2 - t_menu.offsetWidth / 2;
+        target.style.transition = "-webkit-transform 500ms ease-in";
+        target.scrollLeft = t_menu.offsetLeft - space;
+    }
 
  }
 

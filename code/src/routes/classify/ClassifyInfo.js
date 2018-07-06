@@ -128,7 +128,9 @@ class ClassifyInfo extends React.Component {
             goodsData: goodsData,
             categoryData: categorys
         })
+
     }
+
     render() {
         let {goodsData, categorys} = this.props;
         if (goodsData.length === 0) return '';
@@ -146,7 +148,7 @@ class ClassifyInfo extends React.Component {
         });
         return <div className={'classify_box clearfix'}>
             <div className="classify_boxL">
-                <ul>
+                <ul >
                     {
                         newGoodsData.map((item, index) => {
                             return <li key={index} onClick={() => {
@@ -196,6 +198,7 @@ class ClassifyInfo extends React.Component {
         })
 
     }
+
 }
 
 
