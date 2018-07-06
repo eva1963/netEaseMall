@@ -56,7 +56,13 @@ class ToBuy extends React.Component {
         };
 
         /*加入购物车*/
-        let {count} = this.props.productInfo;
+        let {count,color} = this.props.productInfo;
+        if(color === '请选择商品规格') {
+            notify.show('您未选择商品规格', 'custom', 2000, myColor);
+            this.props.history.push(`/prodetail/params?id=${this.proId}`);
+            return;
+        }
+
         await (this.props.addCart({
             goodsID: this.proId,
             count
@@ -71,7 +77,7 @@ class ToBuy extends React.Component {
 
         if(isLogin) {
             this.props.history.push({
-                pathname: '/detailConfirm',
+                pathname: '/detailconfirm',
                 search: `?id=${this.proId}`
             });
         } else {

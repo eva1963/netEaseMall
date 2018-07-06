@@ -23,7 +23,7 @@ class DetailConfirmCont extends React.Component {
         }else{
             this.goodsID = this.proId.split(/\,/g).map(Number);
         }
-        this.orderData = cartData.filter(({goodsID, price, count, orderID}) => {
+        this.orderData = cartData.filter(({goodsID, price, count, orderID,pic}) => {
             if(this.goodsID.includes(goodsID)){
                 this.setState({
                     totalPri: this.state.totalPri + price * count
@@ -42,10 +42,11 @@ class DetailConfirmCont extends React.Component {
         }
         return <section className={'confirmCont'}>
             <ul>
+                <div className="u-icon u-address-bg" data-reactid=".0.1:2.0"></div>
                 <li className={'userInfo'}>
                     <p>
                         <span style={{
-                            marginRight: '1.4rem'
+                            marginRight: '1.6rem'
                         }}>{baseInfo? baseInfo.name : '亲亲'}</span>
                         <span>{baseInfo ? baseInfo.phone : '123****890'}</span>
                     </p>
@@ -86,9 +87,9 @@ class DetailConfirmCont extends React.Component {
                     </p>
                 </li>
                 {
-                    this.orderData.map(({name,desc,price,count},index) => {
+                    this.orderData.map(({name,desc,price,count,pic},index) => {
                         return <li key={index} className='shooes clearfix'>
-                            <img src="" alt="" className='fl'/>
+                            <img src={pic} alt="" className='fl'/>
                             <div className='fl'>
                                 <p>{name}</p>
                                 <p>
@@ -107,7 +108,7 @@ class DetailConfirmCont extends React.Component {
                             agreeChe:!this.state.agreeChe
                         })
                     }}/>
-                    <span>我同意《<span className="agreecont" onClick={this.info}>我的地盘协议</span>》</span>
+                    <span style={{color:'#999',fontSize:".24rem"}}>我同意《<span className="agreecont" onClick={this.info}>我的地盘协议</span>》</span>
                 </li>
                 <li className='pay'>
                     <div className='clearfix'>

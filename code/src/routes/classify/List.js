@@ -2,9 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link, withRouter} from 'react-router-dom';
 import action from '../../store/action';
-
 import Qs from 'qs';
-import Totop from '../../component/Totop';
 
 class List extends React.Component {
     constructor(props, context) {
@@ -31,17 +29,31 @@ class List extends React.Component {
             {
                 "type": "baopinqu",
 
-                "categorys": ["夏季出行", "清凉床品", "夏季茶饮", "减脂好物", "女士夏装", "男士夏装", "萌宝夏装", "夏季凉拖"]
+                "categorys": ["夏凉床品",
+                    "功能箱包",
+                    "女装",
+                    "男装",
+                    "男鞋女鞋",
+                    "保健养生",
+                    "酒水饮品",
+                    "清洁日用",
+                    "宝贝专用",
+                    "游戏周边"]
+            },
+            {
+                "type": "xiajizhuanqu",
+
+                "categorys": ["夏季出行", "清凉床品" ,"夏季茶饮", "减脂好物" ,"女士夏装", "男士夏装", "萌宝夏装", "夏季凉拖"]
             },
             {
                 "type": "jujia",
 
-                "categorys": ["夏凉床品件套", "被枕", "家具", "灯具", "收纳", "布艺软装", "家饰", "旅行用品", "宠物"]
+                "categorys": ["夏凉床品件套", "被枕" ,"家具", "灯具", "收纳", "布艺软装", "家饰", "旅行用品", "宠物"]
             },
             {
                 "type": "xiebaopeishi",
 
-                "categorys": ["行李箱", "男士包袋", "女士包袋", "钱包及小皮件", "女鞋", "男鞋", "拖鞋", "鞋配", "袜子", "丝袜", "配饰", "眼镜", "围巾件套"]
+                "categorys": ["行李箱", "男士包袋" ,"女士包袋", "钱包及小皮件" ,"女鞋", "男鞋", "拖鞋", "鞋配", "袜子", "丝袜", "配饰", "眼镜", "围巾件套"]
             },
             {
                 "type": "fuzhuang",
@@ -97,28 +109,26 @@ class List extends React.Component {
         let {search} = this.props.location,
             newSearch = Qs.parse(search.substr(1));
         let resultSearch = JSON.stringify(newSearch);
-
+        this.categoryIndex=0;
         this.state = {
             goodsData: [],
-            search: JSON.parse(resultSearch)
+            search: JSON.parse(resultSearch),
         };
     }
-
-
     async componentWillMount() {
-        //根据category获取下面数据
+        //获取二级分类
         let {search} = this.props.location;
         this.routeState = true;
         if (search.indexOf('type') === -1 || search.indexOf('category') === -1) {
             this.routeState = false;
         }
-
         if (this.routeState) {
             let categorysData = [];
-            this.categorysHan.forEach(item => {
+            this.categorysHan.forEach((item,index) => {
                 let {type, categorys} = item;
                 if (type === this.state['search']['type']) {
                     categorysData = [...categorys];
+
                 }
             });
             this.categorysData = categorysData;
@@ -131,19 +141,16 @@ class List extends React.Component {
 
             }
             this.setState({
-                goodsData: goodsData
-            })
+                goodsData
+            });
 
         }
-
-
-
     }
-
-
+    componentDidMount() {
+        this.changeMenu();
+    };
     render() {
         if (!this.routeState) {
-            console.log('render', !this.routeState);
             this.props.history.push('/classify');
             return '';
         }
@@ -160,16 +167,19 @@ class List extends React.Component {
         result.length === 0 ? this.props.history.push('/classify') : null;
         //导航样式
         return <div className={'classifyDetail_box'}>
-
-
             <div className={'classifyDetail_nav'}>
-                <ul className={'clearfix'}>
+                <ul className={'clearfix'}  ref={x => this.navList = x}>
                     {
                         this.props.categorys.map((item, index) => {
-                            return <li key={index}
-                                       className={item.category === search.category ? 'active' : ''}
+                                   return <li key={index}
+                                       className={item.category === search.category? 'active' : ''}
                                        onClick={() => {
-                                           this.updateType(item.type, item.category)
+                                           let curSearch=`?type=${item.type}&category=${item.category}`;
+                                           if(this.props.location.search!==curSearch){
+                                               this.props.history.push(`/classify/list/${curSearch}`);
+                                               this.updateType(item.type, item.category)
+                                           }
+                                           this.changeMenu(index);
                                        }}>
                                 {this.categorysData[index]}
                             </li>
@@ -220,8 +230,27 @@ class List extends React.Component {
             this.setState({
                  search: {type, category}
                  })
+        };
+    changeMenu = index => {
+        if (!this.props.categorys.length) return;
+        let target = this.navList;
+        let t_menu = null;
+        if (!index) {
+            let newCategory=[];
+            this.props.categorys.forEach(({category},index)=>{
+                newCategory.push(category);
+            });
+            let _index =newCategory.indexOf(this.state.search.category);
+            t_menu = target.childNodes[_index];
+
+        } else {
+            t_menu = target.childNodes[index];
         }
+        let space = window.innerWidth / 2 - t_menu.offsetWidth / 2;
+        target.style.transition = "-webkit-transform 500ms ease-in";
+        target.scrollLeft = t_menu.offsetLeft - space;
+    }
 
  }
 
-                    export default withRouter(connect(state => ({...state.classify}), action.classify)(List))
+ export default connect(state => ({...state.classify}), action.classify)(List)

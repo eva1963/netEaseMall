@@ -1,8 +1,5 @@
 @import '_variable';
-
-body {
-  background-color: #f4f4f4;
-}
+@import "_minxStyle";
 .personLogin, .personRegister {
   .ant-input-affix-wrapper {
     font-size: .6rem;
@@ -23,6 +20,46 @@ body {
     &:hover .ant-input:not(.ant-input-disabled) {
       box-shadow: none;
       border-color: transparent;
+    }
+  }
+}
+
+.personLogin, .personRegister {
+  .register-form {
+    padding-left: .4rem;
+    .register-btn {
+      display: block;
+      width: 80%;
+      margin: .6rem auto 0;
+      height: 1.2rem;
+      line-height: 1.2rem;
+      color: #fff;
+      font-size: .5rem;
+      background: @red;
+      border-radius: .3rem;
+    }
+    .formItem {
+      position: relative;
+      padding-bottom: .6rem;
+      .input-required:before {
+        content: "*";
+        color: @error;
+        position: absolute;
+        left: -.4rem;
+        top: .2rem;
+      }
+      .anticon.err{
+        color:@error
+      }
+      .checkMsg {
+        color: @error;
+        position:absolute;
+        left:.2rem;
+        bottom:.1rem;
+        font-size: .34rem;
+        .ellipsis;
+
+      }
     }
   }
 }
@@ -96,8 +133,7 @@ body {
 
   .registerWrap {
     text-align: center;
-    padding-top: 2.13333rem;
-    padding-bottom: 2.13333rem;
+    padding: 1.8rem 0 .5rem;
 
     span {
       font-size: .48rem;

@@ -30,6 +30,20 @@ class ClassifyInfo extends React.Component {
                 {
                     "type": "baopinqu",
 
+                    "categorys": ["夏凉床品",
+                        "功能箱包",
+                        "女装",
+                        "男装",
+                        "男鞋女鞋",
+                        "保健养生",
+                        "酒水饮品",
+                        "清洁日用",
+                        "宝贝专用",
+                        "游戏周边"]
+                },
+                {
+                    "type": "xiajizhuanqu",
+
                     "categorys": ["夏季出行", "清凉床品" ,"夏季茶饮", "减脂好物" ,"女士夏装", "男士夏装", "萌宝夏装", "夏季凉拖"]
                 },
                 {
@@ -114,7 +128,9 @@ class ClassifyInfo extends React.Component {
             goodsData: goodsData,
             categoryData: categorys
         })
+
     }
+
     render() {
         let {goodsData, categorys} = this.props;
         if (goodsData.length === 0) return '';
@@ -125,15 +141,14 @@ class ClassifyInfo extends React.Component {
         //二级汉字数据：
         let categorysData=[];
         let {categorysHan,classifyType}=this.state;
-        categorysHan.forEach(item=>{
-           let {type,categorys}=item;
+        categorysHan.forEach(({type,categorys})=>{
            if(type===classifyType){
                categorysData=[...categorys];
            }
         });
         return <div className={'classify_box clearfix'}>
             <div className="classify_boxL">
-                <ul>
+                <ul >
                     {
                         newGoodsData.map((item, index) => {
                             return <li key={index} onClick={() => {
@@ -183,6 +198,7 @@ class ClassifyInfo extends React.Component {
         })
 
     }
+
 }
 
 
