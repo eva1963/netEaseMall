@@ -232,17 +232,15 @@ class List extends React.Component {
                  })
         };
     changeMenu = index => {
-        if (!this.props.categorys) return;
+        if (!this.props.categorys.length) return;
         let target = this.navList;
         let t_menu = null;
         if (!index) {
             let newCategory=[];
             this.props.categorys.forEach(({category},index)=>{
                 newCategory.push(category);
-            })
-            console.log(newCategory);
+            });
             let _index =newCategory.indexOf(this.state.search.category);
-            console.log(_index);
             t_menu = target.childNodes[_index];
 
         } else {
