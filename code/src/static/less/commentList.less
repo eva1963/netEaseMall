@@ -1,0 +1,42 @@
+@import '_variable';
+@import "_minxStyle";
+
+.commentListBox {
+  padding: 1.2rem .4rem 0;
+  background: #fff;
+  .commentsRate {
+    padding-top: .4rem;
+    span {
+      margin-right: .26667rem;
+      line-height: .45333rem;
+      &.goodCmtRate {
+        margin-left: .26667rem;
+        color: #7f7f7f;
+      }
+    }
+  }
+  .tagList {
+    position: relative;
+    height: 2.2rem;
+    background-color: #fff;
+    li {
+      display: inline-block;
+      padding: .1rem .2rem;
+      border: 1px solid #7F7F7F;
+      border-radius: .05333rem;
+      margin: .2rem .2rem 0 0;
+      &.active {
+        color: @red;
+        border-color: @red;
+      }
+    }
+  }
+  .commentList {
+    .item {
+      padding-bottom: .4rem;
+      line-height: 1;
+      border-bottom: .01rem solid @borderColor;
+    }
+  }
+
+}

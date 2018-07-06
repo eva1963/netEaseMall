@@ -1,27 +1,15 @@
 /*@target: 商品分类banner
 * @params: <NavClassify classifyIndex={this.state.classifyIndex} handle={this.classifyHandle}/>
 *          classifyIndex:当前索引
-*          handle:传递的函数，触发的时候传递一个对象
-*          {
-*            type:'tuijianzhuanqu',
-*            index:0
-*          }
 */
 import React from 'react'
 import {connect} from 'react-redux'
+import {withRouter} from "react-router-dom"
 import '../static/less/orderTitle.less'
 
 class NavClassify extends React.Component{
     constructor(props,context){
         super(props,context);
-    }
-    componentWillReceiveProps(){
-        let el = this.classifyWrap,
-          t_menu = el.childNodes[this.props.classifyIndex];
-
-        let space = document.documentElement.clientWidth / 2 - t_menu.offsetWidth / 2 - t_menu.offsetWidth;
-        el.style.transition="-webkit-transform 500ms";
-        el.scrollLeft = t_menu.offsetLeft - space;
     }
     render(){
         let {classifyIndex,handle} = this.props;
@@ -30,11 +18,14 @@ class NavClassify extends React.Component{
         return <div className="orderTitle">
             <ul ref={x=>this.classifyWrap=x}>{
                 type.map((item,index)=>{
-                    return <li key={index} className={classifyIndex===index?'active':''} onClick={handle.bind(this,{type:item,index:index})}>{classifyData[index]}</li>
+                    return <li key={index} className={classifyIndex===index?'active':''} onClick={ev=>{
+                       this.props.history.push(`/classify/list?type=${item}&category=`)
+                    }
+                    }>{classifyData[index]}</li>
                 })
             }</ul>
         </div>
     }
 }
 
-export default connect()(NavClassify)
+export default withRouter(connect()(NavClassify));

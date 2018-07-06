@@ -1,0 +1,190 @@
+@import "_variable";
+@import "_minxStyle";
+
+.shopCartBox {
+  .shopCartContent {
+    //position:relative;
+    padding-bottom: 1.3rem;
+    .shopTit {
+      .txtC;
+      height: 1.15rem;
+      line-height: 1.15rem;
+      background: @white;
+      color: @color3;
+      font-size: .48rem;
+      .edit{
+        float:right;
+        padding:0 .25rem;
+        font-size: .38rem;
+      }
+    }
+    .shopTips {
+      display: flex;
+      text-align: center;
+      line-height: .9rem;
+      margin:0;
+      li {
+        flex: 1;
+        color: @color6;
+      }
+    }
+    .shopCart {
+      .txtC;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-65%);
+      width: 100%;
+      .shopCartAdd {
+        .block;
+        padding-top: 3.1rem;
+        background: url('../img/bigCart.png') no-repeat center top / 3.3rem 3.3rem;
+        line-height: .5rem;
+        font-size: .37rem;
+        color: @color9;
+      }
+      .toLogin {
+        .redBtn(@red);
+        .block;
+        width: 6.4rem;
+        margin: .15rem auto;
+
+      }
+    }
+
+    //购物车列表
+    .shopCarList {
+      //padding-top:2rem;
+      .item {
+        margin-bottom: .2rem;
+        padding: 0 .3rem;
+        background-color: #fff;
+        h3 {
+          padding: .2rem;
+          border-bottom: 0.02rem solid #EBEBEB;
+          color: @color6;
+          margin: 0;
+          font-size: 0.38rem;
+          i {
+            float: right;
+            font-size: 0.42rem;
+            color: @color9
+          }
+        }
+        .content {
+          display: flex;
+          align-items: center;
+          padding: .3rem 0;
+          position:relative;
+          .checkbox{
+            flex:1;
+          }
+          .avator {
+            flex:4;
+            background-color: #f4f4f4;
+            position: relative;
+            width: 2.1rem;
+            height: 2.1rem;
+            margin-right: .27rem;
+            img {
+              width: 100%;
+              height: 100%
+            }
+          }
+          .info {
+            flex:8;
+            .title,.desc,.price{
+              margin:0;
+            }
+            .title {
+              font-size: .37rem;
+              line-height: .7rem;
+              color:@color3;
+              .ellipsis;
+            }
+            .desc {
+              .ellipsis;
+              font-size: 0.32rem;
+              color: @color6;
+              padding-bottom:.35rem;
+            }
+            .price{
+              color:@color3;
+              font-size: .37rem;
+            }
+          }
+          .del{
+            flex:2;
+            font-size: .6rem;
+            color:@red;
+            position:relative;
+            top:-.5rem;
+          }
+          .count{
+            position:absolute;
+            right:.2rem;
+            bottom:.5rem;
+            width:2.1rem;
+            border:.01rem solid @color9;
+            border-radius:.03rem;
+            display: flex;
+            .minus,.countNum, .plus{
+              .txtC;
+              height:.7rem;
+              line-height: .7rem;
+              font-size: .4rem;
+              width:.6rem;
+            }
+            .countNum{
+              border: .01rem solid @color9;
+              border-top:0;
+              width:.8rem;
+              border-bottom:0;
+              padding:0;
+              background:transparent;
+            }
+          }
+        }
+      }
+    }
+
+    .shopBot{
+      position:fixed;
+      bottom:1.3rem;
+      background: #fff;
+      display: flex;
+      height:1.3rem;
+      line-height: 1.3rem;
+      width:100%;
+      .botLeft{
+        flex:2;
+        padding-left:.4rem;
+      }
+      .botRight{
+        flex:3;
+        display: flex;
+        .txtR;
+        .price{
+          flex:1;
+          color:@red;
+          .block;
+          height:100%;
+          padding-right:.15rem;
+          &.disvisble{
+            visibility: hidden;
+          }
+        }
+        .toOrder{
+          flex:1;
+          &.ableDo{
+            .redBtn(@red);
+          }
+          &.unDo{
+            .redBtn(@bgc);
+          }
+          height:100%;
+        }
+      }
+    }
+
+  }
+}

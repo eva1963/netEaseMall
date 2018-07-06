@@ -15,11 +15,12 @@ class NavBottom extends React.Component {
                     <span>首页</span>
                 </NavLink>
                 <NavLink to="/classify">
-                    <Icon type="database"/>
+                    <Icon type="profile"/>
                     <span>分类</span>
                 </NavLink>
                 <NavLink to="/shopcart">
                     <Icon type="shopping-cart"/>
+                    {/*<i className='cartNum'>5</i>*/}
                     <span>购物车</span>
                 </NavLink>
                 <NavLink to="/person">

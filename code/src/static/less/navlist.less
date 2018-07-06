@@ -1,0 +1,174 @@
+@import './_variable';
+
+.navList_box {
+
+  .navlist_nav {
+    width: 100%;
+    height: 1rem;
+    overflow: hidden;
+    background-color: #fff;
+    margin-top: 1.2rem;
+    /* 隐藏滚动条*/
+    ::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0);
+      width: 0;
+      height: 0;
+    }
+    ul {
+      width: 100%;
+      color: #fff;
+      white-space: nowrap;
+      font-size: 0;
+      padding: 0 0.1rem;
+      overflow-x: scroll;
+      li {
+        display: inline-block;
+        padding: 0.2rem 0.3rem;
+        color: @color6;
+        font-size: .38rem;
+        height: 1rem;
+        position: relative;
+        &:first-child {
+          margin-left: 0;
+        }
+        &.active {
+          color: @red;
+          border-bottom-color: @red;
+        }
+        &.active:after{
+          content: ' ';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: .05333rem;
+          background-color: #b4282d;
+          animation: Afterchange .3s;
+          -webkit-animation: Afterchange .3s;
+        }
+        @keyframes Afterchange{
+          from {transform:scale(0)}
+          to {transform: scale(1)}
+        }
+      }
+    }
+  }
+  .navlist_bottom {
+    .navlist_info {
+      background: #fff;
+      margin-top: .3rem;
+      .navlist_title {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        justify-content: center;
+        height: 1.6rem;
+        text-align: center;
+        background-color: #fff;
+        p:first-child {
+          margin-bottom: .21333rem;
+          font-size: .42667rem;
+          line-height: 1;
+          color: #333;
+          padding-top: .3rem;
+        }
+        p:last-child {
+          line-height: 1;
+          color: #999;
+          font-size: .32rem;
+        }
+      }
+      ul {
+        width: 100%;
+        padding:0 2%;
+        li {
+          float: left;
+          margin-bottom: .44rem;
+          width: 48.5%;
+          &:nth-child(2n){
+            margin-left: 3%;
+          }
+
+          .navlist_pic{
+            background:#f4f4f4;
+            img{
+              display: block;
+              margin:0 auto;
+            }
+          }
+        .navlist_desc{
+          width: 100%;
+          background: #F1ECE2;
+          border-radius: 0 0 .05333rem .05333rem;
+          font-size: .32rem;
+          color: #9F8A60;
+          letter-spacing: 0;
+          line-height: .38667rem;
+          padding: .26667rem .13333rem;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+        .navlist_name{
+          margin-top: .13333rem;
+          padding: 0 .13333rem;
+          line-height: .64rem;
+          text-align: left;
+          font-size: .37333rem;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          color: #333;
+          p{
+            line-height: .64rem;
+            text-align: left;
+            font-size: .37333rem;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            color: #333;
+            margin-bottom: 0;
+          }
+        }
+        .navlist_price{
+          line-height: 1;
+          font-size: .42667rem;
+          text-align: left;
+          color: #b4282d;
+          padding: 0 .13333rem;
+
+        }
+
+        }
+      }
+
+
+
+    }
+
+  }
+
+}
+
