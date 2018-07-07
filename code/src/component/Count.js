@@ -22,6 +22,7 @@ class Count extends React.Component {
                            type="tel"
                            defaultValue={1}
                            value={this.state.count}
+                           onChange={()=>{}}
                     />
                 </div>
                 <i className="more" onClick={this.addGoods}/>
