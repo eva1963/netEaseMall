@@ -5,7 +5,7 @@ import {Link, withRouter} from 'react-router-dom';
 import {Form, Button, Input, Icon,Modal} from 'antd';
 import md5 from 'blueimp-md5';
 
-import {login} from '../../api/person';
+import {checkLogin, login} from '../../api/person';
 import action from '../../store/action/index';
 
 import NavTopCart from '../../component/NavTopCart';
@@ -17,12 +17,25 @@ const FormItem = Form.Item;
 class Login extends React.Component {
     constructor(props, context) {
         super(props, context);
+        this.state = {
+            isLogin:false
+        }
+    }
+    async componentDiDMount() {
+        let result = await checkLogin();
+        this.setState({
+            isLogin: parseFloat(result.code) === 0 ? true : false
+        });
     }
     /*componentDidMount(){
         this.userName.focus();
     }*/
 
     render() {
+        if(this.state.isLogin){
+            this.props.history.push('/person/info');
+            return;
+        }
         const {getFieldDecorator} = this.props.form;
         return <div>
             <NavTopCart/>

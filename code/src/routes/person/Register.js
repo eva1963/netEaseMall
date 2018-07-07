@@ -7,7 +7,7 @@ import md5 from 'blueimp-md5';
 
 import action from '../../store/action/index';
 
-import {checkInfo, register} from '../../api/person';
+import {checkInfo, checkLogin, register} from '../../api/person';
 
 import NavTopCart from '../../component/NavTopCart';
 
@@ -29,11 +29,20 @@ class Register extends React.Component {
         }
     }
 
-    componentDidMount() {
+    async componentDidMount() {
         this.userName.focus();
+        let result = await checkLogin();
+        this.setState({
+            isLogin: parseFloat(result.code) === 0 ? true : false
+        });
     }
 
     render() {
+
+        if(this.state.isLogin){
+            this.props.history.push('/person/info');
+            return;
+        }
 
         let {getFieldDecorator} = this.props.form;
         let {confirm, nameMsg, pwdMsg, pwdAgaMsg, phoneMsg} = this.state;

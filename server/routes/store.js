@@ -12,10 +12,13 @@ route.post('/add', (req, res) => {
     count = +count;
     let item = req.storeDATA.find(item => +item.goodsID === goodsID);
     item = item ? item : req.goodsDATA.find(item => +item.id === goodsID);
+    console.log(item);
     item = JSON.parse(JSON.stringify(item));
+    item.goodsID = goodsID;
     //=>已经登录状态下，把信息直接存储到JSON中即可（用户在其它平台上登录，也可以从JSON中获取到数据，实现信息跨平台）
     if (personID) {
         item.count = item.count ? +item.count + count : count;
+
         utils.ADD_STORE(req, res, item).then(() => {
             res.send({code: 0, msg: 'OK!'});
         }).catch(() => {
@@ -29,7 +32,15 @@ route.post('/add', (req, res) => {
 
     let sesItem = req.session.storeList.find(item => item.goodsID === goodsID),
     orderID = (+new Date()).toString().substr(0,10)+(Math.random()).toString().replace(/\./,'').substr(0,8);//18位订单号
-    sesItem ? sesItem.count = +sesItem.count + count : req.session.storeList.push({goodsID, count,orderID});
+    /*sesItem ? sesItem.count = +sesItem.count + count : req.session.storeList.push({goodsID, count,orderID});*/
+    if(sesItem){
+        sesItem.count = +sesItem.count + count
+    }else{
+        let item = req.goodsDATA.find(item => item.id === goodsID);
+        item = JSON.parse(JSON.stringify(item));
+        delete item.id;
+        req.session.storeList.push({...item,goodsID,count,orderID});
+    }
     res.send({code: 0, msg: 'OK!'});
 });
 
@@ -66,11 +77,12 @@ route.get('/info', (req, res) => {
         req.storeDATA.forEach(item => {
             if (parseFloat(item.personID) === personID && parseFloat(item.state) === state) {
 
-                storeList.push({
+                /*storeList.push({
                     goodsID: +item.goodsID,
                     storeID: 0,
                     count: +item.count
-                });
+                });*/
+                storeList.push(item);
             }
         });
     } else {
@@ -88,8 +100,11 @@ route.get('/info', (req, res) => {
     //=>根据上面查找到的商品ID（storeList），把每一个商品的详细信息获取到，返回给客户端
     let data = [];
     storeList.forEach(({goodsID, count, storeID} = {}) => {
-        // let item = req.goodsDATA.find(item => parseFloat(item.id) === goodsID);
-        let item = req.storeDATA.find(item => +item.goodsID === goodsID);
+        let item = req.goodsDATA.find(item => +item.id === goodsID);
+        // let item = req.storeDATA.find(item => +item.goodsID === goodsID);
+        item = JSON.parse(JSON.stringify(item));
+        delete item.id;
+        item.goodsID = goodsID;
         item.storeID = storeID;
         item.count = count;
         data.push(item);
@@ -107,7 +122,6 @@ route.post('/pay', (req, res) => {
         personID = req.session.personID,
         isUpdate = false;
     if (personID) {
-        console.log(orderID);
         req.storeDATA = req.storeDATA.map(item => {
             if (parseFloat(item.orderID) === parseFloat(orderID) && parseFloat(item.personID) === parseFloat(personID)) {
                 isUpdate = true;

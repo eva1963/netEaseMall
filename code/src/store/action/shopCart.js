@@ -42,10 +42,10 @@ export default {
         }
     },
     //商品选中与否
-    changeItemCheck(id) {
+    changeItemCheck(goodsID) {
         return {
             type: TYPES.SHOP_CART_CHANGECHECK,
-            checkId: id
+            checkId: goodsID
         }
     },
     //全选和全不选
@@ -64,6 +64,20 @@ export default {
                 orderID
             })
         }
+    },
+    //加入购物车
+    addCart({goodsID,count} = {}) {
+        return async dispatch => {
+
+            let result = await addGoods({goodsID,count});
+            dispatch({
+                type: TYPES.ADD_SHOP_CART,
+                result,
+                goodsID,
+                count
+            })
+        }
+
     }
 
 }
