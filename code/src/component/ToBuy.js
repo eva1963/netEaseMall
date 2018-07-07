@@ -75,11 +75,13 @@ class ToBuy extends React.Component {
             goodsID: this.proId,
             count
         });
+
+        this.props.history.replace(`/prodetail?id=${this.proId}`);
         // notify.show('已加入购物车!', 'custom', 2000, this.myColor);
         // this.props.getCartInfo();
-        setTimeout(() => {
+        /*setTimeout(() => {
             this.props.history.replace(`/prodetail?id=${this.proId}`);
-        }, 100);
+        }, 100);*/
         if (+result.code === 0) {
             notify.show('已加入购物车!', 'custom', 2000, this.myColor);
             this.props.getCartInfo();
@@ -100,7 +102,8 @@ class ToBuy extends React.Component {
         });
         this.props.history.replace(`/prodetail?id=${this.proId}`);
         if (+result.code === 0) {
-            notify.show('已加入购物车!', 'custom', 2000, this.myColor);
+            // notify.show('已加入购物车!', 'custom', 2000, this.myColor);
+            this.props.getCartInfo();
             if (this.state.isLogin) {
                 this.props.history.push({
                     pathname: '/detailconfirm',
@@ -109,7 +112,6 @@ class ToBuy extends React.Component {
             } else {
                 this.props.history.push('/person/login');
             }
-            this.props.getCartInfo();
         } else {
             notify.show('购买失败啦，请重试', 'custom', 2000, this.myColor);
         }

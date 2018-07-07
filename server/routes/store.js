@@ -12,7 +12,6 @@ route.post('/add', (req, res) => {
     count = +count;
     let item = req.storeDATA.find(item => +item.goodsID === goodsID);
     item = item ? item : req.goodsDATA.find(item => +item.id === goodsID);
-    console.log(item);
     item = JSON.parse(JSON.stringify(item));
     item.goodsID = goodsID;
     //=>已经登录状态下，把信息直接存储到JSON中即可（用户在其它平台上登录，也可以从JSON中获取到数据，实现信息跨平台）
@@ -91,15 +90,15 @@ route.get('/info', (req, res) => {
             //只是为了测试：74行
             // req.session.storeList = [{goodsID:1,count:1},{goodsID:2, count:2}];
             storeList = req.session.storeList || [];
-            storeList = storeList.map(({goodsID, count}) => {
-                return {goodsID, count, storeID: 0};
+            storeList = storeList.map(({goodsID, count, orderID}) => {
+                return {goodsID, count, orderID,storeID: 0};
             });
         }
     }
 
     //=>根据上面查找到的商品ID（storeList），把每一个商品的详细信息获取到，返回给客户端
     let data = [];
-    storeList.forEach(({goodsID, count, storeID} = {}) => {
+    storeList.forEach(({goodsID, count, storeID, orderID} = {}) => {
         let item = req.goodsDATA.find(item => +item.id === goodsID);
         // let item = req.storeDATA.find(item => +item.goodsID === goodsID);
         item = JSON.parse(JSON.stringify(item));
@@ -107,6 +106,7 @@ route.get('/info', (req, res) => {
         item.goodsID = goodsID;
         item.storeID = storeID;
         item.count = count;
+        item.orderID = orderID;
         data.push(item);
     });
     res.send({

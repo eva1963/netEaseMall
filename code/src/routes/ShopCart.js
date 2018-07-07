@@ -82,12 +82,14 @@ class ShopCart extends React.Component {
 
                                                        }}/>
                                             </label>
-                                            <div className="avator"><img src={pic} alt={name}/></div>
-                                            <div className='info'>
-                                                <h2 className='title'>{name}</h2>
-                                                <p className='desc'>{desc}</p>
-                                                <p className="price">￥{price.toFixed(2)}</p>
-                                            </div>
+                                            <Link class='goDetail' to={`/prodetail?id=${goodsID}`}>
+                                                <div className="avator"><img src={pic} alt={name}/></div>
+                                                <div className='info'>
+                                                    <h2 className='title'>{name}</h2>
+                                                    <p className='desc'>{desc}</p>
+                                                    <p className="price">￥{price.toFixed(2)}</p>
+                                                </div>
+                                            </Link>
                                             <Icon className='del' type="delete"
                                                   onClick={this.showConfirm.bind(this, this.delItem.bind(this, goodsID))}/>
                                             <div className="count">

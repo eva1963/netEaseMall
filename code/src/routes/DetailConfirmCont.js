@@ -19,12 +19,12 @@ class DetailConfirmCont extends React.Component {
         this.proId = Qs.parse(this.props.location.search.substr(1)).id;
         this.orderID = [];
         if(this.proId.indexOf(',') === -1){
-            this.goodsID = [+this.proId];
+            this.payGoodsID = [+this.proId];
         }else{
-            this.goodsID = this.proId.split(/\,/g).map(Number);
+            this.payGoodsID = this.proId.split(/\,/g).map(Number);
         }
-        this.orderData = cartData.filter(({goodsID, price, count, orderID,pic}) => {
-            if(this.goodsID.includes(goodsID)){
+        this.orderData = cartData.filter(({goodsID, price, count, orderID}) => {
+            if(this.payGoodsID.includes(goodsID)){
                 this.setState({
                     totalPri: this.state.totalPri + price * count
                 });

@@ -8,8 +8,8 @@ const express = require('express'),
 function add_temp_store(req, res) {
     let storeList = req.session.storeList || [];
     if (storeList.length === 0) return;
-    storeList.map(item => {
-        return utils.ADD_STORE(req, res, parseFloat(item));
+    storeList.forEach(item => {
+        return utils.ADD_STORE(req, res, item);
     });
     Promise.all(storeList).then(() => {
         //...

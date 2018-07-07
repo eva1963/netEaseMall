@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link, withRouter} from 'react-router-dom';
 
-import {Form, Button, Input, Icon,Modal} from 'antd';
+import {Form, Button, Input, Icon, Modal} from 'antd';
 import md5 from 'blueimp-md5';
 
 import {checkLogin, login} from '../../api/person';
@@ -18,26 +18,29 @@ class Login extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
-            isLogin:false
+            isLogin: false
         }
     }
+
     async componentDiDMount() {
+        console.log(2);
         let result = await checkLogin();
         this.setState({
             isLogin: parseFloat(result.code) === 0 ? true : false
         });
     }
+
     /*componentDidMount(){
         this.userName.focus();
     }*/
 
     render() {
-        if(this.state.isLogin){
+        if (this.state.isLogin) {
             this.props.history.push('/person/info');
-            return;
+            return null;
         }
         const {getFieldDecorator} = this.props.form;
-        return <div>
+        return (<div>
             <NavTopCart/>
             <div className='personLogin'>
                 <div className='loginWrap'>
@@ -47,11 +50,15 @@ class Login extends React.Component {
                 <div className='form'>
                     <Form onSubmit={this.handleSubmit} className="login-form">
                         <FormItem>
-                            {getFieldDecorator('userName', {rules: [{required: true, message: '用户名必填'}]})(<Input prefix={<Icon type="user"/>} placeholder="请输入用户名或手机号或邮箱" onBlur={this.handleVale.bind(this,'userName')} ref={x => this.userName = x}/>)}
+                            {getFieldDecorator('userName', {rules: [{required: true, message: '用户名必填'}]})(<Input
+                                prefix={<Icon type="user"/>} placeholder="请输入用户名或手机号或邮箱"
+                                onBlur={this.handleVale.bind(this, 'userName')} ref={x => this.userName = x}/>)}
                         </FormItem>
 
                         <FormItem>
-                            {getFieldDecorator('userPass', {rules: [{required: true, message: '密码必填'}]})(<Input prefix={<Icon type="lock"/>} placeholder="请输入密码" type="password" onBlur={this.handleVale.bind(this,'userPass')}/>)}
+                            {getFieldDecorator('userPass', {rules: [{required: true, message: '密码必填'}]})(<Input
+                                prefix={<Icon type="lock"/>} placeholder="请输入密码" type="password"
+                                onBlur={this.handleVale.bind(this, 'userPass')}/>)}
                         </FormItem>
 
                         <div className='tips clearfix'>
@@ -85,12 +92,13 @@ class Login extends React.Component {
                 </div>
 
             </div>
-        </div>
+        </div>)
     }
+
     handleVale = (input) => {
-        let {getFieldValue,validateFields} = this.props.form;
+        let {getFieldValue, validateFields} = this.props.form;
         let name = getFieldValue(input);
-        validateFields([input],{force:true});
+        validateFields([input], {force: true});
     };
 
     handleSubmit = ev => {
@@ -105,7 +113,7 @@ class Login extends React.Component {
                 if (+result.code === 0) {
                     this.props.history.push('/person/info');
                     return;
-                }else{
+                } else {
                     Modal.error({
                         title: '登录失败',
                         content: '请确认账号密码是否正确',
