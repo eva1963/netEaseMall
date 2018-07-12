@@ -7,7 +7,7 @@ import md5 from 'blueimp-md5';
 
 import action from '../../store/action/index';
 
-import {checkInfo, register} from '../../api/person';
+import {checkInfo, checkLogin, register} from '../../api/person';
 
 import NavTopCart from '../../component/NavTopCart';
 
@@ -31,9 +31,29 @@ class Register extends React.Component {
 
     componentDidMount() {
         this.userName.focus();
+
+    }
+    async componentWillMount() {
+        this._isMounted = true;
+        let result = await checkLogin();
+        if(this._isMounted){
+            this.setState({
+                isLogin: parseFloat(result.code) === 0 ? true : false
+            });
+        }
+    }
+    componentWillUnmount() {
+        this._isMounted = false
     }
 
+
     render() {
+        if (this.state.isLogin) {
+            let timer = setTimeout(() => {
+                clearTimeout(timer);
+                this.props.history.push('/person/info');
+            });
+        }
 
         let {getFieldDecorator} = this.props.form;
         let {confirm, nameMsg, pwdMsg, pwdAgaMsg, phoneMsg} = this.state;
@@ -73,8 +93,9 @@ class Register extends React.Component {
                                 }],
                             })(<Input prefix={<Icon type="mail"/>} placeholder="请输入邮箱"/>)}
                         </Form.Item>
+                        
+                        <input className='button' type="button" value='立即注册' onClick={this.handleSubmit}/>
 
-                        <input type="button" value='立即注册' onClick={this.handleSubmit}/>
 
                         <div className='agree'>
                             <label>我同意 <a href="javascript:;" onClick={utils.modalSuccess.bind(this, {
@@ -101,7 +122,7 @@ class Register extends React.Component {
 
     checkNameForm = async ev => {
         let name = ev.target.value,
-            reg = /^[a-zA-Z][a-zA-Z0-9_]{5,11}$/;
+            reg = /^[a-zA-Z][a-zA-Z0-9_]{4,11}$/;
         if (name && name.trim()) {
             name = name.trim();
             if (!reg.test(name)) {
@@ -219,7 +240,7 @@ class Register extends React.Component {
         let payload = {};
         payload.name=this.userName.input.value;
         payload.phone = this.phone.input.value;
-        payload.password = this.password.input.value;
+        payload.password = md5(this.state.pwd);
         payload.passwordAgain = this.passwordAgain.input.value;
         if(payload.name && payload.phone && payload.password && payload.passwordAgain && this.state.msgFla){
             delete payload.passwordAgain;
@@ -239,4 +260,4 @@ class Register extends React.Component {
     };
 }
 
-export default Form.create()(withRouter(connect(null, action.person)(Register)));
+export default withRouter(Form.create()(connect(null, action.person)(Register)));

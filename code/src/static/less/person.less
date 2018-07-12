@@ -27,6 +27,17 @@
 .personLogin, .personRegister {
   .register-form {
     padding-left: .4rem;
+    .register-btn {
+      display: block;
+      width: 80%;
+      margin: .6rem auto 0;
+      height: 1.2rem;
+      line-height: 1.2rem;
+      color: #fff;
+      font-size: .5rem;
+      background: @red;
+      border-radius: .3rem;
+    }
     .formItem {
       position: relative;
       padding-bottom: .6rem;
@@ -50,7 +61,6 @@
 
       }
     }
-
   }
 }
 
@@ -136,7 +146,7 @@
     width: 100%;
     padding: 0 0.555556rem;
 
-    Button {
+    .button {
       height: 1.28rem;
       font-size: 0.4rem;
       line-height: 1.28rem;
@@ -144,6 +154,9 @@
       width: 100%;
       border-color: transparent;
       background: #b4282d;
+      color: white;
+      text-align: center;
+      margin-bottom: .1rem;
     }
 
     .agree {
@@ -491,4 +504,105 @@
       color: #333;
     }
   }
+}
+
+.userCenterWrapper{
+
+  .userCenter{
+    margin-top: 1.42rem;
+    background: #fff;
+
+    .item{
+      position:relative;
+      padding-left: .4rem;
+      border-bottom: 1px solid #d9d9d9;
+      font-size: .34667rem;
+      color: #333;
+      line-height: 1.38667rem;
+
+      display: block;
+      padding-right: .8rem;
+
+      &:nth-last-child(1){
+        border-bottom: 0px;
+      }
+
+      .rightArrow{
+        margin-top: .42667rem;
+        position: absolute;
+        right: .21333rem;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+
+        background: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/address-right-596d39df1e.png) no-repeat;
+        background-size: 100%;
+
+        display: inline-block;
+        width: .66667rem;
+        height: .66667rem;
+        vertical-align: middle;
+      }
+    }
+
+    .item1{
+      display: block;
+      padding-right: .8rem;
+      position: relative;
+
+      .inner{
+        position: relative;
+        display: block;
+
+        .redDot{
+          position: absolute;
+          width: .21333rem;
+          height: .21333rem;
+          top: .32rem;
+          bottom: auto;
+          right: 0;
+          z-index: 1;
+          background: #b4282d;
+          border-radius: 50%;
+        }
+
+        .userIcon{
+          float: right;
+          height: .74667rem;
+          border-radius: 50%;
+          border: 1px solid #d9d9d9;
+          margin-top: .32rem;
+        }
+      }
+    }
+
+    .item2{
+
+      .rightIMG{
+        float: right;
+        margin-top: .42667rem;
+        background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/sizeHelper-gray-c2ce872149.png);
+
+        width: .53333rem;
+        height: .53333rem;
+        display: inline-block;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+
+    .item3{
+
+      .right{
+        float: right;
+      }
+    }
+    .item4{
+
+      .right{
+        float: right;
+      }
+    }
+  }  
 }

@@ -43,9 +43,9 @@ class Order extends React.Component{
                         <div className={'notices'}><Icon type="sound" />防诈骗公告</div>
                         <ul className={'list'}>{
                             all.length!==0?( all.map((item,index)=>{
-                                let {orderID,pic,name,desc,id,state} = item;
+                                let {orderID,pic,name,desc,goodsID,state} = item;
                                 return <li key={index} className={'item'}>
-                                    <Link to={`/prodetail?id=${id}`}>
+                                    <Link to={`/prodetail?id=${goodsID}`}>
                                         <h3>订单编号：<span>{orderID}</span><Icon type="delete" onClick={ev=>{this.removeOrder}}/></h3>
                                         <div className={'content'}>
                                             <div className="acator"><img src={pic} alt={name}/></div>
@@ -62,9 +62,9 @@ class Order extends React.Component{
                     <TabPane tab="待付款" key="2">
                         <ul className={'list'}>{
                            unpay.length!==0?( unpay.map((item,index)=>{
-                               let {orderID,pic,name,desc,id,state} = item;
+                               let {orderID,pic,name,desc,goodsID,state} = item;
                                return <li key={index} className={'item'}>
-                                   <Link to={`/prodetail?id=${id}`}>
+                                   <Link to={`/prodetail?id=${goodsID}`}>
                                        <h3>订单编号：<span>{orderID}</span><Icon type="delete" onClick={ev=>{this.removeOrder}}/></h3>
                                        <div className={'content'}>
                                            <div className="acator"><img src={pic} alt={name}/></div>
@@ -81,9 +81,9 @@ class Order extends React.Component{
                     <TabPane tab="已付款" key="3">
                         <ul className={'list'}>{
                             pay.length!==0?( pay.map((item,index)=>{
-                                let {orderID,pic,name,desc,id,state} = item;
+                                let {orderID,pic,name,desc,goodsID,state} = item;
                                 return <li key={index} className={'item'}>
-                                    <Link to={`/prodetail?id=${id}`}>
+                                    <Link to={`/prodetail?id=${goodsID}`}>
                                         <h3>订单编号：<span>{orderID}</span></h3>
                                         <div className={'content'}>
                                             <div className="acator"><img src={pic} alt={name}/></div>

@@ -8,8 +8,8 @@ const express = require('express'),
 function add_temp_store(req, res) {
     let storeList = req.session.storeList || [];
     if (storeList.length === 0) return;
-    storeList.map(item => {
-        return utils.ADD_STORE(req, res, parseFloat(item));
+    storeList.forEach(item => {
+        return utils.ADD_STORE(req, res, item);
     });
     Promise.all(storeList).then(() => {
         //...
@@ -24,8 +24,8 @@ route.post('/login', (req, res) => {
 
     //=>req.personalDATA 之前读取的PERSONAL中的信息：登录校验就是把用户传递的信息到总数据中查找，找到就代表登录成功...
     const item = req.personalDATA.find(item => {
-        //=>支持用户名传递：姓名、邮箱、电话
-        return (item.name === name || item.email === name || item.phone === name) && item.password === password;
+        //=>支持用户名传递：姓名、电话
+        return (item.name === name  || item.phone === name) && item.password === password;
     });
 
     if (item) {
@@ -70,9 +70,9 @@ route.post('/register', (req, res) => {
         //=>注册成功也代表登录成功，所以需要记录SESSION
         req.session.personID = parseFloat(personInfo.id);
         add_temp_store(req, res);
-        res.send({code: 0, msg: 'OK!'});
+        res.send({code: 0, msg: 'OK!',personInfo});
     }).catch(() => {
-        res.send({code: 1, msg: 'NO!'});
+        res.send({code: 1, msg: 'NO!',personInfo});
     });
 });
 

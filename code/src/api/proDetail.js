@@ -12,9 +12,11 @@ export const queryGoods = (type) => axios.get('/goods/info',{
         type
     }
 });
-export const addGoods = ({goodsID,count}) => axios.post('/store/add',{
-    goodsID,
-    count
-});
+export const addGoods = ({goodsID,count} = {}) => {
+    return axios.post('/store/add',{
+        goodsID,
+        count
+    })
+};
 
 

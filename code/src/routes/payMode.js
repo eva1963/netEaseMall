@@ -6,6 +6,7 @@ import {Icon, Radio,Divider,message} from 'antd';
 import "../static/less/payMode.less"
 import action from "../store/action";
 import Qs from "qs";
+import NavTopCart from "../component/NavTopCart";
 
 class PayMode extends React.Component {
     constructor(props) {
@@ -19,14 +20,15 @@ class PayMode extends React.Component {
     render() {
         let {payGoods}=this.props;
         return <section className={'payCont'}>
+            <NavTopCart/>
             <p className={'chooseMode'}>请选择支付方式</p>
-            <ul className={'radioBox'} onClick={this.isChecked} >
-                 <li><a className={'radioActive'}>√</a><Icon type={'wechat'} style={{color:'green'}}></Icon><span>微信支付</span></li>
-                <Divider/>
-                <li ><a className={'radioSelef'}>√</a><Icon type={'alipay'} style={{color:'blue'}}></Icon><span>支付宝支付</span></li>
-                <Divider/>
-                <li ><a className={'radioSelef'} >√</a><Icon type={'pay-circle-o'} style={{color:'red'}}></Icon><span>网易支付</span></li>
-            </ul>
+        <ul className={'radioBox'} onClick={this.isChecked} >
+            <li><a className={'radioActive'}>√</a><Icon type={'wechat'} style={{color:'green'}}></Icon><span>微信支付</span></li>
+            <Divider/>
+            <li ><a className={'radioSelef'}>√</a><Icon type={'alipay'} style={{color:'blue'}}></Icon><span>支付宝支付</span></li>
+            <Divider/>
+            <li ><a className={'radioSelef'} >√</a><Icon type={'pay-circle-o'} style={{color:'red'}}></Icon><span>网易支付</span></li>
+        </ul>
             {/*<RadioGroup >
                 <Radio value={1}><Icon type={'wechat'} style={{color:'green'}}></Icon><span>微信支付</span></Radio>
 
@@ -34,8 +36,8 @@ class PayMode extends React.Component {
                 <Divider/>
                 <Radio value={3}><Icon type={'pay-circle-o'} style={{color:'red'}}></Icon><span>网易支付</span></Radio>
             </RadioGroup>*/}
-            <button className={'confirmPay'} onClick={this.payConfirm}>确定</button>
-        </section>
+        <button className={'confirmPay'} onClick={this.payConfirm}>确定</button>
+    </section>
     };
     isChecked=(ev)=>{
         let aCheck=document.getElementsByTagName('a');
@@ -44,7 +46,7 @@ class PayMode extends React.Component {
                 return function(){
                     [...aCheck].forEach(item => {
                         item.style.backgroundColor="#fff"
-                    })
+                    });
                     aCheck[i].style.backgroundColor='#B4282D';
                 };
             })(i)
@@ -54,7 +56,6 @@ class PayMode extends React.Component {
     payConfirm =async () =>{
         let {cartData, payOrder,history,getCartInfo} = this.props,
         selAry = [];
-        console.log(1,this.props.location);
         let orderID = Qs.parse(this.props.location.search.substr(1)).orderID;
         if(!orderID){
             this.props.history.push('/shopcart');
@@ -69,7 +70,7 @@ class PayMode extends React.Component {
             this.success();
             let timer = setTimeout(() => {
                 clearTimeout(timer);
-                // history.push('/order');
+                history.push('/order');
             },2000);
 
         });

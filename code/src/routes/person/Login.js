@@ -2,15 +2,14 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link, withRouter} from 'react-router-dom';
 
-import {Form, Button, Input, Icon} from 'antd';
+import {Form, Button, Input, Icon, Modal} from 'antd';
 import md5 from 'blueimp-md5';
 
-import {login} from '../../api/person';
+import {checkLogin, login} from '../../api/person';
 import action from '../../store/action/index';
 
 import NavTopCart from '../../component/NavTopCart';
 import qs from 'qs'
-
 import {utils} from '../../utils/utils'
 
 const FormItem = Form.Item;
@@ -18,14 +17,39 @@ const FormItem = Form.Item;
 class Login extends React.Component {
     constructor(props, context) {
         super(props, context);
+        this.state = {
+            isLogin: false
+        }
     }
+
+    async componentWillMount() {
+        this._isMounted = true;
+        let result = await checkLogin();
+        if(this._isMounted){
+            this.setState({
+                isLogin: parseFloat(result.code) === 0 ? true : false
+            });
+        }
+
+
+    }
+
     /*componentDidMount(){
         this.userName.focus();
     }*/
+    componentWillUnmount() {
+        this._isMounted = false
+    }
 
     render() {
+        if (this.state.isLogin) {
+            let timer = setTimeout(() => {
+                clearTimeout(timer);
+                this.props.history.push('/person/info');
+            });
+        }
         const {getFieldDecorator} = this.props.form;
-        return <div>
+        return (<div>
             <NavTopCart/>
             <div className='personLogin'>
                 <div className='loginWrap'>
@@ -35,11 +59,15 @@ class Login extends React.Component {
                 <div className='form'>
                     <Form onSubmit={this.handleSubmit} className="login-form">
                         <FormItem>
-                            {getFieldDecorator('userName', {rules: [{required: true, message: '用户名必填'}]})(<Input prefix={<Icon type="user"/>} placeholder="请输入用户名或手机号或邮箱" onBlur={this.handleVale.bind(this,'userName')} ref={x => this.userName = x}/>)}
+                            {getFieldDecorator('userName', {rules: [{required: true, message: '用户名必填'}]})(<Input
+                                prefix={<Icon type="user"/>} placeholder="请输入用户名或手机号或邮箱"
+                                onBlur={this.handleVale.bind(this, 'userName')} ref={x => this.userName = x}/>)}
                         </FormItem>
 
                         <FormItem>
-                            {getFieldDecorator('userPass', {rules: [{required: true, message: '密码必填'}]})(<Input prefix={<Icon type="lock"/>} placeholder="请输入密码" type="password" onBlur={this.handleVale.bind(this,'userPass')}/>)}
+                            {getFieldDecorator('userPass', {rules: [{required: true, message: '密码必填'}]})(<Input
+                                prefix={<Icon type="lock"/>} placeholder="请输入密码" type="password"
+                                onBlur={this.handleVale.bind(this, 'userPass')}/>)}
                         </FormItem>
 
                         <div className='tips clearfix'>
@@ -73,12 +101,13 @@ class Login extends React.Component {
                 </div>
 
             </div>
-        </div>
+        </div>)
     }
+
     handleVale = (input) => {
-        let {getFieldValue,validateFields} = this.props.form;
+        let {getFieldValue, validateFields} = this.props.form;
         let name = getFieldValue(input);
-        validateFields([input],{force:true});
+        validateFields([input], {force: true});
     };
 
     handleSubmit = ev => {
@@ -93,6 +122,11 @@ class Login extends React.Component {
                 if (+result.code === 0) {
                     this.props.history.push('/person/info');
                     return;
+                } else {
+                    Modal.error({
+                        title: '登录失败',
+                        content: '请确认账号密码是否正确',
+                    });
                 }
             }
         });
@@ -100,4 +134,4 @@ class Login extends React.Component {
 }
 
 // export default connect()(Login);
-export default withRouter(connect(null, {...action.person})(Form.create()(Login)));
+export default withRouter(Form.create()(connect(null, action.person)(Login)));

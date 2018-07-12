@@ -14,7 +14,7 @@ function ADD_STORE(req, res, item) {
             price,
             count
         } = item;
-        let storeInfo = {
+    let storeInfo = {
             goodsID:item.goodsID ? item.goodsID : item.id,
             personID
         };
