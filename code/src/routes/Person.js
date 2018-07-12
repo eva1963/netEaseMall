@@ -52,4 +52,4 @@ class Person extends React.Component {
 }
 
 
-export default connect()(Person);
+export default Person;

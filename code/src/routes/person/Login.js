@@ -22,22 +22,31 @@ class Login extends React.Component {
         }
     }
 
-    async componentDiDMount() {
-        console.log(2);
+    async componentWillMount() {
+        this._isMounted = true;
         let result = await checkLogin();
-        this.setState({
-            isLogin: parseFloat(result.code) === 0 ? true : false
-        });
+        if(this._isMounted){
+            this.setState({
+                isLogin: parseFloat(result.code) === 0 ? true : false
+            });
+        }
+
+
     }
 
     /*componentDidMount(){
         this.userName.focus();
     }*/
+    componentWillUnmount() {
+        this._isMounted = false
+    }
 
     render() {
         if (this.state.isLogin) {
-            this.props.history.push('/person/info');
-            return null;
+            let timer = setTimeout(() => {
+                clearTimeout(timer);
+                this.props.history.push('/person/info');
+            });
         }
         const {getFieldDecorator} = this.props.form;
         return (<div>
@@ -125,4 +134,4 @@ class Login extends React.Component {
 }
 
 // export default connect()(Login);
-export default withRouter(connect(null, {...action.person})(Form.create()(Login)));
+export default withRouter(Form.create()(connect(null, action.person)(Login)));

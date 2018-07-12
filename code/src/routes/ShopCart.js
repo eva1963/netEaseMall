@@ -82,7 +82,7 @@ class ShopCart extends React.Component {
 
                                                        }}/>
                                             </label>
-                                            <Link class='goDetail' to={`/prodetail?id=${goodsID}`}>
+                                            <Link className='goDetail' to={`/prodetail?id=${goodsID}`}>
                                                 <div className="avator"><img src={pic} alt={name}/></div>
                                                 <div className='info'>
                                                     <h2 className='title'>{name}</h2>
@@ -159,7 +159,6 @@ class ShopCart extends React.Component {
 
     goDetail = (checkedId,isLogin) => {
         if(isLogin){
-            console.log(checkedId);
             let {cartData,getCartInfo} = this.props,
                 selAry = [];
             let handleAble = cartData.some(item => item.isChecked);//是否可点击

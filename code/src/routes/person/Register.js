@@ -29,19 +29,30 @@ class Register extends React.Component {
         }
     }
 
-    async componentDidMount() {
+    componentDidMount() {
         this.userName.focus();
+
+    }
+    async componentWillMount() {
+        this._isMounted = true;
         let result = await checkLogin();
-        this.setState({
-            isLogin: parseFloat(result.code) === 0 ? true : false
-        });
+        if(this._isMounted){
+            this.setState({
+                isLogin: parseFloat(result.code) === 0 ? true : false
+            });
+        }
+    }
+    componentWillUnmount() {
+        this._isMounted = false
     }
 
-    render() {
 
-        if(this.state.isLogin){
-            this.props.history.push('/person/info');
-            return;
+    render() {
+        if (this.state.isLogin) {
+            let timer = setTimeout(() => {
+                clearTimeout(timer);
+                this.props.history.push('/person/info');
+            });
         }
 
         let {getFieldDecorator} = this.props.form;
@@ -249,4 +260,4 @@ class Register extends React.Component {
     };
 }
 
-export default Form.create()(withRouter(connect(null, action.person)(Register)));
+export default withRouter(Form.create()(connect(null, action.person)(Register)));
