@@ -82,8 +82,8 @@ class DetailConfirmCont extends React.Component {
                     </p>
                     <Divider/>
                     <p className='clearfix'>
-                        <Checkbox className='fl'/>
-                        <span>我要开发票</span>
+                        <input type={'checkbox'} className='checkRed'/>
+                        <span style={{marginLeft:'0.2rem',fontSize:".34rem"}}>我要开发票</span>
                     </p>
                 </li>
                 {
@@ -103,12 +103,12 @@ class DetailConfirmCont extends React.Component {
 
                 }
                 <li className='agree'>
-                    <Checkbox checked={this.state.agreeChe} onChange={() => {
+                    <input type={'checkbox'} className={'checkRed'} checked={this.state.agreeChe} onChange={() => {
                         this.setState({
                             agreeChe:!this.state.agreeChe
                         })
                     }}/>
-                    <span style={{color:'#999',fontSize:".24rem"}}>我同意《<span className="agreecont" onClick={this.info}>我的地盘协议</span>》</span>
+                    <span style={{color:'#999',fontSize:".34rem",marginLeft:'0.2rem',verticalAlign:'middle'}}>我同意《<span className="agreecont" onClick={this.info}>我的地盘协议</span>》</span>
                 </li>
                 <li className='pay'>
                     <div className='clearfix'>
