@@ -50,7 +50,7 @@ route.post('/remove', (req, res) => {
 
     if (personID) {
         req.storeDATA = req.storeDATA.filter(item => {
-            return !(parseFloat(item.id) === goodsID && parseFloat(item.personID) === personID);
+            return !(parseFloat(item.goodsID) === goodsID && parseFloat(item.personID) === personID);
         });
         writeFile(STORE_PATH, req.storeDATA).then(() => {
             res.send({code: 0, msg: 'OK!'});

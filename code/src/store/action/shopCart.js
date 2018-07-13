@@ -18,7 +18,6 @@ export default {
     cartRemove(goodsID) {
         return async dispatch => {
             let removeItem = await removeCart(goodsID);
-            console.log(removeItem);
             dispatch({
                 type: TYPES.SHOP_CART_REMOVE,
                 removeItem,

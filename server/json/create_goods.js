@@ -52,6 +52,6 @@ for (let i = 1; i < 1000; i++) {
     item.name = item.name + '[第' + m + '讲]';
     result.push(item);
 }
-console.log(result);
+// console.log(result);
 require('../utils/promiseFS').writeFile('./goods.json', result);
 

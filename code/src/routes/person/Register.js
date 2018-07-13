@@ -122,7 +122,7 @@ class Register extends React.Component {
 
     checkNameForm = async ev => {
         let name = ev.target.value,
-            reg = /^[a-zA-Z][a-zA-Z0-9_]{4,11}$/;
+            reg = /^[a-zA-Z][a-zA-Z0-9_]{5,11}$/;
         if (name && name.trim()) {
             name = name.trim();
             if (!reg.test(name)) {
