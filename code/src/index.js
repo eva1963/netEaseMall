@@ -43,7 +43,7 @@ render(
                         <Route path="/person" component={Person}/>
                         <Route path="/search" component={Search}/>
                         <Route path="/order" exact component={Order}/> {/*订单页面*/}
-                        <Route path="/detailConfirm" component={DetailConfirm}/>
+                        <Route path="/detailconfirm" component={DetailConfirm}/>
                         <Route path="/payMode" component={payMode}/>
                         <Redirect to="/home"/>
                     </Switch>

@@ -23,4 +23,5 @@ yarn-error.log*
 .idea
 /.xml
 .xml
+store.json
 

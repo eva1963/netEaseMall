@@ -178,7 +178,7 @@ class ShopCart extends React.Component {
         if (handleAble) {
             cartData = cartData.filter(({isChecked}) => isChecked);
             cartData.forEach(item => {
-                selAry.push(item.id);
+                selAry.push(item.goodsID);
             });
 
             selAry = selAry.map(id => {

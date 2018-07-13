@@ -94,13 +94,12 @@ class ToBuy extends React.Component {
             goodsID: this.proId,
             count
         });
-        this.props.history.replace(`/prodetail?id=${this.proId}`);
+        // this.props.history.replace(`/prodetail?id=${this.proId}`);
         if (+result.code === 0) {
-            this.props.getCartInfo();
+            await this.props.getCartInfo();
             if (this.state.isLogin) {
-                this.props.history.push({
-                    pathname: '/detailconfirm',
-                    search: `?id=${this.proId}&count=${count}`
+                setTimeout(()=>{
+                    this.props.history.replace(`/detailconfirm?id=${this.proId}`)
                 });
             } else {
                 this.props.history.push('/person/login');
