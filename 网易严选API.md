@@ -129,8 +129,18 @@
     msg:'xxx'
   }
 ```
+6、商品搜索接口
 
-
+```javascript
+  地址：/goods/search
+  方式：GET
+  参数：name=xxx   //商品name
+  返回：{
+    code:0,  //=>0 可注册  1=>不可注册
+    data:[{}],
+    msg:'xxx'
+  }
+```
 
 
 
