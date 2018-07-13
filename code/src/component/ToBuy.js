@@ -19,16 +19,10 @@ class ToBuy extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
-            show: true,
+            show: this.props.toBack,
             isLogin: false
-        }
-    }
-
-    componentWillMount() {
+        };
         this.proId = parseFloat(Qs.parse(this.props.location.search.substr(1)).id);
-        this.setState({
-            show: this.props.toBack
-        });
         this.myColor = {
             background: 'rgba(0,0,0,.8)',
             text: "#fff",
@@ -36,11 +30,15 @@ class ToBuy extends React.Component {
         };
     }
 
-    async componentDiDMount() {
+    async componentWillMount() {
         let result = await checkLogin();
         this.setState({
             isLogin: parseFloat(result.code) === 0 ? true : false
         });
+    }
+
+    componentDidMount() {
+
     }
 
     render() {
@@ -77,11 +75,7 @@ class ToBuy extends React.Component {
         });
 
         this.props.history.replace(`/prodetail?id=${this.proId}`);
-        // notify.show('已加入购物车!', 'custom', 2000, this.myColor);
-        // this.props.getCartInfo();
-        /*setTimeout(() => {
-            this.props.history.replace(`/prodetail?id=${this.proId}`);
-        }, 100);*/
+
         if (+result.code === 0) {
             notify.show('已加入购物车!', 'custom', 2000, this.myColor);
             this.props.getCartInfo();
@@ -102,7 +96,6 @@ class ToBuy extends React.Component {
         });
         this.props.history.replace(`/prodetail?id=${this.proId}`);
         if (+result.code === 0) {
-            // notify.show('已加入购物车!', 'custom', 2000, this.myColor);
             this.props.getCartInfo();
             if (this.state.isLogin) {
                 this.props.history.push({
@@ -115,22 +108,6 @@ class ToBuy extends React.Component {
         } else {
             notify.show('购买失败啦，请重试', 'custom', 2000, this.myColor);
         }
-        /* 验证是否登录 登录了就跳到下单页，未登录跳到登录页面*/
-        /*let addResult = await addGoods({id: this.proId, count});
-        if (+addResult.code === 0) {
-            this.props.getCartInfo(0);
-            console.log(this.proId);
-            if (this.state.isLogin) {
-                this.props.history.push({
-                    pathname: '/detailconfirm',
-                    search: `?id=${this.proId}&count=${count}`
-                });
-            } else {
-                this.props.history.push('/person/login');
-            }
-        } else {
-            notify.show('出了点问题，请重新操作!', 'custom', 2000, this.myColor);
-        }*/
     }
 }
 
