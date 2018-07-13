@@ -252,7 +252,7 @@ class Register extends React.Component {
             }
         }else{
             utils.modalError({
-                title:'输入信息有误',
+                title:'请核对输入信息有误',
                 misstime:1
             })
         }
